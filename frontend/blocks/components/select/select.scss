@@ -1,0 +1,239 @@
+.selectric-wrapper {
+	position: relative;
+
+	select {
+		display: none;
+	}
+
+	.selectric {
+		background: transparent;
+		border: none;
+		height: auto;
+		border-radius: 0;
+		overflow: hidden;
+		transition: none;
+
+		.label {
+			line-height: 21px;
+			margin-right: 20px;
+			margin-left: 0;
+			font-size: px2rem(14);
+			color: getColor('red');
+			font-weight: 600;
+			transition: color $transition-time;
+			height: 21px;
+		}
+
+		.button {
+			width: 20px;
+			height: 20px;
+			background: transparent;
+
+			&:after {
+				font-size: 0;
+				line-height: 0;
+				border: 5px solid transparent;
+				border-top-color: getColor('black');
+				border-bottom: none;
+				width: 10px;
+				height: 5px;
+				top: 50%;
+				position: absolute;
+				margin-top: -1px;
+				left: 50%;
+				margin-left: -5px;
+				right: auto;
+				transition: transform $transition-time, border-color $transition-time;
+				border-radius: 0;
+			}
+		}
+	}
+
+	.selectric-items {
+		background: getColor('white');
+		border: 0;
+		border-radius: 3px;
+		box-shadow: 0 0 18px 0 rgba(#797979, 0.15);
+		overflow: hidden;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		min-width: 200px;
+
+		ul {
+			margin: 0;
+			padding: 0;
+
+			li {
+				margin: 0;
+				padding: 5px 20px;
+				color: getColor('black');
+				background: transparent;
+				transition: background-color $transition-time, color $transition-time;
+				font-size: px2rem(14);
+
+				&:hover {
+					background: getColor('gray-lightest');
+					color: getColor('black');
+				}
+
+				&.selected {
+					background: getColor('gray-light');
+					color: getColor('black');
+
+					&:hover {
+						background: getColor('gray-lightest');
+						color: getColor('black');
+					}
+				}
+
+				&:before {
+					display: none;
+				}
+
+				&.disabled:first-of-type {
+					display: none;
+				}
+			}
+		}
+	}
+
+
+	&.selectric-open {
+
+		.selectric {
+
+			.button {
+				&:after {
+					transform: rotate(180deg);
+				}
+			}
+		}
+	}
+}
+
+.site-form {
+	.selectric-wrapper {
+		position: relative;
+
+		select {
+			display: none;
+		}
+
+		.selectric {
+			background: getColor('gray-lightest');
+			border: none;
+			height: 50px;
+			border-radius: 10px;
+			overflow: hidden;
+			transition: background-color $transition-time, box-shadow $transition-time;
+
+			.label {
+				line-height: 50px;
+				margin-right: 70px;
+				margin-left: 30px;
+				font-size: px2rem(14);
+				color: getColor('gray-dark');
+				font-weight: 600;
+				transition: color $transition-time;
+				height: 50px;
+			}
+
+			.button {
+				width: 70px;
+				height: 50px;
+				background: transparent;
+
+				&:after {
+					font-size: 0;
+					line-height: 0;
+					border-top-color: getColor('red');
+					transition: transform $transition-time;
+				}
+			}
+		}
+
+		.selectric-items {
+			background: getColor('white');
+			border: 0;
+			border-top: 1px solid getColor('gray-lightest');
+			border-radius: 0 0 10px 10px;
+			box-shadow: none;
+			overflow: hidden;
+			padding-top: 25px;
+			padding-bottom: 10px;
+			transition: box-shadow $transition-time;
+
+			ul {
+				margin: 0;
+				padding: 0;
+
+				li {
+					margin: 0;
+					padding: 7px 30px;
+					color: getColor('black');
+					background: transparent;
+					transition: background-color $transition-time, color $transition-time;
+					font-size: px2rem(14);
+
+					&:hover {
+						background: getColor('gray-lightest');
+						color: getColor('black');
+					}
+
+					&.selected {
+						background: getColor('gray-light');
+						color: getColor('black');
+
+						&:hover {
+							background: getColor('gray-lightest');
+							color: getColor('black');
+						}
+					}
+
+					&:before {
+						display: none;
+					}
+
+					&.disabled:first-of-type {
+						display: none;
+					}
+				}
+			}
+		}
+
+
+		&.selectric-open {
+
+			&:before {
+				content: '';
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 51px;
+				height: 25px;
+				background: getColor('white');
+				z-index: 1;
+			}
+
+			.selectric {
+				border-radius: 10px 10px 0 0;
+				background: getColor('white');
+				box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.1);
+
+				.label {
+					color: getColor('black');
+				}
+
+				.button {
+					&:after {
+						transform: rotate(180deg);
+					}
+				}
+			}
+
+			.selectric-items {
+				box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.1);
+			}
+		}
+	}
+}

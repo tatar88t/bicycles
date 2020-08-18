@@ -1,0 +1,117 @@
+extends ../../layouts/default
+
+include ../../../common/markup/utilites
+
+block TITLE
+	title Сервисное обслуживание
+
+block CONTENT
+	.page-title
+		.container
+			ul.breadcrumb
+				li.back
+					a(href="") Вернуться назад
+				li
+					a(href="/")
+						+svg-icon("home")
+				li
+					a(href="") Личный кабинет дилера
+				li
+					span Сервисное обслуживание
+			h1 Сервисное обслуживание
+	.dealer-service-page
+		.container
+			.row
+				.col-md-4.col-lg-3
+					.lk-menu-mobile-controls
+						a.lk-menu-mobile-toggler(href="", data-toggle-activity="#lk-menu") Сервисное обслуживание
+					ul#lk-menu.lk-menu
+						li
+							a(href="") Персональные данные
+						li
+							a(href="") Мои заказы
+						li
+							a(href="") Скачать
+							ul
+								li
+									a(href="") Каталог
+								li
+									a(href="") Сертификаты
+								li
+									a(href="") Логотипы
+								li
+									a(href="") Банеры
+								li
+									a(href="") Фото продуктов
+								li
+									a(href="") Прайс-листы
+						li
+							a(href="") Заявки
+							ul
+								li
+									a(href="") Маркетинговая поддержка
+								li.active
+									a(href="") Сервисное обслуживание
+				.col-md-8.col-lg-9
+					form.site-form.personal-form(method="POST", action="", novalidate="true", autocomplete="off")
+						.row
+							.col-lg-4.offset-lg-1
+								p.desc Заполните поля слева и с вами свяжется наш специалист отдела сервисного обслуживания и ответит на все ваши вопросы.
+							.col-lg-7.order-lg-first
+								.row
+									.col-12
+										.form-row
+											label.required(for="dealer-name") Фамилия и имя
+											input.form-control(type="text", name="dealer-name", id="dealer-name", placeholder="", value="", required)
+									.col-12
+										.form-row
+											label.required(for="company-name") Название организации
+											input.form-control(type="text", name="company-name", id="company-name", placeholder="", value="", required)
+									.col-sm-6
+										.form-row
+											label(for="dealer-email") E-mail
+											input.form-control(type="text", name="dealer-email", id="dealer-email", placeholder="", value="")
+									.col-sm-6
+										.form-row
+											label.required(for="dealer-phone") Телефон
+											input.form-control(type="text", name="dealer-phone", id="dealer-phone", placeholder="", value="", required)
+									.col-12
+										.form-row
+											label(for="dealer-city") Город
+											input.form-control(type="text", name="dealer-city", id="dealer-city", placeholder="", value="")
+									.col-12
+										.form-row
+											label(for="product-address") Адрес месторасположения велосипеда
+											input.form-control(type="text", name="product-address", id="product-address", placeholder="", value="")
+									.col-sm-6
+										.form-row
+											label(for="") Модель велосипеда
+											input.form-control(type="text", name="product-name", id="product-name", placeholder="", value="")
+									.col-sm-6
+										.form-row
+											label(for="product-number") Заводской номер
+											input.form-control(type="text", name="product-number", id="product-number", placeholder="", value="")
+									.col-12
+										.form-row
+											label(for="date") Дата продажи
+											input.form-control(type="text", name="date", id="date" placeholder="", value="")
+									.col-12
+										.form-row
+											label(for="description") Описание неисправности
+											textarea.form-control(name="description", id="description" placeholder="")
+									.col-12
+										.form-row
+											label(for="dealer-service-attachment") Фотография неисправности, нужной запчасти и прочее (выберите файл для отправки сообщения (gif, jpg)
+											.custom-input-file
+												input(type="file", name="dealer-service-attachment", id="dealer-service-attachment")
+												button.button(type="button") Добавить файл
+													+svg-icon("paperclip")
+									.col-12
+										.form-row
+											input(type="checkbox", name="dealer-service-agreeemnt", id="dealer-service-agreeemnt")
+											label.custom-checkbox(for="dealer-service-agreeemnt") Я согласен на обработку персональных данных
+								.buttons-line
+									button.btn.btn-xs(type="submit") Отправить
+
+
+

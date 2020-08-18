@@ -1,0 +1,32 @@
+extends ../../layouts/default
+
+include ../../../common/markup/utilites
+
+block TITLE
+    title Список страниц
+
+block CONTENT
+    .container
+        h1 Список страниц
+        ul
+            li
+                a(href="main.html") Главная (main.html)
+            li
+                a(href="product-page.html") Карточка товара (product-page.html)
+            li
+                a(href="catalog.html") Каталог (catalog.html)
+            li
+                a(href="basket.html") ЛК пользователя. Корзина (basket.html)
+            li
+                a(href="personal.html") ЛК пользователя. Персональные данные (personal.html)
+            li
+                a(href="dealer-personal.html") ЛК дилера. Персональные данные (dealer-personal.html)
+            li
+                a(href="dealer-service.html") ЛК дилера. Сервисное обслуживание (dealer-service.html)
+            li
+                a(href="about.html") О бренде (about.html)
+            li
+                a(href="technologies.html") Технологии (technologies.html)
+            li
+                a(href="comparison.html") Сравнение (comparison.html)
+

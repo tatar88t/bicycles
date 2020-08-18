@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Домашняя страница</title>
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="MobileOptimized" content="320">
+    <!--link(rel="apple-touch-icon", sizes="180x180", href="/apple-touch-icon.png")-->
+    <!--link(rel="icon", type="image/png", sizes="32x32", href="/favicon-32x32.png")-->
+    <!--link(rel="icon", type="image/png", sizes="16x16", href="/favicon-16x16.png")-->
+    <!--link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat:300,500,600,800&display=swap&subset=latin,cyrillic")-->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/libs/swiper/swiper.min.css">
+    <link rel="stylesheet" href="/libs/fancybox/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="/libs/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="/libs/selectric/selectric.css">
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body data-svg-sprite="/images/svg/svg-sprite.svg" class="main-page">
+    <header id="header" class="header">
+      <div class="header-top">
+        <div class="container-fluid">
+          <div class="header-inner">
+            <div class="toggle-menu-wrapper">
+              <button class="toggle-menu">
+                <div></div>
+              </button>
+            </div>
+            <ul class="header-menu">
+              <li><a href="">О бренде</a></li>
+              <li><a href="">Технологии</a></li>
+              <li><a href="">Оплата и доставка</a></li>
+              <li><a href="">Дилерам</a></li>
+              <li><a href="">Покупателю</a></li>
+            </ul>
+            <ul class="header-info-menu">
+              <li>
+                <button type="button" data-modal="#modal-city-select" class="header-city">Москва</button>
+              </li>
+              <li><a href="#main-contacts" data-scroll-to="#main-contacts" class="header-location">
+                  <svg class="icon icon-location">
+                    <use xlink:href="#location"></use>
+                  </svg><span>Адреса магазинов</span></a></li>
+              <li><a href="#main-sale" data-scroll-to="#main-sale" class="header-sale">
+                  <svg class="icon icon-zap">
+                    <use xlink:href="#zap"></use>
+                  </svg><span>Акции</span></a></li>
+            </ul>
+            <div class="header-search">
+              <button type="button" class="header-search-form-toggler">
+                <svg class="icon icon-loupe">
+                  <use xlink:href="#loupe"></use>
+                </svg>
+              </button>
+              <form method="" action="" novalidate="true" autocomplete="off" class="header-search-form">
+                <div class="container-fluid">
+                  <input type="text" name="" value="" placeholder="Поиск" class="header-search-form-input">
+                  <button type="button" class="header-search-form-toggler button-close">
+                    <svg class="icon icon-close">
+                      <use xlink:href="#close"></use>
+                    </svg>
+                  </button>
+                </div>
+              </form>
+            </div>
+            <ul class="header-user-menu">
+              <li>
+                <button type="button" title="Вход в личный кабинет" data-toggle-activity="#header-auth-menu">
+                  <svg class="icon icon-key">
+                    <use xlink:href="#key"></use>
+                  </svg>
+                </button>
+                <div id="header-auth-menu" class="dropdown">
+                  <ul class="dropdown-items">
+                    <li><a href="">Вход</a></li>
+                    <li><a href="">Выход</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="" title="Сравнение товаров">
+                  <svg class="icon icon-bar-chart">
+                    <use xlink:href="#bar-chart"></use>
+                  </svg></a></li>
+              <li><a href="" title="Корзина">
+                  <svg class="icon icon-cart">
+                    <use xlink:href="#cart"></use>
+                  </svg><span class="badge badge-xs badge-blue"><span>12</span></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="header-bottom">
+        <div class="container-fluid">
+          <div class="header-inner"><a href="/" class="header-logo"><img src="images/logo-full-white.png"></a>
+            <div class="toggle-menu-wrapper">
+              <button class="toggle-menu">
+                <div></div>
+              </button>
+            </div>
+            <button type="button" data-modal="#modal-city-select" class="header-city">Москва</button>
+            <hr>
+            <ul class="header-products-menu">
+              <li><a href="#" data-toggle-activity="#header-products-menu-1">Велосипеды</a>
+                <div id="header-products-menu-1" class="dropdown">
+                  <ul class="dropdown-items">
+                    <li><a href="">Категория 1</a></li>
+                    <li><a href="">Категория 2</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="#" data-toggle-activity="#header-products-menu-2">Самокаты</a>
+                <div id="header-products-menu-2" class="dropdown">
+                  <ul class="dropdown-items">
+                    <li><a href="">Категория 1</a></li>
+                    <li><a href="">Категория 2</a></li>
+                    <li><a href="">Категория 3</a></li>
+                    <li><a href="">Категория 4</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <hr><a href="#main-selection" data-scroll-to="#main-selection" class="header-select-product">Подобрать велосипед</a>
+            <hr>
+            <div class="header-info-block"><span class="header-info-item">Ежедневно с  9:00 до 21:00</span><a href="tel:88001234567" class="header-info-item header-phone">8 800 123 45 67</a></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="main-menu" class="main-menu">
+      <div class="main-menu__content">
+        <div class="header">
+          <div class="header-top">
+            <div class="container-fluid">
+              <div class="header-inner">
+                <div class="toggle-menu-wrapper">
+                  <button class="toggle-menu active">
+                    <div></div>
+                  </button>
+                </div>
+                <ul class="header-menu">
+                  <li><a href="">О бренде</a></li>
+                  <li><a href="">Технологии</a></li>
+                  <li><a href="">Оплата и доставка</a></li>
+                  <li><a href="">Дилерам</a></li>
+                  <li><a href="">Покупателю</a></li>
+                </ul>
+                <ul class="header-info-menu">
+                  <li>
+                    <button type="button" data-modal="#modal-city-select" class="header-city">Москва</button>
+                  </li>
+                  <li><a href="#main-contacts" data-scroll-to="#main-contacts" class="header-location">
+                      <svg class="icon icon-location">
+                        <use xlink:href="#location"></use>
+                      </svg><span>Адреса магазинов</span></a></li>
+                  <li><a href="#main-sale" data-scroll-to="#main-sale" class="header-sale">
+                      <svg class="icon icon-zap">
+                        <use xlink:href="#zap"></use>
+                      </svg><span>Акции</span></a></li>
+                </ul>
+                <div class="header-search">
+                  <button type="button" class="header-search-form-toggler">
+                    <svg class="icon icon-loupe">
+                      <use xlink:href="#loupe"></use>
+                    </svg>
+                  </button>
+                  <form method="" action="" novalidate="true" autocomplete="off" class="header-search-form">
+                    <div class="container-fluid">
+                      <input type="text" name="" value="" placeholder="Поиск" class="header-search-form-input">
+                      <button type="button" class="header-search-form-toggler button-close">
+                        <svg class="icon icon-close">
+                          <use xlink:href="#close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                <ul class="header-user-menu">
+                  <li>
+                    <button type="button" title="Вход в личный кабинет" data-toggle-activity="#header-auth-menu">
+                      <svg class="icon icon-key">
+                        <use xlink:href="#key"></use>
+                      </svg>
+                    </button>
+                    <div id="header-auth-menu" class="dropdown">
+                      <ul class="dropdown-items">
+                        <li><a href="">Вход</a></li>
+                        <li><a href="">Выход</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li><a href="" title="Сравнение товаров">
+                      <svg class="icon icon-bar-chart">
+                        <use xlink:href="#bar-chart"></use>
+                      </svg></a></li>
+                  <li><a href="" title="Корзина">
+                      <svg class="icon icon-cart">
+                        <use xlink:href="#cart"></use>
+                      </svg><span class="badge badge-xs badge-blue"><span>12</span></span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="header-bottom">
+            <div class="container-fluid">
+              <div class="header-inner"><a href="/" class="header-logo"><img src="images/logo-full-white.png"></a>
+                <div class="toggle-menu-wrapper">
+                  <button class="toggle-menu active">
+                    <div></div>
+                  </button>
+                </div>
+                <button type="button" data-modal="#modal-city-select" class="header-city">Москва</button>
+                <hr>
+                <ul class="header-products-menu">
+                  <li><a href="#" data-toggle-activity="#main-products-menu-1">Велосипеды</a>
+                    <div id="main-products-menu-1" class="dropdown">
+                      <ul class="dropdown-items">
+                        <li><a href="">Категория 1</a></li>
+                        <li><a href="">Категория 2</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li><a href="#" data-toggle-activity="#main-products-menu-2">Самокаты</a>
+                    <div id="main-products-menu-2" class="dropdown">
+                      <ul class="dropdown-items">
+                        <li><a href="">Категория 1</a></li>
+                        <li><a href="">Категория 2</a></li>
+                        <li><a href="">Категория 3</a></li>
+                        <li><a href="">Категория 4</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+                <hr><a href="#main-selection" data-scroll-to="#main-selection" class="header-select-product">Подобрать велосипед</a>
+                <hr>
+                <div class="header-info-block"><span class="header-info-item">Ежедневно с  9:00 до 21:00</span><a href="tel:88001234567" class="header-info-item header-phone">8 800 123 45 67</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-6 col-sm-4 col-md-3">
+              <div class="footer-menu">
+                <h4 class="title"><a href="">Велосипеды</a></h4>
+                <ul>
+                  <li><a href="">Горные</a></li>
+                  <li><a href="">Городские</a></li>
+                  <li><a href="">Детские</a></li>
+                  <li><a href="">Мужские</a></li>
+                  <li><a href="">Женские</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3">
+              <div class="footer-menu">
+                <h4 class="title"><a href="">Самокаты</a></h4>
+                <ul>
+                  <li><a href="">Взрослые</a></li>
+                  <li><a href="">Детские</a></li>
+                  <li><a href="">Трюковые</a></li>
+                  <li><a href="">Внедорожные</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3">
+              <div class="footer-menu">
+                <h4 class="title"><a href="">Dewolf</a></h4>
+                <ul>
+                  <li><a href="">О бренде</a></li>
+                  <li><a href="">Технологии</a></li>
+                  <li><a href="">Дилерам</a></li>
+                  <li><a href="">Где купить</a></li>
+                  <li><a href="">Оплата и доставка</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="footer">
+                <div class="container">
+                  <div class="footer-contacts">
+                    <div class="row">
+                      <div class="col-sm-6 col-md-3 mb-3 mb-md-0"><b>Центральный офис в Москве</b><br><a href="mailto:simle@mail.com">simle@mail.com</a><br><a href="tel:+74958808080">+7 (495) 880-80-80</a></div>
+                      <div class="col-sm-6 col-md-3 mb-3 mb-md-0"><b>Офис Волгаград</b><br><a href="mailto:simle@mail.com">simle@mail.com</a><br><a href="tel:+74958808080">+7 (495) 880-80-80</a></div>
+                      <div class="col-sm-6 col-md-3 mb-3 mb-md-0">
+                        <ul class="footer-soc">
+                          <li><a href="" target="_blank"><img src="images/icon-telegram.svg" alt="Telegram"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-whatsapp.svg" alt="WhatsApp"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-facebook.svg" alt="Facebook"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-instagram.svg" alt="Instagram"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-twitter.svg" alt="Twitter"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-vk.svg" alt="ВКонтакте"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-youtube.svg" alt="YouTube"></a></li>
+                        </ul>
+                      </div>
+                      <div class="col-sm-6 col-md-3 mb-3 mb-md-0">
+                        <ul class="footer-card-icons">
+                          <li><a href="" target="_blank"><img src="images/icon-visa.png" alt="VISA"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-mastercard.png" alt="MasterCard"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-mir.png" alt="МИР"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-jcb.png" alt="JSB"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-union-pay.png" alt="UnionPay"></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-page-content">
+      <!-- slider-->
+      <div class="main-slider">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <!-- slide 1-->
+            <div style="background-image:url(images/main-slider-1.jpg)" class="swiper-slide">
+              <div class="container">
+                <div class="row">
+                  <div class="col-6 offset-sm-6">
+                    <div class="title"><span class="badge badge-xl badge-blue"><span>Горный</span></span><span class="badge badge-xl badge-blue"><span>велосипед</span></span><span class="badge badge-xl badge-blue"><span>CLK 900</span></span>
+                      <div class="badge-wrapper"><span class="badge badge-xl badge-gray"><span>57 900 руб.</span></span>
+                        <button class="btn btn-black">
+                          <svg class="icon icon-cart">
+                            <use xlink:href="#cart"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- slide 2-->
+            <div style="background-image:url(images/main-slider-2.jpg)" class="swiper-slide">
+              <div class="container">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="title"><span class="badge badge-xl badge-blue"><span>Взрослые</span></span><span class="badge badge-xl badge-blue"><span>самокаты</span></span><span class="badge badge-xl badge-blue"><span>dewolf</span></span>
+                      <div class="badge-wrapper"><span class="badge badge-xl badge-gray"><span>12 400 руб.</span></span>
+                        <button class="btn btn-black">
+                          <svg class="icon icon-cart">
+                            <use xlink:href="#cart"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-nav">
+          <button type="button" class="swiper-button swiper-button-prev"></button>
+          <button type="button" class="swiper-button swiper-button-next"></button>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <!-- advantages-->
+      <div class="main-advantages">
+        <div class="container">
+          <div class="row no-gutters">
+            <div class="col-md-6">
+              <!-- item 1-->
+              <div style="background-image:url(images/main-advantages-1.jpg)" class="main-advantages-item">
+                <h3 class="title">Велосипеды Dewolf — результат работы лучших немецких инженеров</h3>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <!-- item 2-->
+              <div style="background-image:url(images/main-advantages-2.jpg)" class="main-advantages-item">
+                <h3 class="title">Ваше удовольствие от  катания — наша цель!</h3>
+              </div>
+              <!-- item 3-->
+              <div style="background-image:url(images/main-advantages-3.jpg)" class="main-advantages-item"><img src="images/logo-short-white.png">
+                <h3 class="title">Свобода в движении вместе с DeWolf</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- categories-->
+      <div class="main-categories">
+        <div class="container">
+          <!-- item 1-->
+                <div class="main-categories-item">
+                  <div style="background-image:url(images/main-categories-1.jpg)" class="image"></div>
+                  <div class="content">
+                    <div class="title">
+                      <div class="badge">
+                        <h2 class="badge badge-blue"><span>Горные</span></h2>
+                      </div>
+                      <div class="badge badge-gray"><span>18 моделей</span></div>
+                      <div class="info">от 15 000 руб.</div>
+                    </div>
+                    <p class="description">Велосипед, предназначенный для катания вне дорог, и вследствие этого, имеющий особую конструкцию, отличную от шоссейного, трекового и дорожного велосипедов.</p><a href="" class="link"><span>Выбрать</span>
+                      <svg class="icon icon-arrow-right">
+                        <use xlink:href="#arrow-right"></use>
+                      </svg></a>
+                  </div>
+                </div>
+          <!-- item 2-->
+                <div class="main-categories-item">
+                  <div style="background-image:url(images/main-categories-2.jpg)" class="image"></div>
+                  <div class="content">
+                    <div class="title">
+                      <div class="badge">
+                        <h2 class="badge badge-blue"><span>Городские</span></h2>
+                      </div>
+                      <div class="badge badge-gray"><span>20 моделей</span></div>
+                      <div class="info">от 15 000 руб.</div>
+                    </div>
+                    <p class="description">Городской велосипед – полезное и недорогое средство передвижения. Это отличная альтернатива общественному транспорту или личному автомобилю.</p><a href="" class="link"><span>Выбрать</span>
+                      <svg class="icon icon-arrow-right">
+                        <use xlink:href="#arrow-right"></use>
+                      </svg></a>
+                  </div>
+                </div>
+          <!-- item 3-->
+                <div class="main-categories-item">
+                  <div style="background-image:url(images/main-categories-3.jpg)" class="image"></div>
+                  <div class="content">
+                    <div class="title">
+                      <div class="badge">
+                        <h2 class="badge badge-blue"><span>Детские</span></h2>
+                      </div>
+                      <div class="badge badge-gray"><span>12 моделей</span></div>
+                      <div class="info">от 10 000 руб.</div>
+                    </div>
+                    <p class="description">Сегодня это незаменимая вещь на прогулке. Кроме того, детский велосипед – это еще и формирование правильной осанки, развитие мышц ножек и координации движений.</p><a href="" class="link"><span>Выбрать</span>
+                      <svg class="icon icon-arrow-right">
+                        <use xlink:href="#arrow-right"></use>
+                      </svg></a>
+                  </div>
+                </div>
+          <!-- item 4-->
+                <div class="main-categories-item">
+                  <div style="background-image:url(images/main-categories-4.jpg)" class="image"></div>
+                  <div class="content">
+                    <div class="title">
+                      <div class="badge">
+                        <h2 class="badge badge-blue"><span>Женские</span></h2>
+                      </div>
+                      <div class="badge badge-gray"><span>25 моделей</span></div>
+                      <div class="info">от 13 000 руб.</div>
+                    </div>
+                    <p class="description">Главное отличие женского велосипеда от мужского - это использование заниженной рамы, которая гарантирует удобную посадку девушке в любой одежде</p><a href="" class="link"><span>Выбрать</span>
+                      <svg class="icon icon-arrow-right">
+                        <use xlink:href="#arrow-right"></use>
+                      </svg></a>
+                  </div>
+                </div>
+          <!-- item 5-->
+                <div class="main-categories-item">
+                  <div style="background-image:url(images/main-categories-5.jpg)" class="image"></div>
+                  <div class="content">
+                    <div class="title">
+                      <div class="badge">
+                        <h2 class="badge badge-blue"><span>Мужские</span></h2>
+                      </div>
+                      <div class="badge badge-gray"><span>27 моделей</span></div>
+                      <div class="info">от 17 000 руб.</div>
+                    </div>
+                    <p class="description">Катание на велосипеде – это великолепная возможность поддерживать себя в форме и тонусе, снимать стресс, получать море удовольствия от спортивных рекордов и неспешных велопрогулок.</p><a href="" class="link"><span>Выбрать</span>
+                      <svg class="icon icon-arrow-right">
+                        <use xlink:href="#arrow-right"></use>
+                      </svg></a>
+                  </div>
+                </div>
+        </div>
+      </div>
+      <!-- slider-->
+      <div class="main-slider">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <!-- slide 1-->
+            <div style="background-image:url(images/main-slider-1.jpg)" class="swiper-slide">
+              <div class="container">
+                <div class="row">
+                  <div class="col-6 offset-sm-6">
+                    <div class="title"><span class="badge badge-xl badge-blue"><span>Горный</span></span><span class="badge badge-xl badge-blue"><span>велосипед</span></span><span class="badge badge-xl badge-blue"><span>CLK 900</span></span>
+                      <div class="badge-wrapper"><span class="badge badge-xl badge-gray"><span>57 900 руб.</span></span>
+                        <button class="btn btn-black">
+                          <svg class="icon icon-cart">
+                            <use xlink:href="#cart"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- slide 2-->
+            <div style="background-image:url(images/main-slider-2.jpg)" class="swiper-slide">
+              <div class="container">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="title"><span class="badge badge-xl badge-blue"><span>Взрослые</span></span><span class="badge badge-xl badge-blue"><span>самокаты</span></span><span class="badge badge-xl badge-blue"><span>dewolf</span></span>
+                      <div class="badge-wrapper"><span class="badge badge-xl badge-gray"><span>12 400 руб.</span></span>
+                        <button class="btn btn-black">
+                          <svg class="icon icon-cart">
+                            <use xlink:href="#cart"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-nav">
+          <button type="button" class="swiper-button swiper-button-prev"></button>
+          <button type="button" class="swiper-button swiper-button-next"></button>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <!-- catalog-->
+      <div class="main-catalog">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="main-catalog-slider">
+                <div class="section-title">
+                  <div class="badge">
+                    <h2 class="badge badge-blue"><span>Взрослые</span></h2>
+                  </div>
+                  <div class="badge badge-gray"><span>12 моделей</span></div>
+                </div>
+                <div class="swiper-container">
+                  <div class="row swiper-wrapper">
+                    <div class="col-xs-6 swiper-slide">
+                      <!-- item--><a style="background-image:url(images/main-catalog-1.jpg)" class="main-catalog-item">
+                              <div class="inner">
+                                <div class="top-line">
+                                  <div class="badges-line">
+                                    <div class="badge badge-orange badge-xs"><span>-30%</span></div>
+                                  </div>
+                                  <div class="icons-line">
+                                    <!-- если уже есть в сравнении, то добавить класс .active-->
+                                    <button class="button btn-compare">
+                                      <svg class="icon icon-bar-chart">
+                                        <use xlink:href="#bar-chart"></use>
+                                      </svg>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div style="background-image:url(images/main-catalog-1.jpg)" class="image"></div>
+                                <div class="category">Самокат</div>
+                                <h4 class="title">Shulz 200</h4>
+                                <div class="price-block">
+                                  <div class="price">8 200 руб.</div>
+                                  <div class="old-price">9 800 руб.</div>
+                                </div>
+                              </div></a>
+                    </div>
+                    <div class="col-xs-6 swiper-slide">
+                      <!-- item--><a style="background-image:url(images/main-catalog-2.jpg)" class="main-catalog-item">
+                              <div class="inner">
+                                <div class="top-line">
+                                  <div class="badges-line">
+                                  </div>
+                                  <div class="icons-line">
+                                    <!-- если уже есть в сравнении, то добавить класс .active-->
+                                    <button class="button btn-compare">
+                                      <svg class="icon icon-bar-chart">
+                                        <use xlink:href="#bar-chart"></use>
+                                      </svg>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div style="background-image:url(images/main-catalog-2.jpg)" class="image"></div>
+                                <div class="category">Самокат</div>
+                                <h4 class="title">Tech Jogger 230</h4>
+                                <div class="price-block">
+                                  <div class="price">6 100 руб.</div>
+                                </div>
+                              </div></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="main-catalog-slider">
+                <div class="section-title badge-wrapper">
+                  <div class="badge">
+                    <h2 class="badge badge-blue"><span>Детские</span></h2>
+                  </div>
+                  <div class="badge badge-gray"><span>27 моделей</span></div>
+                </div>
+                <div class="swiper-container">
+                  <div class="row swiper-wrapper">
+                    <div class="col-xs-6 swiper-slide">
+                      <!-- item--><a style="background-image:url(images/main-catalog-3.jpg)" class="main-catalog-item">
+                              <div class="inner">
+                                <div class="top-line">
+                                  <div class="badges-line">
+                                  </div>
+                                  <div class="icons-line">
+                                    <!-- если уже есть в сравнении, то добавить класс .active-->
+                                    <button class="button btn-compare">
+                                      <svg class="icon icon-bar-chart">
+                                        <use xlink:href="#bar-chart"></use>
+                                      </svg>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div style="background-image:url(images/main-catalog-3.jpg)" class="image"></div>
+                                <div class="category">Самокат</div>
+                                <h4 class="title">Comfort 125R</h4>
+                                <div class="price-block">
+                                  <div class="price">4 200 руб.</div>
+                                </div>
+                              </div></a>
+                    </div>
+                    <div class="col-xs-6 swiper-slide">
+                      <!-- item--><a style="background-image:url(images/main-catalog-4.jpg)" class="main-catalog-item">
+                              <div class="inner">
+                                <div class="top-line">
+                                  <div class="badges-line">
+                                    <div class="badge badge-orange badge-xs"><span>-20%</span></div>
+                                  </div>
+                                  <div class="icons-line">
+                                    <!-- если уже есть в сравнении, то добавить класс .active-->
+                                    <button class="button btn-compare">
+                                      <svg class="icon icon-bar-chart">
+                                        <use xlink:href="#bar-chart"></use>
+                                      </svg>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div style="background-image:url(images/main-catalog-4.jpg)" class="image"></div>
+                                <div class="category">Самокат</div>
+                                <h4 class="title">Globber FLOW 125</h4>
+                                <div class="price-block">
+                                  <div class="price">3 100 руб.</div>
+                                  <div class="old-price">7 300 руб.</div>
+                                </div>
+                              </div></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="main-catalog-slider">
+                <div class="section-title badge-wrapper">
+                  <div class="badge">
+                    <h2 class="badge badge-blue"><span>Трюковые</span></h2>
+                  </div>
+                  <div class="badge badge-gray"><span>7 моделей</span></div>
+                </div>
+                <div class="swiper-container">
+                  <div class="row swiper-wrapper">
+                    <div class="col-xs-6 swiper-slide">
+                      <!-- item--><a style="background-image:url(images/main-catalog-4.jpg)" class="main-catalog-item">
+                              <div class="inner">
+                                <div class="top-line">
+                                  <div class="badges-line">
+                                    <div class="badge badge-orange badge-xs"><span>-20%</span></div>
+                                  </div>
+                                  <div class="icons-line">
+                                    <!-- если уже есть в сравнении, то добавить класс .active-->
+                                    <button class="button btn-compare">
+                                      <svg class="icon icon-bar-chart">
+                                        <use xlink:href="#bar-chart"></use>
+                                      </svg>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div style="background-image:url(images/main-catalog-4.jpg)" class="image"></div>
+                                <div class="category">Самокат</div>
+                                <h4 class="title">Globber FLOW 125</h4>
+                                <div class="price-block">
+                                  <div class="price">3 100 руб.</div>
+                                  <div class="old-price">7 300 руб.</div>
+                                </div>
+                              </div></a>
+                    </div>
+                    <div class="col-xs-6 swiper-slide">
+                      <!-- item--><a style="background-image:url(images/main-catalog-3.jpg)" class="main-catalog-item">
+                              <div class="inner">
+                                <div class="top-line">
+                                  <div class="badges-line">
+                                  </div>
+                                  <div class="icons-line">
+                                    <!-- если уже есть в сравнении, то добавить класс .active-->
+                                    <button class="button btn-compare">
+                                      <svg class="icon icon-bar-chart">
+                                        <use xlink:href="#bar-chart"></use>
+                                      </svg>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div style="background-image:url(images/main-catalog-3.jpg)" class="image"></div>
+                                <div class="category">Самокат</div>
+                                <h4 class="title">Comfort 125R</h4>
+                                <div class="price-block">
+                                  <div class="price">4 200 руб.</div>
+                                </div>
+                              </div></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="main-catalog-slider">
+                <div class="section-title badge-wrapper">
+                  <div class="badge">
+                    <h2 class="badge badge-blue"><span>Внедорожные</span></h2>
+                  </div>
+                  <div class="badge badge-gray"><span>9 моделей</span></div>
+                </div>
+                <div class="swiper-container">
+                  <div class="row swiper-wrapper">
+                    <div class="col-xs-6 swiper-slide">
+                      <!-- item--><a style="background-image:url(images/main-catalog-1.jpg)" class="main-catalog-item">
+                              <div class="inner">
+                                <div class="top-line">
+                                  <div class="badges-line">
+                                    <div class="badge badge-orange badge-xs"><span>-30%</span></div>
+                                  </div>
+                                  <div class="icons-line">
+                                    <!-- если уже есть в сравнении, то добавить класс .active-->
+                                    <button class="button btn-compare">
+                                      <svg class="icon icon-bar-chart">
+                                        <use xlink:href="#bar-chart"></use>
+                                      </svg>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div style="background-image:url(images/main-catalog-1.jpg)" class="image"></div>
+                                <div class="category">Самокат</div>
+                                <h4 class="title">Shulz 200</h4>
+                                <div class="price-block">
+                                  <div class="price">8 200 руб.</div>
+                                  <div class="old-price">9 800 руб.</div>
+                                </div>
+                              </div></a>
+                    </div>
+                    <div class="col-xs-6 swiper-slide">
+                      <!-- item--><a style="background-image:url(images/main-catalog-2.jpg)" class="main-catalog-item">
+                              <div class="inner">
+                                <div class="top-line">
+                                  <div class="badges-line">
+                                  </div>
+                                  <div class="icons-line">
+                                    <!-- если уже есть в сравнении, то добавить класс .active-->
+                                    <button class="button btn-compare">
+                                      <svg class="icon icon-bar-chart">
+                                        <use xlink:href="#bar-chart"></use>
+                                      </svg>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div style="background-image:url(images/main-catalog-2.jpg)" class="image"></div>
+                                <div class="category">Самокат</div>
+                                <h4 class="title">Tech Jogger 230</h4>
+                                <div class="price-block">
+                                  <div class="price">6 100 руб.</div>
+                                </div>
+                              </div></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- instagram-->
+      <div class="main-instagram">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h2 class="section-title"><a href="">
+                  <div class="badge badge-blue badge-xl"><span>Instagram</span></div>
+                  <div class="badge badge-blue badge-xl"><span>альбом</span></div>
+                  <div class="badge badge-blue badge-xl"><span>Dewolf</span></div></a></h2>
+            </div>
+            <div class="col-md-6 order-md-first">
+              <div class="main-instagram-slider">
+                <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                    <!-- slide-->
+                    <div class="swiper-slide"><a href="images/main-instagram-1.jpg" data-fancybox="#instagram-album" class="main-instagram-item"><img src="images/main-instagram-1.jpg"></a></div>
+                    <!-- slide-->
+                    <div class="swiper-slide"><a href="images/main-instagram-2.jpg" data-fancybox="#instagram-album" class="main-instagram-item"><img src="images/main-instagram-2.jpg"></a></div>
+                    <!-- slide-->
+                    <div class="swiper-slide"><a href="images/main-instagram-3.jpg" data-fancybox="#instagram-album" class="main-instagram-item"><img src="images/main-instagram-3.jpg"></a></div>
+                    <!-- slide-->
+                    <div class="swiper-slide"><a href="images/main-instagram-4.jpg" data-fancybox="#instagram-album" class="main-instagram-item"><img src="images/main-instagram-4.jpg"></a></div>
+                    <!-- slide-->
+                    <div class="swiper-slide"><a href="images/main-instagram-5.jpg" data-fancybox="#instagram-album" class="main-instagram-item"><img src="images/main-instagram-5.jpg"></a></div>
+                    <!-- slide-->
+                    <div class="swiper-slide"><a href="images/main-instagram-6.jpg" data-fancybox="#instagram-album" class="main-instagram-item"><img src="images/main-instagram-6.jpg"></a></div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- selection-->
+      <div id="main-selection" class="main-selection">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h2 class="section-title">Онлайн-помощник в&nbsp;подборе велосипеда</h2>
+            </div>
+            <div class="col-md-6">
+              <form method="POST" action="" novalidate="true" autocomplete="off" class="main-selection-form-slider">
+                <div class="swiper-container swiper-container-fade">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="title"><span>Выберите: для кого подбираем велосипед?</span></div>
+                      <div class="content">
+                        <div class="row">
+                          <div class="col-6 col-sm-5">
+                            <div class="main-selection-label-title">Взрослые</div>
+                            <div class="form-row">
+                              <ul class="form-variants-list">
+                                <li>
+                                  <input type="radio" id="main-selection-who-man" name="main-selection-who" value="man">
+                                  <label for="main-selection-who-man" class="main-selection-label custom-radio">Мужчины</label>
+                                </li>
+                                <li>
+                                  <input type="radio" id="main-selection-who-woman" name="main-selection-who" value="woman">
+                                  <label for="main-selection-who-woman" class="main-selection-label custom-radio">Женщины</label>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-6 col-sm-5">
+                            <div class="main-selection-label-title">Дети</div>
+                            <div class="form-row">
+                              <ul class="form-variants-list">
+                                <li>
+                                  <input type="radio" id="main-selection-who-boys" name="main-selection-who" value="boys">
+                                  <label for="main-selection-who-boys" class="main-selection-label custom-radio">Мальчики</label>
+                                </li>
+                                <li>
+                                  <input type="radio" id="main-selection-who-girls" name="main-selection-who" value="girls">
+                                  <label for="main-selection-who-girls" class="main-selection-label custom-radio">Девочки</label>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="title"><span>Вопрос 2</span></div>
+                      <div class="content">
+                        <div class="form-row">
+                          <ul class="form-variants-list">
+                            <li>
+                              <input type="radio" id="main-selection-2-1" name="main-selection-2" value="1">
+                              <label for="main-selection-2-1" class="main-selection-label custom-radio">Вариант 1</label>
+                            </li>
+                            <li>
+                              <input type="radio" id="main-selection-2-2" name="main-selection-2" value="2">
+                              <label for="main-selection-2-2" class="main-selection-label custom-radio">Вариант 2</label>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="title"><span>Вопрос 3</span></div>
+                      <div class="content">
+                        <div class="form-row">
+                          <ul class="form-variants-list">
+                            <li>
+                              <input type="radio" id="main-selection-3-1" name="main-selection-3" value="1">
+                              <label for="main-selection-3-1" class="main-selection-label custom-radio">Вариант 1</label>
+                            </li>
+                            <li>
+                              <input type="radio" id="main-selection-3-2" name="main-selection-2" value="2">
+                              <label for="main-selection-3-2" class="main-selection-label custom-radio">Вариант 2</label>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-nav">
+                  <button type="button" class="swiper-button swiper-button-prev">
+                    <svg class="icon icon-arrow-right">
+                      <use xlink:href="#arrow-right"></use>
+                    </svg><span>Назад</span>
+                  </button>
+                  <button type="button" class="swiper-button swiper-button-next"><span>Далее</span>
+                    <svg class="icon icon-arrow-right">
+                      <use xlink:href="#arrow-right"></use>
+                    </svg>
+                  </button>
+                  <button type="submit" class="btn btn-white btn-submit">Подобрать</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- sale-->
+      <div id="main-sale" class="main-sale">
+        <div class="container">
+          <h2 class="section-title">Лучшие цены</h2>
+          <div class="main-sale-slider">
+            <div class="swiper-container">
+              <div class="row swiper-wrapper">
+                <div class="col-xs-6 col-md-8 col-lg-6 swiper-slide">
+                  <!-- item--><a style="background-image:url(images/main-sale-1.jpg)" class="main-catalog-item full-image">
+                          <div class="inner">
+                            <div class="top-line">
+                              <div class="badges-line">
+                                <div class="badge badge-orange badge-xs"><span>-20%</span></div>
+                              </div>
+                              <div class="icons-line">
+                                <!-- если уже есть в сравнении, то добавить класс .active-->
+                                <button class="button btn-compare">
+                                  <svg class="icon icon-bar-chart">
+                                    <use xlink:href="#bar-chart"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                            <div style="background-image:url(images/main-sale-1.jpg)" class="image"></div>
+                            <div class="category">Велосипед + самокат</div>
+                            <h4 class="title">TRX 150</h4>
+                            <div class="price-block">
+                              <div class="price">28 600 руб.</div>
+                              <div class="old-price">28 900 руб.</div>
+                            </div>
+                          </div></a>
+                </div>
+                <div class="col-xs-6 col-md-4 col-lg-3 swiper-slide">
+                  <!-- item--><a style="background-image:url(images/main-sale-2.jpg)" class="main-catalog-item">
+                          <div class="inner">
+                            <div class="top-line">
+                              <div class="badges-line">
+                                <div class="badge badge-orange badge-xs"><span>-30%</span></div>
+                              </div>
+                              <div class="icons-line">
+                                <!-- если уже есть в сравнении, то добавить класс .active-->
+                                <button class="button btn-compare">
+                                  <svg class="icon icon-bar-chart">
+                                    <use xlink:href="#bar-chart"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                            <div style="background-image:url(images/main-sale-2.jpg)" class="image"></div>
+                            <div class="category">Велосипед</div>
+                            <h4 class="title">Asphalt 1</h4>
+                            <div class="price-block">
+                              <div class="price">41 300 руб.</div>
+                              <div class="old-price">56 800 руб.</div>
+                            </div>
+                          </div></a>
+                </div>
+                <div class="col-xs-6 col-md-4 col-lg-3 swiper-slide">
+                  <!-- item--><a style="background-image:url(images/main-sale-3.jpg)" class="main-catalog-item">
+                          <div class="inner">
+                            <div class="top-line">
+                              <div class="badges-line">
+                                <div class="badge badge-blue badge-xs"><span>Подарок</span></div>
+                              </div>
+                              <div class="icons-line">
+                                <!-- если уже есть в сравнении, то добавить класс .active-->
+                                <button class="button btn-compare">
+                                  <svg class="icon icon-bar-chart">
+                                    <use xlink:href="#bar-chart"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                            <div style="background-image:url(images/main-sale-3.jpg)" class="image"></div>
+                            <div class="category">Велосипед</div>
+                            <h4 class="title">COVAX 2</h4>
+                            <div class="price-block">
+                              <div class="price">34 900 руб.</div>
+                              <div class="old-price">37 500 руб.</div>
+                            </div>
+                          </div></a>
+                </div>
+                <div class="col-xs-6 col-md-4 col-lg-3 swiper-slide">
+                  <!-- item--><a style="background-image:url(images/main-sale-4.jpg)" class="main-catalog-item">
+                          <div class="inner">
+                            <div class="top-line">
+                              <div class="badges-line">
+                                <div class="badge badge-orange badge-xs"><span>-30%</span></div>
+                                <div class="badge badge-blue badge-xs"><span>Подарок</span></div>
+                              </div>
+                              <div class="icons-line">
+                                <!-- если уже есть в сравнении, то добавить класс .active-->
+                                <button class="button btn-compare">
+                                  <svg class="icon icon-bar-chart">
+                                    <use xlink:href="#bar-chart"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                            <div style="background-image:url(images/main-sale-4.jpg)" class="image"></div>
+                            <div class="category">Велосипед</div>
+                            <h4 class="title">PERFECT</h4>
+                            <div class="price-block">
+                              <div class="price">36 200 руб.</div>
+                              <div class="old-price">39 800 руб.</div>
+                            </div>
+                          </div></a>
+                </div>
+                <div class="col-xs-6 col-md-4 col-lg-3 swiper-slide">
+                  <!-- item--><a style="background-image:url(images/main-sale-5.jpg)" class="main-catalog-item">
+                          <div class="inner">
+                            <div class="top-line">
+                              <div class="badges-line">
+                              </div>
+                              <div class="icons-line">
+                                <!-- если уже есть в сравнении, то добавить класс .active-->
+                                <button class="button btn-compare">
+                                  <svg class="icon icon-bar-chart">
+                                    <use xlink:href="#bar-chart"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                            <div style="background-image:url(images/main-sale-5.jpg)" class="image"></div>
+                            <div class="category">Велосипед</div>
+                            <h4 class="title">FOREST</h4>
+                            <div class="price-block">
+                              <div class="price">43 300 руб.</div>
+                              <div class="old-price">46 500 руб.</div>
+                            </div>
+                          </div></a>
+                </div>
+                <div class="col-xs-6 col-md-4 col-lg-3 swiper-slide">
+                  <!-- item--><a style="background-image:url(images/main-sale-6.jpg)" class="main-catalog-item full-image">
+                          <div class="inner">
+                            <div class="top-line">
+                              <div class="badges-line">
+                                <div class="badge badge-orange badge-xs"><span>-30%</span></div>
+                              </div>
+                              <div class="icons-line">
+                                <!-- если уже есть в сравнении, то добавить класс .active-->
+                                <button class="button btn-compare">
+                                  <svg class="icon icon-bar-chart">
+                                    <use xlink:href="#bar-chart"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                            <div style="background-image:url(images/main-sale-6.jpg)" class="image"></div>
+                            <div class="category">Велосипед</div>
+                            <h4 class="title">MAESTRO 2</h4>
+                            <div class="price-block">
+                              <div class="price">32 300 руб.</div>
+                              <div class="old-price">34 700 руб.</div>
+                            </div>
+                          </div></a>
+                </div>
+                <div class="col-xs-6 col-md-4 col-lg-3 swiper-slide">
+                  <!-- item--><a style="background-image:url(images/main-sale-7.jpg)" class="main-catalog-item">
+                          <div class="inner">
+                            <div class="top-line">
+                              <div class="badges-line">
+                                <div class="badge badge-orange badge-xs"><span>-40%</span></div>
+                              </div>
+                              <div class="icons-line">
+                                <!-- если уже есть в сравнении, то добавить класс .active-->
+                                <button class="button btn-compare">
+                                  <svg class="icon icon-bar-chart">
+                                    <use xlink:href="#bar-chart"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                            <div style="background-image:url(images/main-sale-7.jpg)" class="image"></div>
+                            <div class="category">Велосипед</div>
+                            <h4 class="title">CLK 900</h4>
+                            <div class="price-block">
+                              <div class="price">21 500 руб.</div>
+                              <div class="old-price">26 900 руб.</div>
+                            </div>
+                          </div></a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+      <!-- contacts-->
+      <div id="main-contacts" class="main-contacts">
+        <div id="main-contacts-map" data-lat="" data-lng="" class="main-contacts-map"></div>
+        <div class="container">
+          <div class="row no-gutters">
+            <div class="col-md-6 offset-md-6">
+              <form method="POST" action="" novalidate="true" autocomplete="off" class="main-contacts-form">
+                <h2 class="section-title">Хотите прокатиться?<br><span class="text-blue">Приходите в магазин...</span></h2>
+                <div class="form-row">
+                  <select id="main-contacts-city" name="main-contacts-city">
+                    <option disabled selected value="">Выберите город</option>
+                    <option value="1">Москва</option>
+                    <option value="2">Санкт-Петербург</option>
+                  </select>
+                </div>
+                <div class="form-row">
+                  <ul class="form-variants-list">
+                    <li>
+                      <input type="checkbox" id="main-contacts-shop-type-company-store" name="main-contacts-shop-type" value="company-store">
+                      <label for="main-contacts-shop-type-company-store" class="main-contacts-label custom-checkbox">Фирменный магазин Dewolf</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="main-contacts-shop-type-dealer-shop" name="main-contacts-shop-type" value="dealer-shop">
+                      <label for="main-contacts-shop-type-dealer-shop" class="main-contacts-label custom-checkbox">Магазины дилеров</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="main-contacts-shop-type-service-center" name="main-contacts-shop-type" value="service-center">
+                      <label for="main-contacts-shop-type-service-center" class="main-contacts-label custom-checkbox">Сервисные центры</label>
+                    </li>
+                  </ul>
+                </div>
+                <button type="submit" class="btn btn-blue btn-submit">Искать</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- call-to-action-slider-->
+      <div class="main-call-to-action">
+        <div class="main-slider">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <!-- slide 1-->
+              <div style="background-image:url(images/main-call-to-action-bg.jpg)" class="swiper-slide">
+                <div class="container">
+                  <div class="title"><span class="badge badge-xl badge-blue"><span>Отправляйтесь</span></span><span class="badge badge-xl badge-blue"><span>в путешествие</span></span><span class="badge badge-xl badge-blue"><span>или покоряйте</span></span><span class="badge badge-xl badge-blue"><span>новые</span></span><span class="badge badge-xl badge-blue"><span>вершины</span></span><span class="badge badge-xl badge-blue"><span>вместе</span></span><span class="badge badge-xl badge-blue"><span>с Dewolf</span></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-nav">
+            <button type="button" class="swiper-button swiper-button-prev"></button>
+            <button type="button" class="swiper-button swiper-button-next"></button>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="row">
+            <div class="col-sm-4 col-md-3"><a href="/" class="footer-logo"><img src="images/logo-full-white.png" alt="Dewolf"></a></div>
+            <div class="col-md-6 order-sm-last order-md-auto">
+              <div class="row">
+                <div class="col-6 col-sm-4">
+                  <div class="footer-menu">
+                    <h4 class="title"><a href="">Велосипеды</a></h4>
+                    <ul>
+                      <li><a href="">Горные</a></li>
+                      <li><a href="">Городские</a></li>
+                      <li><a href="">Детские</a></li>
+                      <li><a href="">Мужские</a></li>
+                      <li><a href="">Женские</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4">
+                  <div class="footer-menu">
+                    <h4 class="title"><a href="">Самокаты</a></h4>
+                    <ul>
+                      <li><a href="">Взрослые</a></li>
+                      <li><a href="">Детские</a></li>
+                      <li><a href="">Трюковые</a></li>
+                      <li><a href="">Внедорожные</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4">
+                  <div class="footer-menu">
+                    <h4 class="title"><a href="">Dewolf</a></h4>
+                    <ul>
+                      <li><a href="">О бренде</a></li>
+                      <li><a href="">Технологии</a></li>
+                      <li><a href="">Дилерам</a></li>
+                      <li><a href="">Где купить</a></li>
+                      <li><a href="">Оплата и доставка</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="footer-contacts">
+                <div class="footer-contacts-block"><a href="tel:88001234567" class="footer-phone">8 800 123 45 67</a>
+                  <ul class="footer-soc">
+                    <li><a href="" target="_blank"><img src="images/icon-telegram.svg" alt="Telegram"></a></li>
+                    <li><a href="" target="_blank"><img src="images/icon-whatsapp.svg" alt="WhatsApp"></a></li>
+                  </ul>
+                </div><b>Центральный офис в Москве</b><br><a href="mailto:simle@mail.com">simle@mail.com</a><br><b>Офис Волгаград</b><br><a href="mailto:simle@mail.com">simle@mail.com</a><br><a href="tel:+74958808080" class="link-white">+7 (495) 880-80-80</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="row">
+            <div class="col-sm-6 col-md-3 order-md-last">
+              <ul class="footer-soc">
+                <li><a href="" target="_blank"><img src="images/icon-facebook.svg" alt="Facebook"></a></li>
+                <li><a href="" target="_blank"><img src="images/icon-instagram.svg" alt="Instagram"></a></li>
+                <li><a href="" target="_blank"><img src="images/icon-twitter.svg" alt="Twitter"></a></li>
+                <li><a href="" target="_blank"><img src="images/icon-vk.svg" alt="ВКонтакте"></a></li>
+                <li><a href="" target="_blank"><img src="images/icon-youtube.svg" alt="YouTube"></a></li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <div class="footer-copyright">
+                <p>Опубликованная на страницах данного сайта информация, продукция и её изображения являются объектом прав интеллектуальной собственности ООО «Dewolf». Изображение товара на сайте может отличаться от фактического изображения товара.</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3 order-md-first">
+              <ul class="footer-card-icons">
+                <li><a href="" target="_blank"><img src="images/icon-visa.png" alt="VISA"></a></li>
+                <li><a href="" target="_blank"><img src="images/icon-mastercard.png" alt="MasterCard"></a></li>
+                <li><a href="" target="_blank"><img src="images/icon-mir.png" alt="МИР"></a></li>
+                <li><a href="" target="_blank"><img src="images/icon-jcb.png" alt="JSB"></a></li>
+                <li><a href="" target="_blank"><img src="images/icon-union-pay.png" alt="UnionPay"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- MODALS-->
+    <div style="display:none;">
+      <div id="modal-city-select" class="modal">
+        <div class="modal__inner">
+          <h4>Выберите Ваш город</h4>
+          <ul>
+            <li><a href="">Москва</a></li>
+            <li><a href="">Санкт-Петербург</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="/js/jquery.js" type="text/javascript" defer></script>
+    <script src="/libs/swiper/swiper.min.js" type="text/javascript" defer></script>
+    <script src="/libs/fancybox/jquery.fancybox.min.js" type="text/javascript" defer></script>
+    <script src="/libs/perfect-scrollbar/perfect-scrollbar.min.js" type="text/javascript" defer></script>
+    <script src="/js/jquery-ui-slider.min.js" type="text/javascript" defer></script>
+    <script src="/libs/selectric/jquery.selectric.min.js" type="text/javascript" defer></script>
+    <script src="/libs/inputmask/jquery.inputmask.bundle.min.js" type="text/javascript" defer></script>
+    <script src="/js/main.js" type="text/javascript" defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=InitMainContactsMap" async defer></script>
+  </body>
+</html>

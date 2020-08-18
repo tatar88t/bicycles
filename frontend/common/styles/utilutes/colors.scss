@@ -1,0 +1,5 @@
+$theme-colors: () !default;
+$colors: map_merge($default-colors, $theme-colors);
+@function getColor($color-name) {
+	@return map_get($colors, $color-name);
+}

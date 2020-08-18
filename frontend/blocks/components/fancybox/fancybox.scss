@@ -1,0 +1,164 @@
+.fancybox {
+
+	&-bg {
+		background: getColor('black');
+	}
+	&-is-open &-bg {
+		opacity: 0.8;
+	}
+	&-toolbar {
+		opacity: 1!important;
+		visibility: visible!important;
+	}
+	&-navigation {
+		@include media-breakpoint-down(xs) {
+			display: none;
+		}
+	}
+
+	&-is-modal &-navigation{
+		display: none!important;
+	}
+	&-navigation &-button {
+		width: 60px;
+		height: 60px;
+		outline: none;
+		box-shadow: none;
+		border: 0 solid transparent;
+		border-radius: 0;
+		background: none;
+		cursor: pointer;
+		position: absolute;
+		display: block;
+		opacity: 1!important;
+		visibility: visible!important;
+
+		@include media-breakpoint-down(xs) {
+			width: 30px;
+			height: 30px;
+		}
+
+		.icon {
+			width: 40px;
+			height: 40px;
+			position: absolute;
+			top: 50%;
+			margin-top: -20px;
+			left: 50%;
+			right: auto;
+			margin-left: -20px;
+			fill: getColor('white');
+			transform: none;
+			transition: fill $transition-time;
+
+			@include media-breakpoint-down(xs) {
+				width: 20px;
+				height: 20px;
+				margin-top: -10px;
+				margin-right: -10px;
+			}
+		}
+
+		@include link-hover-style {
+			.icon {
+				fill: getColor('blue');
+			}
+		}
+
+		&-prev,
+		&-next {
+			left: auto;
+			right: auto;
+			top: 50%;
+			bottom: auto;
+			margin: -30px 0 0;
+		}
+
+		&-prev {
+			left: 30px;
+
+			.icon {
+				transform: rotate(180deg);
+			}
+		}
+
+		&-next {
+			right: 30px;
+		}
+
+		&-disabled {
+			opacity: 0.3;
+		}
+	}
+	&-button-close {
+		width: 60px;
+		height: 60px;
+		outline: none!important;
+		box-shadow: none;
+		border: 0 solid transparent;
+		border-radius: 0;
+		background: none;
+		cursor: pointer;
+		display: block;
+		opacity: 1!important;
+		visibility: visible!important;
+		top: 30px;
+		right: 30px;
+
+		@include media-breakpoint-down(xs) {
+			width: 30px;
+			height: 30px;
+			top: 10px;
+			right: 10px;
+		}
+
+		.icon {
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			top: 50%;
+			margin-top: -15px;
+			fill: getColor('white');
+			transition: fill $transition-time;
+			right: 50%;
+			margin-right: -15px;
+
+			@include media-breakpoint-down(xs) {
+				width: 20px;
+				height: 20px;
+				margin-top: -5px;
+				margin-right: -5px;
+			}
+		}
+
+		@include link-hover-style {
+			.icon {
+				fill: getColor('blue');
+			}
+		}
+	}
+	&-slide {
+		padding: 40px 80px;
+
+		@include media-breakpoint-down(xs) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		img {
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+
+	&-content {
+		overflow: visible;
+		border-radius: 0;
+
+		> img {
+			border-radius: 0;
+			border: 20px solid getColor('white');
+		}
+	}
+
+}

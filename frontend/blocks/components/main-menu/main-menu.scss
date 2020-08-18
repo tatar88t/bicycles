@@ -1,0 +1,116 @@
+.main-page .main-menu,
+.main-menu {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: getColor('black');
+	z-index: 200;
+	color: getColor('white');
+	display: none;
+	overflow: hidden;
+
+	&__content {
+		overflow: hidden;
+		padding-bottom: 50px;
+		max-height: 100%;
+
+		@include media-breakpoint-down(sm) {
+			padding-bottom: 30px;
+		}
+	}
+
+	//hr {
+	//	background: rgba(getColor('white'), 0.1);
+	//}
+
+	.header {
+		margin-bottom: 50px;
+
+		&-bottom {
+			position: static;
+		}
+
+		&-bottom .toggle-menu {
+			div,
+			div:before,
+			div:after {
+				background: getColor('white');
+			}
+
+			&:hover {
+				div,
+				div:before,
+				div:after {
+					background: getColor('blue');
+				}
+			}
+		}
+
+		&-bottom .header-inner {
+			border-top: 1px solid rgba(getColor('white'), 0.35);
+			border-bottom: 1px solid rgba(getColor('white'), 0.35);
+		}
+
+		&-bottom hr {
+			background: rgba(getColor('white'), 0.35);
+
+			@include media-breakpoint-down(xs) {
+				display: none;
+
+				&:nth-of-type(odd) {
+					display: block;
+				}
+			}
+		}
+
+		&-bottom a,
+		&-bottom button {
+			@include link-default-style {
+				color: getColor("white");
+			}
+			@include link-hover-style {
+				color: getColor("blue");
+			}
+		}
+
+		&-products-menu > li > a:after {
+			border-top-color: getColor("white");
+		}
+
+		&-info-block {
+			color: getColor("white");
+
+			@include media-breakpoint-down(xs) {
+				display: block;
+				flex: 1 1 auto;
+				text-align: left;
+				min-width: 0;
+				width: 100%;
+				max-width: 100%;
+				margin-left: 0;
+			}
+		}
+
+		&-info-item {
+			margin-left: 0;
+			margin-right: 15px;
+		}
+	}
+
+	.footer {
+		padding-top: 50px;
+		padding-bottom: 0;
+		border-top: 1px solid rgba(getColor('white'), 0.35);
+
+		&:after,
+		&:before {
+			display: none;
+		}
+	}
+}
+
+body.main-menu-active .main-menu__content {
+	overflow: auto;
+}

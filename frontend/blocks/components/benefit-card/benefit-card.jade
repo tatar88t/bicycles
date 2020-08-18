@@ -1,0 +1,36 @@
+mixin benefit-card-pattern(textBlock_1, textBlock_2)
+    .benefit-card
+        .container
+            .benefit-card-specify
+                .row
+                    .col-md-6.col-12.benefit-card-descr-wrapper
+                        .benefit-card-descr
+                            p.
+                                #{textBlock_1}
+                    .col-md-6.col-12.benefit-card-descr-wrapper
+                        .benefit-card-descr
+                            p.
+                                #{textBlock_2}
+                .row
+                mixin descr-pattern(features, blockname)
+                    ul.block-icons
+                        -for (let i = 1; i < 9; i++)
+                            .col-md-3.col-xs-6.col-12.block-icons-item-wrapper
+                                li.block-icons-item
+                                    img(src=`images/benefit-card-${blockname}-${i}.png`)
+                                    -let text = `${features[i - 1]}`
+                                    span #{text}
+
+                mixin descr-pattern_same-icon(features, blockname)
+                    ul.block-icons
+                        -for (let i = 1; i < 9; i++)
+                           .col-md-3.col-xs-6.col-12.block-icons-item-wrapper
+                               li.block-icons-item
+                                   img(src=`images/benefit-card-${blockname}-1.png`)
+                                   -let text = `${features[i - 1]}`
+                                   span #{text}
+
+
+
+
+

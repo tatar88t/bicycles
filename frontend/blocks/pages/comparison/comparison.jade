@@ -1,0 +1,94 @@
+extends ../../layouts/default
+
+include ../../../common/markup/utilites
+
+mixin comparison-product-item(cpriimg, cprialt, cpricategory, cpriproduct, cpriprice, cprioldprice)
+    .comparison-product-item
+        a(href="#").comparison-product-item-img
+            img(src="images/" + cpriimg, alt = cprialt)
+        .comparison-product__capture
+            .comparison-product__capture-descr
+                .category=cpricategory
+                a(href="#")
+                    h4.title=cpriproduct
+                .price-block
+                    .price=cpriprice
+                    .old-price=cprioldprice
+                button.btn.btn-xs.btn-basket в корзину
+            .comparison-product-remove-block
+                button.comparison-remove-btn(type="button")
+                    +svg-icon("trash")
+
+
+mixin comparison-property-item(cpiname, cpivalue1, cpivalue2, cpivalue3, cpivalue4, cpivalue5, cpivalue6)
+    .comparison-property-item
+        .compare-property-title
+            span=cpiname
+        ul.compare-property-values
+            li.compare-property-value=cpivalue1
+            li.compare-property-value=cpivalue2
+            li.compare-property-value=cpivalue3
+            li.compare-property-value=cpivalue4
+            li.compare-property-value=cpivalue5
+            li.compare-property-value=cpivalue6
+block TITLE
+    title Сравнение
+block CONTENT
+    .page-title.comparison-page-title
+        .container
+            ul.breadcrumb
+                li.back
+                    a(href="") Вернуться назад
+                li
+                    a(href="/")
+                        +svg-icon("home")
+                li
+                    a(href="") Каталог
+                li
+                    span Сравнение
+            .title-block
+                h1 Сравнение товаров
+                .comparison__nav
+                    a.badge.badge-sm.badge-blue.comparison__arrows_prev
+                        span.left
+                            +svg-icon("arrow-right")
+                    a.badge.badge-sm.badge-blue.comparison__arrows_next
+                        span
+                            +svg-icon("arrow-right")
+
+
+    .comparison
+        .container
+            .comparison-content
+                .comparison-products
+                    .comparison-products__inner
+                        +comparison-product-item("main-sale-4.jpg", "Велосипед", "Велосипед", "PERFECT", "36 200 руб.", "39 800 руб.")
+                        +comparison-product-item("main-sale-2.jpg", "Велосипед", "Велосипед", "Asphalt 1", "41 300 руб.", "56 800 руб.")
+                        +comparison-product-item("main-sale-3.jpg", "Велосипед", "Велосипед", "COVAX 2", "34 900 руб.", "37 500 руб.")
+                        +comparison-product-item("main-sale-2.jpg", "Велосипед", "Велосипед", "Asphalt 1", "41 300 руб.", "56 800 руб.")
+                        +comparison-product-item("main-sale-4.jpg", "Велосипед", "Велосипед", "PERFECT", "36 200 руб.", "39 800 руб.")
+                        +comparison-product-item("main-sale-4.jpg", "Велосипед", "Велосипед", "PERFECT", "36 200 руб.", "39 800 руб.")
+                .comparison-properties
+                    .comparison-properties__inner
+                        +comparison-property-item("Рама", "Property description, its benefits and features -1", "Property description, its benefits and features -2", "Property description, its benefits and features -3", "Property description benefits and features -4", "Property description benefits and features -5", "Описание товара преимущества и особенности")
+                        +comparison-property-item("Вилка", "Очень длинное описание свойства детали или механизама велосипеда, Очень длинное описание свойства детали или механизама велосипеда, Очень длинное описание свойства детали или механизама велосипеда, Очень длинное описание свойства детали или механизама велосипеда,", "Property description, its benefits and features -2", "Property description, its benefits and features -3", "Property description benefits and features -4", "Property description benefits and features -5", "Описание товара преимущества и особенности")
+                        +comparison-property-item("Тормоза", "Короткое описание", "Очень длинное описание свойства детали или механизама велосипеда, Очень длинное описание свойства детали или механизама велосипеда, Очень длинное описание свойства детали или механизама велосипеда,", "Property description, its benefits and features -3", "Property description benefits and features -4", "Property description benefits and features -5", "Описание товара преимущества и особенности")
+                        +comparison-property-item("Манетки", "Property description, its benefits and features -1", "PКороткое описание", "Property description, its benefits and features -3", "Property description benefits and features -4", "Property description benefits and features -5", "Описание товара преимущества и особенности")
+                        +comparison-property-item("Система", "Property description, its benefits and features -1", "Очень длинное описание свойства детали или механизама велосипеда, Очень длинное описание свойства детали или механизама велосипеда,Очень длинное описание свойства детали или механизама велосипеда, Очень длинное описание свойства детали или механизама велосипеда,", "Property description, its benefits and features -3")
+                        +comparison-property-item("Цвета", "Property description, its benefits and features -1", "Property description, its benefits and features -2", "Property description, its benefits and features -3", "Property description benefits and features -4", "Property description benefits and features -5", "Описание товара преимущества и особенности")
+                        +comparison-property-item("Размеры", "Property description, its benefits and features -1", "Property description, its benefits and features -2", "Property description, its benefits and features -3", "Property description benefits and features -4", "Property description benefits and features -5", "Описание товара преимущества и особенности")
+                        +comparison-property-item("Амортизатор", "Property description, its benefits and features -1", "Property description, its benefits and features -2", "Property description, its benefits and features -3", "Property description benefits and features -4", "Property description benefits and features -5", "Описание товара преимущества и особенности")
+                        +comparison-property-item("Руль", "Property description, its benefits and features -1", "Property description, its benefits and features -2", "Property description, its benefits and features -3", "Property description benefits and features -4", "Property description benefits and features -5", "Описание товара преимущества и особенности")
+                        +comparison-property-item("Вынос", "Property description, its benefits and features -1", "Property description, its benefits and features -2", "Property description, its benefits and features -3", "Property description benefits and features -4", "Property description benefits and features -5", "Описание товара преимущества и особенности")
+                        +comparison-property-item("ПОДСЕДЕЛЬНЫЙ ШТЫРЬ", "Property description, its benefits and features -1", "Property description, its benefits and features -2", "Property description, its benefits and features -3", "Property description benefits and features -4", "Property description benefits and features -5", "Описание товара преимущества и особенности")
+                        +comparison-property-item("Педали", "Property description, its benefits and features -1", "Property description, its benefits and features -2", "Property description, its benefits and features -3", "Property description benefits and features -4", "Property description benefits and features -5", "Описание товара преимущества и особенности")
+                        +comparison-property-item("Кассета", "Property description, its benefits and features -1", "Property description, its benefits and features -2", "Property description, its benefits and features -3", "Property description benefits and features -4", "Property description benefits and features -5", "Описание товара преимущества и особенности")
+                        +comparison-property-item("Цепь", "Property description, its benefits and features -1", "Property description, its benefits and features -2", "Property description, its benefits and features -3", "Property description benefits and features -4", "Property description benefits and features -5", "Описание товара преимущества и особенности")
+                        +comparison-property-item("Каретка", "Property description, its benefits and features -1", "Property description, its benefits and features -2", "Property description, its benefits and features -3", "Property description benefits and features -4", "Property description benefits and features -5", "Описание товара преимущества и особенности")
+                        +comparison-property-item("Обода", "Property description, its benefits and features -1", "Property description, its benefits and features -2", "Property description, its benefits and features -3", "Property description benefits and features -4", "Property description benefits and features -5", "Описание товара преимущества и особенности")
+                        +comparison-property-item("Втулки", "Property description, its benefits and features -1", "Property description, its benefits and features -2", "Property description, its benefits and features -3", "Property description benefits and features -4", "Property description benefits and features -5", "Описание товара преимущества и особенности")
+                        +comparison-property-item("Спицы", "Property description, its benefits and features -1", "Property description, its benefits and features -2", "Property description, its benefits and features -3", "Property description benefits and features -4", "Property description benefits and features -5", "Описание товара преимущества и особенности")
+                        +comparison-property-item("Покрышки", "Property description, its benefits and features -1", "Property description, its benefits and features -2", "Property description, its benefits and features -3", "Property description benefits and features -4", "Property description benefits and features -5", "Описание товара преимущества и особенности")
+                        +comparison-property-item("Дополнительно", "Property description, its benefits and features -1", "Property description, its benefits and features -2", "Property description, its benefits and features -3", "Property description benefits and features -4", "Property description benefits and features -5", "Описание товара преимущества и особенности")
+                        +comparison-property-item("Вес", "Очень длинное описание свойства детали или механизама велосипеда, Очень длинное описание свойства детали или механизама велосипеда,Очень длинное описание свойства детали или механизама велосипеда,Очень длинное описание свойства детали или механизама велосипеда,Очень длинное описание свойства детали или механизама велосипеда,Очень длинное описание свойства детали или механизама велосипеда", "Property description, its benefits and features -2", "Property description, its benefits and features -3", "Property description benefits and features -4", "Property description benefits and features -5", "Описание товара преимущества и особенности")
+

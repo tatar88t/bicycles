@@ -1,0 +1,107 @@
+extends ../../layouts/default
+
+include ../../../common/markup/utilites
+
+block TITLE
+	title Персональные данные
+
+block CONTENT
+	.page-title
+		.container
+			ul.breadcrumb
+				li.back
+					a(href="") Вернуться назад
+				li
+					a(href="/")
+						+svg-icon("home")
+				li
+					a(href="") Личный кабинет дилера
+				li
+					span Персональные данные
+			h1 Персональные данные
+	.dealer-personal-page
+		.container
+			.row
+				.col-md-4.col-lg-3
+					.lk-menu-mobile-controls
+						a.lk-menu-mobile-toggler(href="", data-toggle-activity="#lk-menu") Персональные данные
+					ul#lk-menu.lk-menu
+						li.active
+							a(href="") Персональные данные
+						li
+							a(href="") Мои заказы
+						li
+							a(href="") Скачать
+							ul
+								li
+									a(href="") Каталог
+								li
+									a(href="") Сертификаты
+								li
+									a(href="") Логотипы
+								li
+									a(href="") Банеры
+								li
+									a(href="") Фото продуктов
+								li
+									a(href="") Прайс-листы
+						li
+							a(href="") Заявки
+							ul
+								li
+									a(href="") Маркетинговая поддержка
+								li
+									a(href="") Сервисное обслуживание
+				.col-md-8.col-lg-9
+					form.site-form.personal-form(method="POST", action="", novalidate="true", autocomplete="off")
+						.row
+							.col-12.col-lg-auto
+								.dealers-label
+									img(src="images/dealer-label.png")
+							.col.order-lg-first
+								.row
+									.col-12
+										.form-row
+											.form-control.disabled <span class="text-gray">Название компании:</span> <span class="text-black">ООО «Велосипедный магазин»</span>
+									.col-12
+										.form-row
+											.form-control.disabled <span class="text-gray">Номер договора:</span> <span class="text-black">4378231-372</span>
+									.col-sm-6
+										.form-row
+											input.form-control(type="text", id="dealer-name", name="dealer-name", placeholder="Имя", value="")
+									.col-sm-6
+										.form-row
+											input.form-control(type="text", id="dealer-family", name="dealer-family", placeholder="Фамилия", value="")
+									.col-sm-6
+										.form-row
+											input.form-control(type="text", id="dealer-email-1", name="dealer-email-1", placeholder="E-mail 1", value="")
+									.col-sm-6
+										.form-row
+											input.form-control(type="text", id="dealer-email-2", name="dealer-email-2", placeholder="E-mail 2", value="")
+									.col-sm-6
+										.form-row
+											input.form-control(type="text", id="dealer-phone", name="dealer-phone", placeholder="Телефон", value="")
+									.col-sm-6
+										.form-row
+											input.form-control(type="text", id="dealer-site", name="dealer-site", placeholder="Сайт", value="")
+									.col-12
+										.form-row
+											input.form-control(type="text", id="dealer-city", name="dealer-city", placeholder="Город", value="")
+								.buttons-line
+									button.btn.btn-xs(type="submit") Сохранить
+									button(type="reset") Сбросить
+					.dealer-discount
+						.row.no-gutters
+							.col-sm-4
+								.white-block
+									div Ваша текущая скидка:
+									div.num 7%
+							.col-sm-4
+								.blue-block
+									div Осталось закупить на&nbsp;2&nbsp;000&nbsp;000&nbsp;рублей до&nbsp;15.09.2020
+							.col-sm-4
+								.white-block
+									div Ваша будущая скидка::
+									div.num 10%
+
+

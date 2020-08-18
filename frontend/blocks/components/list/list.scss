@@ -1,0 +1,75 @@
+.list-unset {
+	@include list-unset;
+
+	li {
+		padding-left: 0;
+
+		&:before {
+			display: none;
+		}
+	}
+}
+
+ul, ol {
+	display: block;
+	list-style: none;
+	padding: 0;
+	margin: 1em 0;
+
+	li {
+		display: block;
+		margin: 0 0 1em;
+		position: relative;
+		padding-left: 20px;
+	}
+}
+
+ul {
+	li {
+		&:before {
+			content: '';
+			width: 6px;
+			height: 6px;
+			background: getColor('blue');
+			position: absolute;
+			left: 0;
+			top: calc(1em * 2 / 2 - 3px);
+			transform: $standard-skew;
+			transform-origin: left bottom;
+		}
+	}
+}
+
+ol {
+	counter-reset: mainListCounter;
+
+	li {
+		counter-increment: mainListCounter;
+
+		&:before {
+			content: counter(mainListCounter) ".";
+			position: absolute;
+			font-size: inherit;
+			line-height: inherit;
+			color: getColor('blue');
+			left: 0;
+			top: 0;
+			font-weight: 600;
+			font-style: italic;
+			font-family: inherit;
+		}
+	}
+
+	ol {
+		counter-reset: subListCounter;
+
+		li {
+			padding-left: 30px;
+			counter-increment: subListCounter;
+
+			&:before {
+				content: counter(mainListCounter) "." counter(subListCounter) ".";
+			}
+		}
+	}
+}

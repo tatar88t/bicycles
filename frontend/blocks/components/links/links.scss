@@ -1,0 +1,37 @@
+a {
+	outline: none!important;
+	transition: $transition-time;
+	cursor: pointer;
+
+	&[disabled],
+	&:disabled {
+		cursor: default;
+	}
+	
+	@include link-default-style() {
+		color: getColor('blue');
+		text-decoration: none;
+	}
+	@include link-hover-style() {
+		color: getColor('blue-dark');
+		text-decoration: none;
+	}
+}
+
+.link-white {
+	@include link-default-style() {
+		color: getColor('white');
+	}
+	@include link-hover-style() {
+		color: getColor('blue');
+	}
+}
+
+.link-orange {
+	@include link-default-style() {
+		color: getColor('orange');
+	}
+	@include link-hover-style() {
+		color: getColor('orange-dark');
+	}
+}

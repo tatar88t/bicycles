@@ -1,0 +1,35 @@
+//@mixin button-variant(	$color, $background, $border,
+//						$hover-color: $color, $hover-background: $background, $hover-border: $border,
+//						$active-color: $hover-color, $active-background: $hover-background, $active-border: $hover-border,
+//						$disabled-color: getColor('black'), $disabled-background: getColor('gray'), $disabled-border: $disabled-background) {
+//
+//	&:not(:disabled):not(.disabled) {
+//
+//		@include link-default-style {
+//			color: $color;
+//			background-color: $background;
+//			border-color: $border;
+//		}
+//
+//		@include link-hover-style {
+//			color: $hover-color;
+//			background-color: $hover-background;
+//			border-color: $hover-border;
+//		}
+//
+//		@include link-active-style {
+//			color: $active-color;
+//			background-color: $active-background;
+//			border-color: $active-border;
+//		}
+//
+//	}
+//
+//	&.disabled,
+//	&:disabled {
+//		color: $disabled-color;
+//		background-color: $disabled-background;
+//		border-color: $disabled-border;
+//		pointer-events: none;
+//	}
+//}

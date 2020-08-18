@@ -1,0 +1,14 @@
+@mixin make-container($gutter: $grid-gutter-width) {
+	width: 100%;
+	padding-right: $gutter / 2;
+	padding-left: $gutter / 2;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.container {
+	@include make-container();
+}
+.container-fluid {
+	@include make-container();
+}

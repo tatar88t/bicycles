@@ -1,0 +1,360 @@
+.pagination {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 0;
+	width: 100%;
+	padding: 0 52px;
+	position: relative;
+
+	@include media-breakpoint-down(xs) {
+		padding-left: 0;
+		padding-right: 0;
+		margin-left: -5px;
+		margin-right: -5px;
+	}
+
+	> li {
+		flex: 0 0 auto;
+		padding: 0;
+		margin: 10px;
+
+		@include media-breakpoint-down(xs) {
+			margin: 5px;
+		}
+
+		&:before {
+			display: none;
+		}
+
+		> a,
+		> span {
+			display: block;
+			line-height: 42px;
+			font-weight: 700;
+			font-size: 16px;
+			padding: 0 5px;
+			font-family: $rubik;
+			font-style: italic;
+			text-align: center;
+			white-space: nowrap;
+			min-width: 42px;
+			position: relative;
+			z-index: 1;
+
+			@include media-breakpoint-down(xs) {
+				//font-size: px2rem(14);
+			}
+
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				transform: $standard-skew;
+				transform-origin: center;
+				transition: background-color $transition-time;
+				z-index: -1;
+			}
+		}
+
+		> a {
+			@include link-default-style {
+				color: getColor('blue');
+
+				&:before {
+					background: getColor("white");
+				}
+			}
+			@include link-hover-style {
+				color: getColor('white');
+
+				&:before {
+					background: getColor("blue");
+				}
+			}
+		}
+
+		> span {
+			color: getColor('blue');
+
+			&:before {
+				background: getColor("white");
+			}
+		}
+
+		&.active {
+			> a {
+				@include link-default-style {
+					color: getColor('white');
+
+					&:before {
+						background: getColor("blue");
+					}
+				}
+				@include link-hover-style {
+					color: getColor('white');
+
+					&:before {
+						background: getColor("blue-dark");
+					}
+				}
+			}
+
+			> span {
+				color: getColor('white');
+
+				&:before {
+					background: getColor("blue");
+				}
+			}
+		}
+
+		&.prev,
+		&.next {
+			position: absolute;
+			width: 42px;
+			height: 42px;
+			top: (42px - 26px)/2;
+			margin: 0;
+
+			@include media-breakpoint-down(xs) {
+				display: none;
+			}
+
+			a,
+			span,
+			.icon {
+				display: block;
+			}
+
+			a,
+			span {
+				position: static;
+
+				&:before {
+					display: none;
+				}
+			}
+
+			.icon {
+				width: 26px;
+				height: 26px;
+				position: absolute;
+				top: 50%;
+				margin-top: -13px;
+			}
+
+			a {
+				.icon {
+					transition: fill $transition-time;
+				}
+
+				@include link-default-style {
+					.icon {
+						fill: getColor('blue');
+					}
+				}
+				@include link-hover-style {
+					.icon {
+						fill: getColor('blue-dark');
+					}
+				}
+			}
+
+			span {
+				.icon {
+					fill: getColor('gray-light');
+				}
+			}
+		}
+
+		&.prev {
+			left: 0;
+
+			.icon {
+				left: 0;
+				transform: rotate(180deg);
+			}
+		}
+		&.next {
+			right: 0;
+
+			.icon {
+				right: 0;
+			}
+		}
+	}
+
+	&.pagination-items-nav {
+		padding-right: 0;
+		padding-left: 0;
+		justify-content: space-between;
+		margin-right: 0;
+		margin-left: 0;
+		flex-wrap: nowrap;
+		align-items: center;
+		height: 70px;
+
+		@include media-breakpoint-between(sm,md) {
+			height: 50px;
+		}
+		@include media-breakpoint-down(xs) {
+			height: 40px;
+		}
+
+		> li {
+			height: auto;
+			margin: 0 10px;
+			flex: 0 1 auto;
+			min-width: 0;
+
+			> a,
+			> span {
+				font-weight: 900;
+				font-size: 18px;
+				line-height: (24/18);
+				white-space: normal;
+
+				@include media-breakpoint-down(md) {
+					font-size: 16px;
+				}
+
+				&:before {
+					display: none;
+				}
+			}
+
+			> a {
+				@include link-default-style {
+					color: getColor("black");
+				}
+				@include link-hover-style {
+					color: getColor("blue");
+				}
+			}
+
+			&.prev,
+			&.next {
+				position: static;
+				width: auto;
+				height: auto;
+
+				@include media-breakpoint-down(xs) {
+					display: block;
+				}
+
+				.icon {
+					fill: getColor("white")!important;
+				}
+
+				> a,
+				> span {
+					position: relative;
+
+					&:before {
+						display: block;
+						width: 70px;
+						height: 70px;
+						top: 50%;
+						margin-top: -35px;
+						background: getColor("blue");
+
+						@include media-breakpoint-between(sm,md) {
+							width: 50px;
+							height: 50px;
+							margin-top: -25px;
+						}
+						@include media-breakpoint-down(xs) {
+							width: 40px;
+							height: 40px;
+							margin-top: -20px;
+						}
+					}
+
+					span {
+						@include media-breakpoint-down(xs) {
+							display: none;
+						}
+					}
+				}
+			}
+
+			&.prev {
+				margin-left: 0;
+
+				> a,
+				> span {
+					padding-left: 110px;
+					text-align: left;
+
+					@include media-breakpoint-only(lg) {
+						padding-left: 90px;
+					}
+					@include media-breakpoint-between(sm,md) {
+						padding-left: 70px;
+					}
+					@include media-breakpoint-down(xs) {
+						padding-left: 40px;
+					}
+
+					&:before {
+						left: 0;
+					}
+
+					.icon {
+						left: 22px;
+
+						@include media-breakpoint-between(sm,md) {
+							left: 12px;
+						}
+						@include media-breakpoint-down(xs) {
+							left: 7px;
+						}
+					}
+				}
+			}
+
+			&.next {
+				margin-right: 0;
+
+				> a,
+				> span {
+					padding-right: 110px;
+					text-align: right;
+
+					@include media-breakpoint-only(lg) {
+						padding-right: 90px;
+					}
+					@include media-breakpoint-between(sm,md) {
+						padding-right: 70px;
+					}
+					@include media-breakpoint-down(xs) {
+						padding-right: 40px;
+					}
+
+					&:before {
+						right: 0;
+						left: auto;
+					}
+
+					.icon {
+						right: 22px;
+
+						@include media-breakpoint-between(sm,md) {
+							right: 12px;
+						}
+						@include media-breakpoint-down(xs) {
+							right: 7px;
+						}
+					}
+				}
+			}
+
+		}
+	}
+}

@@ -1,0 +1,7 @@
+$container-max-widths: (
+		"xs": 540px,
+		"sm": 750px,
+		"md": 960px,
+		"lg": 1180px,
+		"xl": 1352px + $grid-gutter-width
+);

@@ -1,0 +1,98 @@
+form#catalog-filter.catalog-filter(method="POST", action="", novalidate="true", autocomplete="off")
+    .inner
+        .catalog-filter-item.open
+            .head
+                button.toggler(type="button") Цена
+            .body.open
+                .range-block
+                    .range-block-inputs
+                        .input-wrapper
+                            span.placeholder от:
+                            input(type="text", name="price-min", placeholder="1 000", value="10000", data-min-field)
+                        .input-wrapper
+                            span.placeholder до:
+                            input(type="text", name="price-max", placeholder="100 000", value="90000", data-max-field)
+                    .range-block-slider
+                        .ui-range-slider(data-min-value="1000", data-max-value="100000")
+        .catalog-filter-item
+            .head
+                button.toggler(type="button") Где кататься
+            .body
+                ul.variants-list
+                    li
+                        input(type="checkbox", id="catalog-filter-input-name-1-value-1" name="catalog-filter-input-name-1", value="value-1")
+                        label.catalog-filter-label.custom-checkbox(for="catalog-filter-input-name-1-value-1") Город
+                    li
+                        input(type="checkbox", id="catalog-filter-input-name-1-value-2" name="catalog-filter-input-name-1", value="value-2")
+                        label.catalog-filter-label.custom-checkbox(for="catalog-filter-input-name-1-value-2") Горы
+        .catalog-filter-item
+            .head
+                button.toggler(type="button") Материал рамы
+            .body
+                ul.variants-list
+                    li
+                        input(type="radio", id="catalog-filter-input-name-2-value-1" name="catalog-filter-input-name-2", value="value-1")
+                        label.catalog-filter-label.custom-radio(for="catalog-filter-input-name-2-value-1") Аллюминий
+                    li
+                        input(type="radio", id="catalog-filter-input-name-2-value-2" name="catalog-filter-input-name-2", value="value-2")
+                        label.catalog-filter-label.custom-radio(for="catalog-filter-input-name-2-value-2") Карбон
+        .catalog-filter-item
+            .head
+                button.toggler(type="button") Размер колес, дюймы
+            .body
+                ul.variants-list
+                    li
+                        input(type="checkbox", id="catalog-filter-input-name-3-value-1" name="catalog-filter-input-name-3", value="value-1")
+                        label.catalog-filter-label.custom-checkbox(for="catalog-filter-input-name-3-value-1") Вариант 1
+                    li
+                        input(type="checkbox", id="catalog-filter-input-name-3-value-2" name="catalog-filter-input-name-3", value="value-2")
+                        label.catalog-filter-label.custom-checkbox(for="catalog-filter-input-name-3-value-2") Вариант 2
+                    li
+                        input(type="checkbox", id="catalog-filter-input-name-3-value-3" name="catalog-filter-input-name-3", value="value-3")
+                        label.catalog-filter-label.custom-checkbox(for="catalog-filter-input-name-3-value-3") Вариант 3
+                    li
+                        input(type="checkbox", id="catalog-filter-input-name-3-value-4" name="catalog-filter-input-name-3", value="value-4")
+                        label.catalog-filter-label.custom-checkbox(for="catalog-filter-input-name-3-value-4") Вариант 4
+        .catalog-filter-item
+            .head
+                button.toggler(type="button") Тормоза
+            .body
+                ul.variants-list
+                    li
+                        input(type="checkbox", id="catalog-filter-input-name-4-value-1" name="catalog-filter-input-name-4", value="value-1")
+                        label.catalog-filter-label.custom-checkbox(for="catalog-filter-input-name-4-value-1") Гидравлические дисковые
+                    li
+                        input(type="checkbox", id="catalog-filter-input-name-4-value-2" name="catalog-filter-input-name-4", value="value-2")
+                        label.catalog-filter-label.custom-checkbox(for="catalog-filter-input-name-4-value-2") Дисковые
+                    li
+                        input(type="checkbox", id="catalog-filter-input-name-4-value-3" name="catalog-filter-input-name-4", value="value-3")
+                        label.catalog-filter-label.custom-checkbox(for="catalog-filter-input-name-4-value-3") Механические дисковые
+                    li
+                        input(type="checkbox", id="catalog-filter-input-name-4-value-4" name="catalog-filter-input-name-4", value="value-4")
+                        label.catalog-filter-label.custom-checkbox(for="catalog-filter-input-name-4-value-4") Нет
+                    li
+                        input(type="checkbox", id="catalog-filter-input-name-4-value-5" name="catalog-filter-input-name-4", value="value-5")
+                        label.catalog-filter-label.custom-checkbox(for="catalog-filter-input-name-4-value-5") Ножной
+                    li
+                        input(type="checkbox", id="catalog-filter-input-name-4-value-6" name="catalog-filter-input-name-4", value="value-6")
+                        label.catalog-filter-label.custom-checkbox(for="catalog-filter-input-name-4-value-6") Ободной
+        .catalog-filter-item
+            .head
+                button.toggler(type="button") Подвеска
+            .body
+                ul.variants-list
+                    li
+                        input(type="checkbox", id="catalog-filter-input-name-5-value-1" name="catalog-filter-input-name-5", value="value-1")
+                        label.catalog-filter-label.custom-checkbox(for="catalog-filter-input-name-5-value-1") Двухподвес
+                    li
+                        input(type="checkbox", id="catalog-filter-input-name-5-value-2" name="catalog-filter-input-name-5", value="value-2")
+                        label.catalog-filter-label.custom-checkbox(for="catalog-filter-input-name-5-value-2") Складной хардтейл
+                    li
+                        input(type="checkbox", id="catalog-filter-input-name-5-value-3" name="catalog-filter-input-name-5", value="value-3")
+                        label.catalog-filter-label.custom-checkbox(for="catalog-filter-input-name-5-value-3") Хардтейл
+    .buttons-block
+        .buttons-line
+            button.btn.btn-xs.btn-submit(type="submit") Применить
+            button.btn-reset(type="reset") Очистить
+        button.btn-close(type="button", data-toggle-activity="#catalog-filter")
+            +svg-icon("close")

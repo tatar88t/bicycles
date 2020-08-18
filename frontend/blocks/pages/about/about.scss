@@ -1,0 +1,346 @@
+.about{
+  &-page-content {
+    margin-top: -30px;
+  }
+  &-slider {
+    @include media-breakpoint-only(xl) {
+      //height: 910px;
+    }
+    @include media-breakpoint-only(lg) {
+          //height: 82vh;
+        }
+    & .swiper-wrapper {
+
+    }
+    & .title {
+      @include media-breakpoint-down(sm) {
+        //margin-left: -25px;
+      }
+      @include media-breakpoint-down(xs) {
+        margin-left: 0;
+      }
+    }
+    & .badge {
+      @include media-breakpoint-up(md) {
+        margin-left: 38px;
+      }
+
+      & span {
+        @include media-breakpoint-down(lg) {
+          font-size: 54px;
+        }
+        @include media-breakpoint-down(md) {
+          font-size: 48px;
+        }
+        @include media-breakpoint-down(sm) {
+          font-size: 36px;
+        }
+        @include media-breakpoint-down(xs) {
+          font-size: 21px;
+        }
+      }
+    }
+    & .swiper-pagination {
+      @include media-breakpoint-down(md) {
+        bottom: 54px;
+      }
+      @include media-breakpoint-down(sm) {
+        bottom: 42px;
+      }
+      @include media-breakpoint-down(xs) {
+        bottom: 34px;
+      }
+    }
+  }
+  &-history {
+    padding: 115px 0 96px 0;
+    @include media-breakpoint-down(lg) {
+      padding: 75px 0 42px 0;
+    }
+    @include media-breakpoint-down(sm) {
+      padding: 55px 0 42px 0;
+    }
+    @include media-breakpoint-down(xs) {
+      padding: 10px 0 32px 0;
+    }
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      @include media-breakpoint-down(xs) {
+        display: block;
+      }
+    }
+    &-foundation, &-goal {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: left;
+      flex-basis: 50%;
+      margin: 0;
+      padding: 0;
+      &-img {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        min-height: 434px;
+      }
+    }
+    &-foundation {
+
+      padding-right: 20px;
+      @include media-breakpoint-down(xs) {
+        padding-right: 0;
+      }
+      & p {
+        width: 88%;
+        font-style: italic;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 1.636;
+        @include media-breakpoint-down(sm) {
+          font-size: 18px;
+        }
+      }
+    }
+    &-goal {
+      padding-left: 20px;
+      @include media-breakpoint-down(xs) {
+        padding-left: 0;
+        margin-top: 18px;
+      }
+      p {
+        font-weight: 600;
+        line-height: 1.6;
+        font-size: 15px;
+        & span {
+          display: block;
+          margin-top: 20px;
+          font-weight: 900;
+        }
+      }
+    }
+  }
+  &-destination {
+    padding: 99px 0 115px 0;
+    display: flex;
+    justify-content: space-between;
+    @include media-breakpoint-down(xs){
+      flex-wrap: wrap;
+      padding: 42px 0 34px 0;
+    }
+    &-mission, &-view {
+      flex-basis: 50%;
+      @include media-breakpoint-down(xs){
+        flex-basis: 100%;
+      }
+      & p {
+        font-weight: 600;
+        line-height: 1.667;
+        font-size: 18px;
+        @include media-breakpoint-down(xs){
+          font-size: 16px;
+        }
+      }
+    }
+    &-mission {
+      margin-right: 41px;
+    }
+    &-view {
+
+    }
+    &-block {
+      background: getColor('gray-lightest');
+      &-cover {
+        height: 962px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 498px 0 0 calc((284 / 1920)*100%);
+        @include media-breakpoint-down(lg) {
+          padding: 258px 0 0 110px;
+          height: 628px;
+        }
+        @include media-breakpoint-down(md) {
+          padding: 288px 0 0 110px;
+        }
+        @include media-breakpoint-down(sm) {
+          padding: 318px 0 0 90px;
+
+        }
+        @include media-breakpoint-down(xs) {
+          height: 480px;
+          background-size: cover;
+          //background-size: contain;
+          padding: 280px 0 0 22px;
+        }
+      }
+      &-title {
+        & h2 {
+          margin: 2px 0 0 0;
+          & span {
+            @include media-breakpoint-down(xs) {
+              font-size: 22px;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-section-title {
+    margin: 90px 0 65px 0;
+    @include media-breakpoint-down(xs){
+      font-size: 22px;
+      margin: 32px 0 24px 0;
+    }
+  }
+  &-benefits {
+    &_shaded {
+      background: getColor('gray-lightest');
+    }
+    &-toggler {
+      color: inherit;
+      font-family: $rubik;
+      font-style: italic;
+      font-weight: 900;
+      font-size: 36px;
+      line-height: (50/36);
+      margin: 0;
+      padding: 62px 0 55px 0;
+      text-align: left;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      cursor: pointer;
+      @include media-breakpoint-down(xs) {
+        font-size: 20px;
+        padding: 32px 0 25px 0;
+      }
+      &:after {
+        content: "";
+        border: 7.5px solid transparent;
+        border-top: 9px solid #14a6e0;
+        border-bottom: 0;
+        position: static;
+        display: inline-block;
+        vertical-align: top;
+        right: 0;
+        height: 9px;
+        width: 15px;
+        -webkit-transition: -webkit-transform 0.3s;
+        transition: -webkit-transform 0.3s;
+        -o-transition: transform 0.3s;
+        transition: transform 0.3s;
+        transition: transform 0.3s, -webkit-transform 0.3s;
+        margin-top: 21px;
+        margin-left: 17px;
+        @include media-breakpoint-down(xs) {
+          margin-top: 10px;
+          margin-left: 17px;
+        }
+      }
+      &_active {
+        &:after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  &-links {
+    margin-top: 99px;
+    @include media-breakpoint-down(xs) {
+      margin-top: 38px;
+    }
+    & h4 {
+      line-height: 1.0;
+    }
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      @include media-breakpoint-down(xs) {
+        flex-wrap: wrap;
+      }
+
+    }
+    &-block {
+      flex-basis: 50%;
+
+      &:first-child {
+        margin-right: 41px;
+        @include media-breakpoint-down(xs){
+          margin-right: 0;
+          margin-bottom: 41px;
+        }
+      }
+      @include media-breakpoint-down(xs) {
+        flex-basis: 100%;
+      }
+
+    }
+    &-link {
+      display: block;
+      height: 451px;
+      background-size: cover ;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 245px 0 0 58px;
+      @include media-breakpoint-down(xs){
+        height: 342px;
+        padding: 165px 0 0 34px;
+      }
+      & button {
+        display: block;
+      }
+    }
+    &-title {
+      font-size: 36px;
+      color: getColor("white");
+      margin-bottom: 40px;
+      @include media-breakpoint-down(xs){
+        font-size: 26px;
+      }
+    }
+  }
+}
+.benefit-card-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.9s all;
+  &_active {
+    max-height: 495px;
+    @include media-breakpoint-down(sm) {
+      max-height: 995px;
+    }
+    @include media-breakpoint-down(xs) {
+      max-height: 1695px;
+    }
+  }
+}
+@media(max-width: 380px) {
+  .about-history-foundation-img, .about-history-goal-img {
+    min-height: 320px;
+  }
+}
+@media(max-width: 1920px) {
+  .about-slider {
+    height: 940px;
+  }
+}
+@media(max-width: 1680px) {
+  .about-slider {
+    height: 910px;
+  }
+}
+@media(max-width: 1440px) {
+  .about-slider {
+    height: 760px;
+  }
+}
+@media(max-width: 1366px) {
+  .about-slider {
+    height: 628px;
+  }
+}
+@media(max-width: 1200px) {
+  .about-slider {
+    height: auto;
+  }
+}

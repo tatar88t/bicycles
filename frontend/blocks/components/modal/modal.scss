@@ -1,0 +1,18 @@
+.modal {
+	width: 100%;
+	max-width: 450px;
+	margin: 0 auto;
+	padding: 0;
+	background: getColor("white");
+	position: relative;
+	border-radius: 0;
+	overflow: hidden;
+
+	&__inner {
+		padding: 60px 60px 70px;
+
+		@include media-breakpoint-down(xs) {
+			padding: 35px;
+		}
+	}
+}

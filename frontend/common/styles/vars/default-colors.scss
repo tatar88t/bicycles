@@ -1,0 +1,18 @@
+$default-colors: (
+		"black": #000,
+		"white": #fff,
+
+		"blue": #14a6e0,
+		"blue-dark": darken(#14a6e0, 10%),
+		
+		"orange": #f04f0a,
+		"orange-dark": #e44b09,
+
+		"red": #e40909,
+
+		"green": #27c617,
+
+		"gray":  #999999,
+		"gray-light": #c9c9c9,
+		"gray-lightest": #f2f2f2
+);

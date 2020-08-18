@@ -1,0 +1,198 @@
+#main-menu.main-menu
+    .main-menu__content
+        .header
+            .header-top
+                .container-fluid
+                    .header-inner
+                        .toggle-menu-wrapper
+                            button.toggle-menu.active
+                                div
+                        ul.header-menu
+                            li
+                                a(href="") О бренде
+                            li
+                                a(href="") Технологии
+                            li
+                                a(href="") Оплата и доставка
+                            li
+                                a(href="") Дилерам
+                            li
+                                a(href="") Покупателю
+                        ul.header-info-menu
+                            li
+                                button.header-city(type="button", data-modal="#modal-city-select") Москва
+                            li
+                                a.header-location(href="#main-contacts", data-scroll-to="#main-contacts")
+                                    +svg-icon("location")
+                                    span Адреса магазинов
+                            li
+                                a.header-sale(href="#main-sale", data-scroll-to="#main-sale")
+                                    +svg-icon("zap")
+                                    span Акции
+                        .header-search
+                            button.header-search-form-toggler(type="button")
+                                +svg-icon("loupe")
+                            form.header-search-form(method="", action="", novalidate="true", autocomplete="off")
+                                .container-fluid
+                                    input.header-search-form-input(type="text", name="", value="", placeholder="Поиск")
+                                    button.header-search-form-toggler.button-close(type="button")
+                                        +svg-icon("close")
+                        ul.header-user-menu
+                            li
+                                button(type="button", title="Вход в личный кабинет", data-toggle-activity="#header-auth-menu")
+                                    +svg-icon("key")
+                                #header-auth-menu.dropdown
+                                    ul.dropdown-items
+                                        li
+                                            a(href="") Вход
+                                        li
+                                            a(href="") Выход
+                            li
+                                a(href="", title="Сравнение товаров")
+                                    +svg-icon("bar-chart")
+                            li
+                                a(href="", title="Корзина")
+                                    +svg-icon("cart")
+                                    span.badge.badge-xs.badge-blue
+                                        span 12
+            .header-bottom
+                .container-fluid
+                    .header-inner
+                        a.header-logo(href="/")
+                            img(src="images/logo-full-white.png")
+                        .toggle-menu-wrapper
+                            button.toggle-menu.active
+                                div
+                        button.header-city(type="button", data-modal="#modal-city-select") Москва
+                        hr
+                        ul.header-products-menu
+                            li
+                                a(href="#", data-toggle-activity="#main-products-menu-1") Велосипеды
+                                #main-products-menu-1.dropdown
+                                    ul.dropdown-items
+                                        li
+                                            a(href="") Категория 1
+                                        li
+                                            a(href="") Категория 2
+                            li
+                                a(href="#", data-toggle-activity="#main-products-menu-2") Самокаты
+                                #main-products-menu-2.dropdown
+                                    ul.dropdown-items
+                                        li
+                                            a(href="") Категория 1
+                                        li
+                                            a(href="") Категория 2
+                                        li
+                                            a(href="") Категория 3
+                                        li
+                                            a(href="") Категория 4
+                        hr
+                        a.header-select-product(href="#main-selection", data-scroll-to="#main-selection") Подобрать велосипед
+                        hr
+                        .header-info-block
+                            span.header-info-item Ежедневно с  9:00 до 21:00
+                            a.header-info-item.header-phone(href="tel:88001234567") 8 800 123 45 67
+        .container
+            .row
+                .col-6.col-sm-4.col-md-3
+                    .footer-menu
+                        h4.title
+                            a(href="") Велосипеды
+                        ul
+                            li
+                                a(href="") Горные
+                            li
+                                a(href="") Городские
+                            li
+                                a(href="") Детские
+                            li
+                                a(href="") Мужские
+                            li
+                                a(href="") Женские
+                .col-6.col-sm-4.col-md-3
+                    .footer-menu
+                        h4.title
+                            a(href="") Самокаты
+                        ul
+                            li
+                                a(href="") Взрослые
+                            li
+                                a(href="") Детские
+                            li
+                                a(href="") Трюковые
+                            li
+                                a(href="") Внедорожные
+                .col-6.col-sm-4.col-md-3
+                    .footer-menu
+                        h4.title
+                            a(href="") Dewolf
+                        ul
+                            li
+                                a(href="") О бренде
+                            li
+                                a(href="") Технологии
+                            li
+                                a(href="") Дилерам
+                            li
+                                a(href="") Где купить
+                            li
+                                a(href="") Оплата и доставка
+        .container-fluid
+            .row
+                .col-12
+                    .footer
+                        .container
+                            .footer-contacts
+                                .row
+                                    .col-sm-6.col-md-3.mb-3.mb-md-0
+                                        b Центральный офис в Москве
+                                        br
+                                        a(href="mailto:simle@mail.com") simle@mail.com
+                                        br
+                                        a(href="tel:+74958808080") +7 (495) 880-80-80
+                                    .col-sm-6.col-md-3.mb-3.mb-md-0
+                                        b Офис Волгаград
+                                        br
+                                        a(href="mailto:simle@mail.com") simle@mail.com
+                                        br
+                                        a(href="tel:+74958808080") +7 (495) 880-80-80
+                                    .col-sm-6.col-md-3.mb-3.mb-md-0
+                                        ul.footer-soc
+                                            li
+                                                a(href="", target="_blank")
+                                                    img(src="images/icon-telegram.svg", alt="Telegram")
+                                            li
+                                                a(href="", target="_blank")
+                                                    img(src="images/icon-whatsapp.svg", alt="WhatsApp")
+                                            li
+                                                a(href="", target="_blank")
+                                                    img(src="images/icon-facebook.svg", alt="Facebook")
+                                            li
+                                                a(href="", target="_blank")
+                                                    img(src="images/icon-instagram.svg", alt="Instagram")
+                                            li
+                                                a(href="", target="_blank")
+                                                    img(src="images/icon-twitter.svg", alt="Twitter")
+                                            li
+                                                a(href="", target="_blank")
+                                                    img(src="images/icon-vk.svg", alt="ВКонтакте")
+                                            li
+                                                a(href="", target="_blank")
+                                                    img(src="images/icon-youtube.svg", alt="YouTube")
+                                    .col-sm-6.col-md-3.mb-3.mb-md-0
+                                        ul.footer-card-icons
+                                            li
+                                                a(href="", target="_blank")
+                                                    img(src="images/icon-visa.png", alt="VISA")
+                                            li
+                                                a(href="", target="_blank")
+                                                    img(src="images/icon-mastercard.png", alt="MasterCard")
+                                            li
+                                                a(href="", target="_blank")
+                                                    img(src="images/icon-mir.png", alt="МИР")
+                                            li
+                                                a(href="", target="_blank")
+                                                    img(src="images/icon-jcb.png", alt="JSB")
+                                            li
+                                                a(href="", target="_blank")
+                                                    img(src="images/icon-union-pay.png", alt="UnionPay")

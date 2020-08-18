@@ -1,0 +1,149 @@
+// FONTS
+@import "utilutes/fonts";
+
+@include font-face('Exo-2', '../fonts/Exo2/Exo2-Light.ttf', $weight: 300, $style: normal);
+@include font-face('Exo-2', '../fonts/Exo2/Exo2-LightItalic.ttf', $weight: 300, $style: italic);
+@include font-face('Exo-2', '../fonts/Exo2/Exo2-Regular.ttf', $weight: 400, $style: normal);
+@include font-face('Exo-2', '../fonts/Exo2/Exo2-Italic.ttf', $weight: 400, $style: italic);
+@include font-face('Exo-2', '../fonts/Exo2/Exo2-SemiBold.ttf', $weight: 600, $style: normal);
+@include font-face('Exo-2', '../fonts/Exo2/Exo2-SemiBoldItalic.ttf', $weight: 600, $style: italic);
+@include font-face('Exo-2', '../fonts/Exo2/Exo2-Bold.ttf', $weight: 700, $style: normal);
+@include font-face('Exo-2', '../fonts/Exo2/Exo2-BoldItalic.ttf', $weight: 700, $style: italic);
+@include font-face('Exo-2', '../fonts/Exo2/Exo2-BlackItalic.ttf', $weight: 900, $style: italic);
+$exo2: 'Exo-2', sans-serif;
+
+@include font-face('Rubik', '../fonts/Rubik/Rubik-Bold.ttf', $weight: 700, $style: normal);
+@include font-face('Rubik', '../fonts/Rubik/Rubik-BoldItalic.ttf', $weight: 700, $style: italic);
+@include font-face('Rubik', '../fonts/Rubik/Rubik-Black.ttf', $weight: 900, $style: normal);
+@include font-face('Rubik', '../fonts/Rubik/Rubik-BlackItalic.ttf', $weight: 900, $style: italic);
+$rubik: 'Rubik', sans-serif;
+
+// COMMON
+//@import "utilutes/common";
+@import "utilutes/clearfix";
+
+// BREAKPOINTS
+@import "vars/breakpoints";
+@import "utilutes/breakpoints";
+
+// COLUMNS
+@import "vars/grid";
+@import "utilutes/grid";
+
+// CONTAINER
+@import "utilutes/container";
+@import "vars/container-max-width";
+@import "utilutes/container-adaptive";
+
+// FLEX UTILITIES
+@import "utilutes/flex";
+
+// SPACINGS
+@import "vars/spacing";
+@import "utilutes/spacing";
+
+// COLORS
+@import "vars/default-colors";
+//@import "vars/theme-colors";
+@import "utilutes/colors";
+
+// TRANSITIONS
+@import "vars/transitions";
+
+// TRANSFORMS
+@import "vars/transforms";
+
+// TOUCH & NO-TOUCH
+//@import "collection/touch";
+
+// COMMON STYLES
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html, body {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: getColor('white');
+}
+
+// TYPOGRAPHY
+//@import "vars/root";
+//@import "vars/typography";
+@import "../../blocks/components/typograpy/typography";
+
+// LINKS
+@import "utilutes/link-styles";
+@import "../../blocks/components/links/links";
+
+// BUTTONS
+//@import "collection/buttons";
+@import "../../blocks/components/buttons/buttons";
+
+// LIST STYLES
+@import "utilutes/list";
+@import "../../blocks/components/list/list";
+
+// TABLES
+@import "../../blocks/components/table/table";
+
+// FORMS
+@import "utilutes/placeholder";
+@import "../../blocks/components/form/form";
+
+// CHANGE LIBS DEFAULTS
+@import "../../blocks/components/swiper/swiper";
+@import "../../blocks/components/fancybox/fancybox";
+@import "../../blocks/components/select/select";
+
+// COMPONENTS
+@import "../../blocks/components/header/header";
+@import "../../blocks/components/main-menu/main-menu";
+@import "../../blocks/components/toggle-menu/toggle-menu";
+@import "../../blocks/components/footer/footer";
+@import "../../blocks/components/badge/badge";
+@import "../../blocks/components/dropdown/dropdown";
+@import "../../blocks/components/breadcrumb/breadcrumb";
+@import "../../blocks/components/catalog-filter/catalog-filter";
+@import "../../blocks/components/ui-range-slider/ui-range-slider";
+@import "../../blocks/components/pagination/pagination";
+@import "../../blocks/components/nav-tabs/nav-tabs";
+@import "../../blocks/components/tooltip/tooltip";
+@import "../../blocks/components/lk-menu/lk-menu";
+@import "../../blocks/components/benefit-card/benefit-card";
+
+// PAGES
+@import "../../blocks/pages/main/main";
+@import "../../blocks/pages/catalog/catalog";
+@import "../../blocks/pages/product-page/product-page";
+@import "../../blocks/pages/basket/basket";
+@import "../../blocks/pages/personal/personal";
+@import "../../blocks/pages/dealer-personal/dealer-personal";
+@import "../../blocks/pages/dealer-service/dealer-service";
+@import "../../blocks/pages/about/about";
+@import "../../blocks/pages/technologies/technologies";
+@import "../../blocks/pages/comparison/comparison";
+
+// COMMON STYLES
+body.main-menu-active {
+	overflow: hidden;
+}
+
+.page-title {
+	padding-bottom: 30px;
+
+	@include media-breakpoint-down(sm) {
+		padding-bottom: 25px;
+	}
+
+	h1, .h1 {
+		margin-bottom: 0;
+	}
+}

@@ -1,0 +1,64 @@
+extends ../../layouts/default
+
+include ../../../common/markup/utilites
+
+block TITLE
+	title Персональные данные
+
+block CONTENT
+	.page-title
+		.container
+			ul.breadcrumb
+				li.back
+					a(href="") Вернуться назад
+				li
+					a(href="/")
+						+svg-icon("home")
+				li
+					a(href="") Личный кабинет
+				li
+					span Персональные данные
+			h1 Персональные данные
+	.personal-page
+		.container
+			.row
+				.col-md-4.col-lg-3
+					.lk-menu-mobile-controls
+						a.lk-menu-mobile-toggler(href="", data-toggle-activity="#lk-menu") Персональные данные
+					ul#lk-menu.lk-menu
+						li.active
+							a(href="") Персональные данные
+						li
+							a(href="") Корзина
+						li
+							a(href="") Мои заказы
+						li
+							a(href="") Выход
+				.col-md-8.col-lg-9
+					form.site-form.personal-form(method="POST", action="", novalidate="true", autocomplete="off")
+						.row
+							.col-lg-3.offset-lg-1
+								p.desc Внесите изменения в поля слева, а затем не забудьте сохранить информацию!
+							.col-lg-8.order-lg-first
+								.row
+									.col-12
+										.form-row
+											input.form-control(type="text", id="user-name", name="user-name", placeholder="Ваше имя и фамилия", value="")
+									.col-sm-6
+										.form-row
+											input.form-control(type="text", id="user-email", name="user-email", placeholder="Электронная почта", value="")
+									.col-sm-6
+										.form-row
+											input.form-control(type="text", id="user-phone", name="user-phone", placeholder="Телефон", value="")
+									.col-sm-6
+										.form-row
+											input.form-control(type="password", id="user-pass", name="user-pass", placeholder="Пароль", value="")
+									.col-sm-6
+										.form-row
+											input.form-control(type="password", id="user-pass-2", name="user-pass-2", placeholder="Пароль еще раз", value="")
+								.buttons-line
+									button.btn.btn-xs(type="submit") Сохранить
+									button(type="reset") Сбросить
+
+
+

@@ -1,0 +1,94 @@
+extends ../../layouts/default
+
+include ../../../common/markup/utilites
+
+block TITLE
+	title Корзина
+
+block CONTENT
+	.page-title
+		.container
+			ul.breadcrumb
+				li.back
+					a(href="") Вернуться назад
+				li
+					a(href="/")
+						+svg-icon("home")
+				li
+					a(href="") Личный кабинет
+				li
+					span Корзина
+			h1 Mоя корзина
+	.basket-page
+		.container
+			.row
+				.col-md-4.col-lg-3
+					.lk-menu-mobile-controls
+						a.lk-menu-mobile-toggler(href="", data-toggle-activity="#lk-menu") Корзина
+					ul#lk-menu.lk-menu
+						li
+							a(href="") Персональные данные
+						li.active
+							a(href="") Корзина
+						li
+							a(href="") Мои заказы
+						li
+							a(href="") Выход
+
+				.col-md-8.col-lg-9
+					mixin basket-item(biimg, biname, biprice)
+						.catalog-item.basket-item
+							.basket-item-block.image-block
+								a.image(href="")
+									img(src="images/" + biimg, alt=biname)
+							.basket-item-block.info-block
+								h4.title
+									a(href="")= biname
+								ul.chars-list
+									li
+										span.char-name Цвет:
+										ul.colors-list
+											li(style="background:#e40909") Красный
+									li
+										span.char-name Вес:
+										span 17.2 кг
+									li
+										span.char-name Диаметр колес:
+										span 27.5"
+									li
+										span.char-name Артикул:
+										span 1115863
+							.basket-item-block.price-block
+								.price= biprice
+							.basket-item-block.amount-control-block
+								.add-basket-block
+									input.add-basket-block-input(type="text", name="", value="1", readonly)
+									.add-basket-block-input-value 1
+									button.add-basket-block-amount-control.plus(type="button")
+									button.add-basket-block-amount-control.minus(type="button")
+							.basket-item-block.sum-block
+								.sum= biprice
+							.basket-item-block.remove-block
+								button.basket-remove-btn(type="button")
+									+svg-icon("trash")
+									span Отложить
+					.basket-list
+						ul.basket-list-head
+							li.products Товары
+							li.price Цена
+							li.amount Кол-во
+							li.sum Сумма
+						+basket-item("main-sale-2.jpg", "Asphalt 1", "38 650 руб.")
+						+basket-item("main-sale-4.jpg", "PERFECT", "16 530 руб.")
+						+basket-item("main-sale-2.jpg", "Asphalt 1", "38 650 руб.")
+						+basket-item("main-sale-4.jpg", "PERFECT", "16 530 руб.")
+						.basket-list-sum
+							span Итого
+							span.price 284 657 руб.
+						.basket-list-submit-row
+							.basket-list-agree-block
+								input(type="checkbox", id="basket-agree", name="", value="")
+								label.custom-checkbox(for="basket-agree") Соглашаюсь, что цвет на мониторе может не соответствовать реальному
+							.basket-list-submit-block
+								button.btn(type="submit") Оформить заказ
+

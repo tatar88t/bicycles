@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>О бренде</title>
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="MobileOptimized" content="320">
+    <!--link(rel="apple-touch-icon", sizes="180x180", href="/apple-touch-icon.png")-->
+    <!--link(rel="icon", type="image/png", sizes="32x32", href="/favicon-32x32.png")-->
+    <!--link(rel="icon", type="image/png", sizes="16x16", href="/favicon-16x16.png")-->
+    <!--link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat:300,500,600,800&display=swap&subset=latin,cyrillic")-->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/libs/overlayScrollbars/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="/libs/swiper/swiper.min.css">
+    <link rel="stylesheet" href="/libs/fancybox/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="/libs/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="/libs/selectric/selectric.css">
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body data-svg-sprite="/images/svg/svg-sprite.svg">
+    <header id="header" class="header">
+      <div class="header-top">
+        <div class="container-fluid">
+          <div class="header-inner">
+            <div class="toggle-menu-wrapper">
+              <button class="toggle-menu">
+                <div></div>
+              </button>
+            </div>
+            <ul class="header-menu">
+              <li><a href="">О бренде</a></li>
+              <li><a href="">Технологии</a></li>
+              <li><a href="">Оплата и доставка</a></li>
+              <li><a href="">Дилерам</a></li>
+              <li><a href="">Покупателю</a></li>
+            </ul>
+            <ul class="header-info-menu">
+              <li>
+                <button type="button" data-modal="#modal-city-select" class="header-city">Москва</button>
+              </li>
+              <li><a href="#main-contacts" data-scroll-to="#main-contacts" class="header-location">
+                  <svg class="icon icon-location">
+                    <use xlink:href="#location"></use>
+                  </svg><span>Адреса магазинов</span></a></li>
+              <li><a href="#main-sale" data-scroll-to="#main-sale" class="header-sale">
+                  <svg class="icon icon-zap">
+                    <use xlink:href="#zap"></use>
+                  </svg><span>Акции</span></a></li>
+            </ul>
+            <div class="header-search">
+              <button type="button" class="header-search-form-toggler">
+                <svg class="icon icon-loupe">
+                  <use xlink:href="#loupe"></use>
+                </svg>
+              </button>
+              <form method="" action="" novalidate="true" autocomplete="off" class="header-search-form">
+                <div class="container-fluid">
+                  <input type="text" name="" value="" placeholder="Поиск" class="header-search-form-input">
+                  <button type="button" class="header-search-form-toggler button-close">
+                    <svg class="icon icon-close">
+                      <use xlink:href="#close"></use>
+                    </svg>
+                  </button>
+                </div>
+              </form>
+            </div>
+            <ul class="header-user-menu">
+              <li>
+                <button type="button" title="Вход в личный кабинет" data-toggle-activity="#header-auth-menu">
+                  <svg class="icon icon-key">
+                    <use xlink:href="#key"></use>
+                  </svg>
+                </button>
+                <div id="header-auth-menu" class="dropdown">
+                  <ul class="dropdown-items">
+                    <li><a href="">Вход</a></li>
+                    <li><a href="">Выход</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="" title="Сравнение товаров">
+                  <svg class="icon icon-bar-chart">
+                    <use xlink:href="#bar-chart"></use>
+                  </svg></a></li>
+              <li><a href="" title="Корзина">
+                  <svg class="icon icon-cart">
+                    <use xlink:href="#cart"></use>
+                  </svg><span class="badge badge-xs badge-blue"><span>12</span></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="header-bottom">
+        <div class="container-fluid">
+          <div class="header-inner"><a href="/" class="header-logo"><img src="images/logo-full-black.png"></a>
+            <div class="toggle-menu-wrapper">
+              <button class="toggle-menu">
+                <div></div>
+              </button>
+            </div>
+            <button type="button" data-modal="#modal-city-select" class="header-city">Москва</button>
+            <hr>
+            <ul class="header-products-menu">
+              <li><a href="#" data-toggle-activity="#header-products-menu-1">Велосипеды</a>
+                <div id="header-products-menu-1" class="dropdown">
+                  <ul class="dropdown-items">
+                    <li><a href="">Категория 1</a></li>
+                    <li><a href="">Категория 2</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="#" data-toggle-activity="#header-products-menu-2">Самокаты</a>
+                <div id="header-products-menu-2" class="dropdown">
+                  <ul class="dropdown-items">
+                    <li><a href="">Категория 1</a></li>
+                    <li><a href="">Категория 2</a></li>
+                    <li><a href="">Категория 3</a></li>
+                    <li><a href="">Категория 4</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <hr><a href="#main-selection" data-scroll-to="#main-selection" class="header-select-product">Подобрать велосипед</a>
+            <hr>
+            <div class="header-info-block"><span class="header-info-item">Ежедневно с  9:00 до 21:00</span><a href="tel:88001234567" class="header-info-item header-phone">8 800 123 45 67</a></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="main-menu" class="main-menu">
+      <div class="main-menu__content">
+        <div class="header">
+          <div class="header-top">
+            <div class="container-fluid">
+              <div class="header-inner">
+                <div class="toggle-menu-wrapper">
+                  <button class="toggle-menu active">
+                    <div></div>
+                  </button>
+                </div>
+                <ul class="header-menu">
+                  <li><a href="">О бренде</a></li>
+                  <li><a href="">Технологии</a></li>
+                  <li><a href="">Оплата и доставка</a></li>
+                  <li><a href="">Дилерам</a></li>
+                  <li><a href="">Покупателю</a></li>
+                </ul>
+                <ul class="header-info-menu">
+                  <li>
+                    <button type="button" data-modal="#modal-city-select" class="header-city">Москва</button>
+                  </li>
+                  <li><a href="#main-contacts" data-scroll-to="#main-contacts" class="header-location">
+                      <svg class="icon icon-location">
+                        <use xlink:href="#location"></use>
+                      </svg><span>Адреса магазинов</span></a></li>
+                  <li><a href="#main-sale" data-scroll-to="#main-sale" class="header-sale">
+                      <svg class="icon icon-zap">
+                        <use xlink:href="#zap"></use>
+                      </svg><span>Акции</span></a></li>
+                </ul>
+                <div class="header-search">
+                  <button type="button" class="header-search-form-toggler">
+                    <svg class="icon icon-loupe">
+                      <use xlink:href="#loupe"></use>
+                    </svg>
+                  </button>
+                  <form method="" action="" novalidate="true" autocomplete="off" class="header-search-form">
+                    <div class="container-fluid">
+                      <input type="text" name="" value="" placeholder="Поиск" class="header-search-form-input">
+                      <button type="button" class="header-search-form-toggler button-close">
+                        <svg class="icon icon-close">
+                          <use xlink:href="#close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                <ul class="header-user-menu">
+                  <li>
+                    <button type="button" title="Вход в личный кабинет" data-toggle-activity="#header-auth-menu">
+                      <svg class="icon icon-key">
+                        <use xlink:href="#key"></use>
+                      </svg>
+                    </button>
+                    <div id="header-auth-menu" class="dropdown">
+                      <ul class="dropdown-items">
+                        <li><a href="">Вход</a></li>
+                        <li><a href="">Выход</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li><a href="" title="Сравнение товаров">
+                      <svg class="icon icon-bar-chart">
+                        <use xlink:href="#bar-chart"></use>
+                      </svg></a></li>
+                  <li><a href="" title="Корзина">
+                      <svg class="icon icon-cart">
+                        <use xlink:href="#cart"></use>
+                      </svg><span class="badge badge-xs badge-blue"><span>12</span></span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="header-bottom">
+            <div class="container-fluid">
+              <div class="header-inner"><a href="/" class="header-logo"><img src="images/logo-full-white.png"></a>
+                <div class="toggle-menu-wrapper">
+                  <button class="toggle-menu active">
+                    <div></div>
+                  </button>
+                </div>
+                <button type="button" data-modal="#modal-city-select" class="header-city">Москва</button>
+                <hr>
+                <ul class="header-products-menu">
+                  <li><a href="#" data-toggle-activity="#main-products-menu-1">Велосипеды</a>
+                    <div id="main-products-menu-1" class="dropdown">
+                      <ul class="dropdown-items">
+                        <li><a href="">Категория 1</a></li>
+                        <li><a href="">Категория 2</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li><a href="#" data-toggle-activity="#main-products-menu-2">Самокаты</a>
+                    <div id="main-products-menu-2" class="dropdown">
+                      <ul class="dropdown-items">
+                        <li><a href="">Категория 1</a></li>
+                        <li><a href="">Категория 2</a></li>
+                        <li><a href="">Категория 3</a></li>
+                        <li><a href="">Категория 4</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+                <hr><a href="#main-selection" data-scroll-to="#main-selection" class="header-select-product">Подобрать велосипед</a>
+                <hr>
+                <div class="header-info-block"><span class="header-info-item">Ежедневно с  9:00 до 21:00</span><a href="tel:88001234567" class="header-info-item header-phone">8 800 123 45 67</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-6 col-sm-4 col-md-3">
+              <div class="footer-menu">
+                <h4 class="title"><a href="">Велосипеды</a></h4>
+                <ul>
+                  <li><a href="">Горные</a></li>
+                  <li><a href="">Городские</a></li>
+                  <li><a href="">Детские</a></li>
+                  <li><a href="">Мужские</a></li>
+                  <li><a href="">Женские</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3">
+              <div class="footer-menu">
+                <h4 class="title"><a href="">Самокаты</a></h4>
+                <ul>
+                  <li><a href="">Взрослые</a></li>
+                  <li><a href="">Детские</a></li>
+                  <li><a href="">Трюковые</a></li>
+                  <li><a href="">Внедорожные</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3">
+              <div class="footer-menu">
+                <h4 class="title"><a href="">Dewolf</a></h4>
+                <ul>
+                  <li><a href="">О бренде</a></li>
+                  <li><a href="">Технологии</a></li>
+                  <li><a href="">Дилерам</a></li>
+                  <li><a href="">Где купить</a></li>
+                  <li><a href="">Оплата и доставка</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="footer">
+                <div class="container">
+                  <div class="footer-contacts">
+                    <div class="row">
+                      <div class="col-sm-6 col-md-3 mb-3 mb-md-0"><b>Центральный офис в Москве</b><br><a href="mailto:simle@mail.com">simle@mail.com</a><br><a href="tel:+74958808080">+7 (495) 880-80-80</a></div>
+                      <div class="col-sm-6 col-md-3 mb-3 mb-md-0"><b>Офис Волгаград</b><br><a href="mailto:simle@mail.com">simle@mail.com</a><br><a href="tel:+74958808080">+7 (495) 880-80-80</a></div>
+                      <div class="col-sm-6 col-md-3 mb-3 mb-md-0">
+                        <ul class="footer-soc">
+                          <li><a href="" target="_blank"><img src="images/icon-telegram.svg" alt="Telegram"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-whatsapp.svg" alt="WhatsApp"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-facebook.svg" alt="Facebook"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-instagram.svg" alt="Instagram"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-twitter.svg" alt="Twitter"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-vk.svg" alt="ВКонтакте"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-youtube.svg" alt="YouTube"></a></li>
+                        </ul>
+                      </div>
+                      <div class="col-sm-6 col-md-3 mb-3 mb-md-0">
+                        <ul class="footer-card-icons">
+                          <li><a href="" target="_blank"><img src="images/icon-visa.png" alt="VISA"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-mastercard.png" alt="MasterCard"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-mir.png" alt="МИР"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-jcb.png" alt="JSB"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-union-pay.png" alt="UnionPay"></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about-page-content main-page-content">
+      <!-- slider-->
+      <div class="about-slider main-slider">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <!-- slide 1-->
+            <div style="background-image:url(images/about-slider-1.jpg)" class="swiper-slide">
+              <div class="container">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="title"><span class="badge badge-xl badge-blue"><span>created for emotions</span></span><span class="badge badge-xl badge-blue"><span>создан для эмоций</span></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- slide 2-->
+            <div style="background-image:url(images/main-slider-1.jpg)" class="swiper-slide">
+              <div class="container">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="title"><span class="badge badge-xl badge-blue"><span>Slogan number 2</span></span><span class="badge badge-xl badge-blue"><span>Слоган номер 2</span></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- slide 3-->
+            <div style="background-image:url(images/about-slider-1.jpg)" class="swiper-slide">
+              <div class="container">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="title"><span class="badge badge-xl badge-blue"><span>Slogan number 3</span></span><span class="badge badge-xl badge-blue"><span>Слоган номер 3</span></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- slide 4-->
+            <div style="background-image:url(images/main-slider-2.jpg)" class="swiper-slide">
+              <div class="container">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="title"><span class="badge badge-xl badge-blue"><span>Slogan number 4</span></span><span class="badge badge-xl badge-blue"><span>Слоган номер 4</span></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-nav">
+          <button type="button" class="swiper-button swiper-button-prev"></button>
+          <button type="button" class="swiper-button swiper-button-next"></button>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="container">
+        <div class="about-history">
+          <h2 class="section-title">история бренда</h2>
+          <div class="about-history-wrapper">
+            <div class="col-sm-6 col-12 about-history-foundation">
+              <p>
+                Бренд DEWOLF основан в 2015 году в Германии.
+                Однажды летним днем, команда велосипедистов-
+                любителей отправилась прокатиться по красивым
+                 живописным местам в поисках приключений. Тропа
+                вела их через густой хвойный лес. Проехав вглубь,
+                они увидели отблеск, который их заинтересовал.
+              </p>
+              <div style="background-image:url(images/about-history-foundation.jpg)" class="about-history-foundation-img"></div>
+            </div>
+            <div class="col-sm-6 col-12 about-history-goal">
+              <p>
+                Подъехав ближе они наткнулись на старый велосипед, вокруг которого было много волчьих следов. Эти знаки вдохновили единомышленников.
+                <span>Цель была в поле зрения.</span>
+                Именно в тот день родилась идея бренда DEWOLF, как велосипеда с яркой внешностью и дерзким характером. Под маркой DEWOLF выпускаются горные, городские, складные, женские, подростковые и детские велосипеды, а также с 2021 года качественные и стильные самокаты.
+              </p>
+              <div style="background-image:url(images/about-history-goal.jpg)" class="about-history-goal-img"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about-destination-block">
+      <div class="container">
+        <div class="about-destination">
+          <div class="about-destination-mission">
+            <h2 class="badge badge-blue"><span>миссия</span></h2>
+            <p class="descr">
+              Предоставить пользователям оптимальный выбор велосипедов и самокатов,
+              предлагая качественную продукцию, украшая жизнь и предоставляя
+              неограниченные возможности.
+            </p>
+          </div>
+          <div class="about-destination-view">
+            <h2 class="badge badge-blue"><span>видение</span></h2>
+            <p class="descr">
+              Мы создаем велосипеды и самокаты, доступные множеству людей. Любой
+              человек сможет наслаждаться часами отдыха с семьей, либо использовать
+              наши велосипеды и самокаты в пути на работу
+            </p>
+          </div>
+        </div>
+      </div>
+      <div style="background-image:url(images/about-destination-block-cover.jpg)" class="about-destination-block-cover">
+        <div class="about-destination-block-title">
+          <h2 class="badge badge-xl badge-blue"><span>совершенный</span></h2><br>
+          <h2 class="badge badge-xl badge-blue"><span>продукт как знак</span></h2><br>
+          <h2 class="badge badge-xl badge-blue"><span>заботы о клиентах</span></h2>
+        </div>
+      </div>
+    </div>
+    <div class="about-benefits">
+      <div class="container">
+        <h1 class="section-title about-section-title">
+          почему велосипеды dewolw
+          <br> так хороши?
+        </h1>
+      </div>
+      <div class="about-benefits_shaded">
+        <div class="container">
+          <h3 class="about-benefits-toggler">Детские</h3>
+          <div class="benefit-card-wrapper">
+                      <div class="benefit-card">
+                        <div class="container">
+                          <div class="benefit-card-specify">
+                            <div class="row">
+                              <div class="col-md-6 col-12 benefit-card-descr-wrapper">
+                                <div class="benefit-card-descr">
+                                  <p>Мы разработали уникальную геометрию рамы для моделей 20 и 24 дюйма, которая подходитпо физиологическим особенностям как мальчикам, так и девочкам. В моделях 26 дюймов предусмотрели возможность использования велосипеда продолжительное время: от 140 см до 165 см – это закрывает потребность в частой смене велосипеда. Все велосипеды выполнены из легкого алюминиевого сплава 6061,</p>
+                                </div>
+                              </div>
+                              <div class="col-md-6 col-12 benefit-card-descr-wrapper">
+                                <div class="benefit-card-descr">
+                                  <p>который позволяет достичь оптимального соотношения между жесткостью конструкции и её низким весом. Помимо этого, мы комплектуем наши детские велосипеды проверенным и удобным навесным оборудованием брендов  Shimano и Micro shift. Подходит стандартный автомобильный насос.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row"></div>
+                          </div>
+                        </div>
+                      </div>
+                            <ul class="block-icons">
+                              <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                                <li class="block-icons-item"><img src="images/benefit-card-children-1.png"><span>Пожизненная гарантия</span>
+                                </li>
+                              </div>
+                              <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                                <li class="block-icons-item"><img src="images/benefit-card-children-2.png"><span>Euro Bottom Bracket</span>
+                                </li>
+                              </div>
+                              <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                                <li class="block-icons-item"><img src="images/benefit-card-children-3.png"><span>Оборудование Shimano на 26 дюйма</span>
+                                </li>
+                              </div>
+                              <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                                <li class="block-icons-item"><img src="images/benefit-card-children-4.png"><span>Комплетуется передним и задним фонариком</span>
+                                </li>
+                              </div>
+                              <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                                <li class="block-icons-item"><img src="images/benefit-card-children-5.png"><span>Эргонномичные седла Vader</span>
+                                </li>
+                              </div>
+                              <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                                <li class="block-icons-item"><img src="images/benefit-card-children-6.png"><span>Рама из легкого алюминиевого сплава 6061</span>
+                                </li>
+                              </div>
+                              <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                                <li class="block-icons-item"><img src="images/benefit-card-children-7.png"><span>Оборудование Micro shift на 20 и 24 дюймах</span>
+                                </li>
+                              </div>
+                              <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                                <li class="block-icons-item"><img src="images/benefit-card-children-8.png"><span>Комплектуется подножкой и звонком</span>
+                                </li>
+                              </div>
+                            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <h3 class="about-benefits-toggler">горные</h3>
+        <div class="benefit-card-wrapper">
+                    <div class="benefit-card">
+                      <div class="container">
+                        <div class="benefit-card-specify">
+                          <div class="row">
+                            <div class="col-md-6 col-12 benefit-card-descr-wrapper">
+                              <div class="benefit-card-descr">
+                                <p>В наших горных велосипедах мы используем качественный бренд покрышек Wanda, зарекомендовавший себя в производстве шин для автомобилей. Помимо этого, велосипеды оборудованы амортизационными вилками бренда MODE. Это сравнительно новый продукт на нашем рынке, дающий действительно качественные</p>
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-12 benefit-card-descr-wrapper">
+                              <div class="benefit-card-descr">
+                                <p>комплектующие с алюминиевыми элементами. Подходит стандартный автомобильный насос. Не нужно искать переходники и тратить время на накачку колес.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row"></div>
+                        </div>
+                      </div>
+                    </div>
+                          <ul class="block-icons">
+                            <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                              <li class="block-icons-item"><img src="images/benefit-card-mountain-1.png"><span>Качественные вулканизированные покрышки Wanda</span>
+                              </li>
+                            </div>
+                            <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                              <li class="block-icons-item"><img src="images/benefit-card-mountain-1.png"><span>Пожизненная гарантия на раму</span>
+                              </li>
+                            </div>
+                            <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                              <li class="block-icons-item"><img src="images/benefit-card-mountain-1.png"><span>Навесное борудование Shimano</span>
+                              </li>
+                            </div>
+                            <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                              <li class="block-icons-item"><img src="images/benefit-card-mountain-1.png"><span>Сумка с набором шестигранников и насос</span>
+                              </li>
+                            </div>
+                            <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                              <li class="block-icons-item"><img src="images/benefit-card-mountain-1.png"><span>Амортизационные вилки MODE</span>
+                              </li>
+                            </div>
+                            <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                              <li class="block-icons-item"><img src="images/benefit-card-mountain-1.png"><span>Гидравлические тормозные системы Tektro</span>
+                              </li>
+                            </div>
+                            <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                              <li class="block-icons-item"><img src="images/benefit-card-mountain-1.png"><span>Эргономичные седла Vader</span>
+                              </li>
+                            </div>
+                            <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                              <li class="block-icons-item"><img src="images/benefit-card-mountain-1.png"><span>Фляга и флягодержатель</span>
+                              </li>
+                            </div>
+                          </ul>
+        </div>
+      </div>
+      <div class="about-benefits_shaded">
+        <div class="container">
+          <h3 class="about-benefits-toggler">Женские</h3>
+          <div class="benefit-card-wrapper">
+                      <div class="benefit-card">
+                        <div class="container">
+                          <div class="benefit-card-specify">
+                            <div class="row">
+                              <div class="col-md-6 col-12 benefit-card-descr-wrapper">
+                                <div class="benefit-card-descr">
+                                  <p>Для женщин используется уникальная геометрия с укороченной рамой и комфортной посадкой. Велосипеды оборудованы эргономичными сиденьями Vader, качественными покрышками Wanda и амортизационными вилками бренда MODE с алюминиевыми </p>
+                                </div>
+                              </div>
+                              <div class="col-md-6 col-12 benefit-card-descr-wrapper">
+                                <div class="benefit-card-descr">
+                                  <p>элементами. Подходит стандартный автомобильный насос. Не нужно искать переходники и тратить время на накачку колес.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row"></div>
+                          </div>
+                        </div>
+                      </div>
+                            <ul class="block-icons">
+                              <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                                <li class="block-icons-item"><img src="images/benefit-card-mountain-1.png"><span>Качественные вулканизированные покрышки Wanda</span>
+                                </li>
+                              </div>
+                              <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                                <li class="block-icons-item"><img src="images/benefit-card-mountain-1.png"><span>Пожизненная гарантия на раму</span>
+                                </li>
+                              </div>
+                              <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                                <li class="block-icons-item"><img src="images/benefit-card-mountain-1.png"><span>Навесное борудование Shimano</span>
+                                </li>
+                              </div>
+                              <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                                <li class="block-icons-item"><img src="images/benefit-card-mountain-1.png"><span>Сумка с набором шестигранников и насос</span>
+                                </li>
+                              </div>
+                              <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                                <li class="block-icons-item"><img src="images/benefit-card-mountain-1.png"><span>Амортизационные вилки MODE</span>
+                                </li>
+                              </div>
+                              <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                                <li class="block-icons-item"><img src="images/benefit-card-mountain-1.png"><span>Гидравлические тормозные системы Tektro</span>
+                                </li>
+                              </div>
+                              <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                                <li class="block-icons-item"><img src="images/benefit-card-mountain-1.png"><span>Эргономичные седла Vader</span>
+                                </li>
+                              </div>
+                              <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                                <li class="block-icons-item"><img src="images/benefit-card-mountain-1.png"><span>Фляга и флягодержатель</span>
+                                </li>
+                              </div>
+                            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <h3 class="about-benefits-toggler">Городские</h3>
+        <div class="benefit-card-wrapper">
+                    <div class="benefit-card">
+                      <div class="container">
+                        <div class="benefit-card-specify">
+                          <div class="row">
+                            <div class="col-md-6 col-12 benefit-card-descr-wrapper">
+                              <div class="benefit-card-descr">
+                                <p>Мы делаем городские велосипеды максимально удобными и функциональными для катания. При покупке не придется ничего докупать. В комплекте все предусмотрено: крылья, багажник, подножка, а также передний и задний фонарь. Подходит стандартный автомобильный насос. Не нужно искать переходники и тратить время на </p>
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-12 benefit-card-descr-wrapper">
+                              <div class="benefit-card-descr">
+                                <p>накачку колес. Максимальное соотношение в компоновке качественных продуктов, навесного оборудования и аксессуаров в комплекте позволит насладиться каждым моментом.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row"></div>
+                        </div>
+                      </div>
+                    </div>
+                          <ul class="block-icons">
+                            <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                              <li class="block-icons-item"><img src="images/benefit-card-mountain-1.png"><span>Качественные вулканизированные покрышки Wanda</span>
+                              </li>
+                            </div>
+                            <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                              <li class="block-icons-item"><img src="images/benefit-card-mountain-1.png"><span>Пожизненная гарантия на раму</span>
+                              </li>
+                            </div>
+                            <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                              <li class="block-icons-item"><img src="images/benefit-card-mountain-1.png"><span>Навесное борудование Shimano</span>
+                              </li>
+                            </div>
+                            <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                              <li class="block-icons-item"><img src="images/benefit-card-mountain-1.png"><span>Максимальная комплектация аксессуарами</span>
+                              </li>
+                            </div>
+                            <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                              <li class="block-icons-item"><img src="images/benefit-card-mountain-1.png"><span>Амортизационные вилки MODE</span>
+                              </li>
+                            </div>
+                            <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                              <li class="block-icons-item"><img src="images/benefit-card-mountain-1.png"><span>Гидравлические тормозные системы Tektro</span>
+                              </li>
+                            </div>
+                            <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                              <li class="block-icons-item"><img src="images/benefit-card-mountain-1.png"><span>Эргономичные седла Vader</span>
+                              </li>
+                            </div>
+                            <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                              <li class="block-icons-item"><img src="images/benefit-card-mountain-1.png"><span>Сумка с набором шестигранников и насос</span>
+                              </li>
+                            </div>
+                          </ul>
+        </div>
+      </div>
+      <div class="about-benefits_shaded">
+        <div class="container">
+          <h3 class="about-benefits-toggler">складные</h3>
+          <div class="benefit-card-wrapper">
+                      <div class="benefit-card">
+                        <div class="container">
+                          <div class="benefit-card-specify">
+                            <div class="row">
+                              <div class="col-md-6 col-12 benefit-card-descr-wrapper">
+                                <div class="benefit-card-descr">
+                                  <p>Комфортная изогнутая геометрия, максимально адаптирована для складных рам с колесами небольшого размера. Отличительной частью является качественная фурнитура складных элементов из стали и алюминия. Шарнирные и складные системы более ресурсные и долговечные. Планетарная втулка Shimano Nexus на 3 передачи </p>
+                                </div>
+                              </div>
+                              <div class="col-md-6 col-12 benefit-card-descr-wrapper">
+                                <div class="benefit-card-descr">
+                                  <p>дает преимущества в мягком ходе и более редком обслуживании. Складные велосипеды DEWOLF позволяют наслаждаться прогулками в течение длительного времени, не испытывая при этом дискомфорта.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row"></div>
+                          </div>
+                        </div>
+                      </div>
+                            <ul class="block-icons">
+                              <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                                <li class="block-icons-item"><img src="images/benefit-card-mountain-1.png"><span>Качественные вулканизированные покрышки Wanda</span>
+                                </li>
+                              </div>
+                              <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                                <li class="block-icons-item"><img src="images/benefit-card-mountain-1.png"><span>Пожизненная гарантия на раму</span>
+                                </li>
+                              </div>
+                              <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                                <li class="block-icons-item"><img src="images/benefit-card-mountain-1.png"><span>Навесное борудование Shimano</span>
+                                </li>
+                              </div>
+                              <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                                <li class="block-icons-item"><img src="images/benefit-card-mountain-1.png"><span>Сумка с набором шестигранников и насос</span>
+                                </li>
+                              </div>
+                              <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                                <li class="block-icons-item"><img src="images/benefit-card-mountain-1.png"><span>Складные механизмы из высококачественных материалов</span>
+                                </li>
+                              </div>
+                              <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                                <li class="block-icons-item"><img src="images/benefit-card-mountain-1.png"><span>Максимально адаптированная геометрия рам</span>
+                                </li>
+                              </div>
+                              <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                                <li class="block-icons-item"><img src="images/benefit-card-mountain-1.png"><span>Эргономичные седла Vader</span>
+                                </li>
+                              </div>
+                              <div class="col-md-3 col-xs-6 col-12 block-icons-item-wrapper">
+                                <li class="block-icons-item"><img src="images/benefit-card-mountain-1.png"><span>Транспортировоч- ная сумка в комплекте</span>
+                                </li>
+                              </div>
+                            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about-links">
+      <div class="container">
+        <div class="about-links-wrapper">
+          <div class="about-links-block"><a style="background-image:url(images/about-links-choice.jpg)" class="about-links-link">
+              <div class="about-links-link-descr">
+                <h4 class="title about-links-title">
+                  выбрать свой
+                  <br>
+                  dewolf
+                </h4>
+                <button class="btn btn-orange btn-xs">в каталог</button>
+              </div></a></div>
+          <div class="about-links-block"><a style="background-image:url(images/about-links-for-dillers.jpg)" class="about-links-link">
+              <h4 class="title about-links-title">
+                хотите стать
+                <br>
+                дилером
+              </h4>
+              <button class="btn btn-orange btn-xs">связаться</button></a></div>
+        </div>
+      </div>
+    </div>
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="row">
+            <div class="col-sm-4 col-md-3"><a href="/" class="footer-logo"><img src="images/logo-full-white.png" alt="Dewolf"></a></div>
+            <div class="col-md-6 order-sm-last order-md-auto">
+              <div class="row">
+                <div class="col-6 col-sm-4">
+                  <div class="footer-menu">
+                    <h4 class="title"><a href="">Велосипеды</a></h4>
+                    <ul>
+                      <li><a href="">Горные</a></li>
+                      <li><a href="">Городские</a></li>
+                      <li><a href="">Детские</a></li>
+                      <li><a href="">Мужские</a></li>
+                      <li><a href="">Женские</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4">
+                  <div class="footer-menu">
+                    <h4 class="title"><a href="">Самокаты</a></h4>
+                    <ul>
+                      <li><a href="">Взрослые</a></li>
+                      <li><a href="">Детские</a></li>
+                      <li><a href="">Трюковые</a></li>
+                      <li><a href="">Внедорожные</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4">
+                  <div class="footer-menu">
+                    <h4 class="title"><a href="">Dewolf</a></h4>
+                    <ul>
+                      <li><a href="">О бренде</a></li>
+                      <li><a href="">Технологии</a></li>
+                      <li><a href="">Дилерам</a></li>
+                      <li><a href="">Где купить</a></li>
+                      <li><a href="">Оплата и доставка</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="footer-contacts">
+                <div class="footer-contacts-block"><a href="tel:88001234567" class="footer-phone">8 800 123 45 67</a>
+                  <ul class="footer-soc">
+                    <li><a href="" target="_blank"><img src="images/icon-telegram.svg" alt="Telegram"></a></li>
+                    <li><a href="" target="_blank"><img src="images/icon-whatsapp.svg" alt="WhatsApp"></a></li>
+                  </ul>
+                </div><b>Центральный офис в Москве</b><br><a href="mailto:simle@mail.com">simle@mail.com</a><br><b>Офис Волгаград</b><br><a href="mailto:simle@mail.com">simle@mail.com</a><br><a href="tel:+74958808080" class="link-white">+7 (495) 880-80-80</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="row">
+            <div class="col-sm-6 col-md-3 order-md-last">
+              <ul class="footer-soc">
+                <li><a href="" target="_blank"><img src="images/icon-facebook.svg" alt="Facebook"></a></li>
+                <li><a href="" target="_blank"><img src="images/icon-instagram.svg" alt="Instagram"></a></li>
+                <li><a href="" target="_blank"><img src="images/icon-twitter.svg" alt="Twitter"></a></li>
+                <li><a href="" target="_blank"><img src="images/icon-vk.svg" alt="ВКонтакте"></a></li>
+                <li><a href="" target="_blank"><img src="images/icon-youtube.svg" alt="YouTube"></a></li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <div class="footer-copyright">
+                <p>Опубликованная на страницах данного сайта информация, продукция и её изображения являются объектом прав интеллектуальной собственности ООО «Dewolf». Изображение товара на сайте может отличаться от фактического изображения товара.</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3 order-md-first">
+              <ul class="footer-card-icons">
+                <li><a href="" target="_blank"><img src="images/icon-visa.png" alt="VISA"></a></li>
+                <li><a href="" target="_blank"><img src="images/icon-mastercard.png" alt="MasterCard"></a></li>
+                <li><a href="" target="_blank"><img src="images/icon-mir.png" alt="МИР"></a></li>
+                <li><a href="" target="_blank"><img src="images/icon-jcb.png" alt="JSB"></a></li>
+                <li><a href="" target="_blank"><img src="images/icon-union-pay.png" alt="UnionPay"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- MODALS-->
+    <div style="display:none;">
+      <div id="modal-city-select" class="modal">
+        <div class="modal__inner">
+          <h4>Выберите Ваш город</h4>
+          <ul>
+            <li><a href="">Москва</a></li>
+            <li><a href="">Санкт-Петербург</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="/js/jquery.js" type="module" defer></script>
+    <script src="/libs/overlayScrollbars/jquery.overlayScrollbars.min.js" type="module" defer></script>
+    <script src="/libs/swiper/swiper.min.js" type="module" defer></script>
+    <script src="/libs/fancybox/jquery.fancybox.min.js" type="module" defer></script>
+    <script src="/libs/perfect-scrollbar/perfect-scrollbar.min.js" type="module" defer></script>
+    <script src="/js/jquery-ui-slider.min.js" type="module" defer></script>
+    <script src="/libs/selectric/jquery.selectric.min.js" type="module" defer></script>
+    <script src="/libs/inputmask/jquery.inputmask.bundle.min.js" type="module" defer></script>
+    <script src="/js/main.js" type="module" defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=InitContactsMaps" async defer></script>
+  </body>
+</html>

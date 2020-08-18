@@ -1,0 +1,194 @@
+html {
+	font-size: 16px;
+}
+
+body {
+	font-family: $exo2;
+	font-size: 15px;
+	line-height: 2;
+	font-weight: 300;
+	color: getColor('black');
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+	//font-family: 'Ubuntu', sans-serif;
+	//font-weight: 300;
+	//line-height: 1.2;
+	//margin-bottom: 1em;
+	//text-align: center;
+	//color: #000;
+	margin: 0;
+	padding: 0;
+	display: block;
+	color: getColor("black");
+	text-align: left;
+}
+
+h1, .h1 {
+	font-family: $rubik;
+	font-size: 50px;
+	line-height: (40/36);
+	font-weight: 900;
+	font-style: italic;
+	text-align: left;
+	margin-bottom: 0.5em;
+	text-transform: uppercase;
+	
+	@include media-breakpoint-only(sm) {
+		font-size: 42px;
+	}
+	
+	@include media-breakpoint-down(xs) {
+		font-size: 30px;
+	}
+}
+
+h2, .h2 {
+	font-family: $rubik;
+	font-size: 36px;
+	line-height: (48/36);
+	font-weight: 900;
+	font-style: italic;
+	text-align: left;
+	margin-bottom: 0.8em;
+	text-transform: uppercase;
+	
+	@include media-breakpoint-down(sm) {
+		font-size: 30px;
+	}
+	
+	@include media-breakpoint-down(xs) {
+		font-size: 24px;
+	}
+}
+
+//h3, .h3 {
+//	//font-size: px2rem(36);
+//	line-height: 1.11111;
+//	margin-bottom: 0.6em;
+//
+//	@include media-breakpoint-down(sm) {
+//		//font-size: px2rem(30);
+//	}
+//
+//	@include media-breakpoint-down(xs) {
+//		//font-size: px2rem(24);
+//	}
+//}
+//
+h4, .h4 {
+	font-family: $rubik;
+	font-size: 18px;
+	line-height: (24/18);
+	font-weight: 900;
+	font-style: italic;
+	text-align: left;
+	margin-bottom: 0.8em;
+	text-transform: uppercase;
+
+	@include media-breakpoint-down(xs) {
+		font-size: 16px;
+	}
+}
+
+h5, .h5 {
+	font-family: $exo2;
+	font-size: 15px;
+	line-height: (22/15);
+	font-weight: 700;
+	font-style: normal;
+	text-align: left;
+	margin-bottom: 0.8em;
+	text-transform: uppercase;
+}
+
+h6, .h6 {
+	font-family: $exo2;
+	font-size: 15px;
+	line-height: (24/15);
+	font-weight: 700;
+	font-style: italic;
+	text-align: left;
+	text-transform: none;
+}
+
+b {
+	font-weight: 700;
+}
+
+i {
+	font-style: italic;
+}
+
+u {
+	text-decoration: underline;
+}
+
+em {
+	font-style: italic;
+}
+
+small {
+	font-size: 0.75em;
+}
+
+strong {
+	font-size: 1.25em;
+}
+
+sub {
+	vertical-align: sub;
+	font-size: 0.6em;
+}
+
+sup {
+	vertical-align: super;
+	font-size: 0.6em;
+}
+
+ins {
+	text-decoration: underline;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+p {
+	margin: 0 0 1em;
+}
+
+hr {
+	border: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	margin: 1em auto;
+	height: 1px;
+	display: block;
+	background: #ddd;
+}
+
+@each $color in map-keys($default-colors) {
+	.text-#{$color}  { color: getColor($color) !important; }
+}
+
+.text-light {
+	font-weight: 300;
+}
+.text-regular {
+	font-weight: 400;
+}
+.text-semibold {
+	font-weight: 600;
+}
+.text-bold {
+	font-weight: 700;
+}
+.text-weight-black {
+	font-weight: 900;
+}

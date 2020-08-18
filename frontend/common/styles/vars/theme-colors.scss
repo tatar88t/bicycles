@@ -1,0 +1,10 @@
+$theme-colors: (
+		"primary":    #000,
+		"secondary":  #000,
+		"success":    map-get($default-colors, "green"),
+		"info":       map-get($default-colors, "blue"),
+		"warning":    map-get($default-colors, "orange"),
+		"danger":     map-get($default-colors, "red"),
+		"light":      map-get($default-colors, "white"),
+		"dark":       map-get($default-colors, "gray-darker")
+);

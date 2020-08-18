@@ -1,0 +1,67 @@
+.toggle-menu {
+	display: block;
+	position: relative;
+	width: 32px;
+	height: 32px;
+	border: none;
+
+	@include media-breakpoint-down(xs) {
+		width: 27px;
+		height: 27px;
+	}
+
+	div,
+	div:before,
+	div:after {
+		display: block;
+		background: getColor('blue');
+		width: 32px;
+		position: absolute;
+		height: 2px;
+
+		@include media-breakpoint-down(xs) {
+			width: 27px;
+		}
+	}
+
+	div {
+		top: 50%;
+		left: 0;
+		transform: translate(0, -50%);
+		transition: background $transition-time;
+	}
+
+	div:before,
+	div:after {
+		content: '';
+		left: 0;
+		transition: transform $transition-time, background $transition-time;
+		transform-origin: center;
+	}
+
+	div:before {
+		top: -7px;
+	}
+
+	div:after {
+		top: 7px;
+	}
+
+	&.active {
+
+		div {
+			background: transparent!important;
+		}
+
+		div:before {
+			top: 0;
+			transform: rotate(-45deg);
+		}
+
+		div:after {
+			top: 0;
+			transform: rotate(45deg);
+		}
+
+	}
+}

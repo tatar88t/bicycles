@@ -1,0 +1,36 @@
+doctype html
+html(lang="ru")
+
+    head
+        meta(http-equiv="Content-Type", content="text/html; charset=UTF-8")
+
+        block TITLE
+        meta(name="description", content="")
+
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+        meta(name="MobileOptimized", content="320")
+
+        //link(rel="apple-touch-icon", sizes="180x180", href="/apple-touch-icon.png")
+        //link(rel="icon", type="image/png", sizes="32x32", href="/favicon-32x32.png")
+        //link(rel="icon", type="image/png", sizes="16x16", href="/favicon-16x16.png")
+
+        //link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat:300,500,600,800&display=swap&subset=latin,cyrillic")
+
+        - var stylesList = ['/css/reset', '/libs/overlayScrollbars/OverlayScrollbars.min', '/libs/swiper/swiper.min', '/libs/fancybox/jquery.fancybox.min', '/libs/perfect-scrollbar/perfect-scrollbar', '/libs/selectric/selectric', '/css/styles']
+        each name in stylesList
+            link(rel="stylesheet", href= name + ".css")
+
+    body(data-svg-sprite="/images/svg/svg-sprite.svg")
+
+        include ../components/header/header
+        include ../components/main-menu/main-menu
+
+        block CONTENT
+
+        include ../components/footer/footer
+
+        - var scriptsList = ["/js/jquery", '/libs/overlayScrollbars/jquery.overlayScrollbars.min', '/libs/swiper/swiper.min', '/libs/fancybox/jquery.fancybox.min', '/libs/perfect-scrollbar/perfect-scrollbar.min', '/js/jquery-ui-slider.min', '/libs/selectric/jquery.selectric.min', '/libs/inputmask/jquery.inputmask.bundle.min', "/js/main"]
+        each name in scriptsList
+            script(src=name + ".js", type="module", defer)
+        script(src="https://maps.googleapis.com/maps/api/js?callback=InitContactsMaps", async, defer)

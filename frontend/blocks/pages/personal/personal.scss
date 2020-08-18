@@ -1,0 +1,68 @@
+.personal-page {
+	background: getColor("gray-lightest");
+	padding-top: $grid-gutter-width;
+	padding-bottom: 90px;
+	margin-bottom: -100px;
+
+	@include media-breakpoint-only(sm) {
+		padding-bottom: 50px;
+		margin-bottom: -60px;
+	}
+
+	@include media-breakpoint-down(xs) {
+		padding-top: 20px;
+		padding-bottom: 40px;
+		margin-bottom: -40px;
+	}
+
+	.personal-form {
+		background-color: getColor("white");
+		box-shadow: 0 19px 31px 0 rgba(getColor("black"), 0.05);
+		padding: 40px;
+		display: block;
+
+		@include media-breakpoint-up(xl) {
+			padding-right: 100px;
+		}
+		@include media-breakpoint-down(md) {
+			padding: 20px;
+		}
+
+		.buttons-line {
+			margin-top: 10px;
+
+			button {
+				vertical-align: middle;
+			}
+
+			button:not(:last-child) {
+				margin-right: 20px;
+			}
+
+			button:not(.btn) {
+				font-style: italic;
+				text-transform: lowercase;
+
+				@include link-default-style {
+					color: getColor('gray');
+				}
+				@include link-hover-style {
+					color: getColor("blue");
+				}
+			}
+		}
+
+		.desc {
+			font-weight: 700;
+			font-style: italic;
+			margin-bottom: 1.5em;
+
+			@include media-breakpoint-up(lg) {
+				margin-top: -0.5em;
+			}
+		}
+	}
+
+
+
+}

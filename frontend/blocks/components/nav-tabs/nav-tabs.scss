@@ -1,0 +1,144 @@
+.nav-tabs {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	border-bottom: 1px solid getColor('gray-light');
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	justify-content: flex-start;
+	flex-wrap: nowrap;
+
+	li {
+		flex: 0 0 auto;
+		padding: 0;
+		margin: 0;
+
+		&:before {
+			display: none;
+		}
+	}
+
+	a {
+		display: block;
+		font-family: $rubik;
+		font-weight: 700;
+		font-style: italic;
+		font-size: 18px;
+		line-height: (24/18);
+		border: none;
+		margin-bottom: 0;
+		padding: (52px - 24px)/2 40px;
+		position: relative;
+
+		&:before {
+			content: "";
+			transform: $standard-skew;
+			transform-origin: left bottom;
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			transition: background-color $transition-time;
+			z-index: -1;
+		}
+
+		@include link-default-style {
+			color: getColor('blue');
+
+			&:before {
+				background: transparent;
+			}
+		}
+		@include link-hover-style {
+			color: getColor('blue-dark');
+
+			&:before {
+				background: transparent;
+			}
+		}
+
+		&.active {
+			@include link-default-style {
+				color: getColor('black');
+
+				&:before {
+					background: getColor("gray-lightest");
+				}
+			}
+			@include link-hover-style {
+				color: getColor('black');
+
+				&:before {
+					background: getColor("gray-lightest");
+				}
+			}
+		}
+	}
+}
+
+.tab-container {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+
+	.tab-pane {
+		display: none;
+
+		&.active {
+			@include media-breakpoint-up(sm) {
+				display: block;
+				animation: fadeIn $transition-time;
+			}
+		}
+	}
+}
+
+.nav-tabs + .tab-container {
+	margin-top: 20px;
+}
+
+@keyframes fadeIn {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+.nav-tab-mobile {
+	display: none;
+	font-family: $rubik;
+	font-style: italic;
+	font-weight: 700;
+	font-size: 18px;
+	vertical-align: top;
+	transition: color $transition-time;
+	margin: 0;
+	padding: 0;
+
+	@include link-default-style {
+		color: getColor("black");
+	}
+	@include link-hover-style {
+		color: getColor("blue");
+	}
+
+	&:after {
+		content: "";
+		border: 4px solid transparent;
+		border-top: 5px solid getColor("blue");
+		border-bottom: 0;
+		position: static;
+		display: inline-block;
+		vertical-align: top;
+		right: 0;
+		height: 5px;
+		width: 8px;
+		transition: transform $transition-time;
+		margin-top: 16px;
+		margin-left: 8px;
+	}
+
+	&.active:after {
+		transform: rotate(180deg);
+	}
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+</style>
+<title></title>
+<g id="_28-Bar_Chart">
+	<g>
+		<path class="st0" d="M31,32H21c-0.6,0-1-0.4-1-1V1c0-0.6,0.4-1,1-1h10c0.6,0,1,0.4,1,1v30C32,31.6,31.6,32,31,32z M22,30h8V2h-8
+			V30z"/>
+	</g>
+	<g>
+		<path class="st0" d="M21,32H11c-0.6,0-1-0.4-1-1V9c0-0.6,0.4-1,1-1h10c0.6,0,1,0.4,1,1v22C22,31.6,21.6,32,21,32z M12,30h8V10h-8
+			V30z"/>
+	</g>
+	<g>
+		<path class="st0" d="M11,32H1c-0.6,0-1-0.4-1-1V17c0-0.6,0.4-1,1-1h10c0.6,0,1,0.4,1,1v14C12,31.6,11.6,32,11,32z M2,30h8V18H2V30
+			z"/>
+	</g>
+</g>
+</svg>

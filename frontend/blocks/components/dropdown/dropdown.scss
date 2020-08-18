@@ -1,0 +1,51 @@
+.dropdown {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translate(-50%, 0);
+	vertical-align: top;
+	z-index: 500;
+	font-size: 15px;
+	line-height: 1.5;
+
+	&.active {
+		display: inline-block;
+	}
+
+	&-items {
+		background: getColor('white');
+		border: 1px solid getColor('black');
+		border-radius: 0;
+		margin: 0;
+		padding: 15px 0;
+		list-style: none;
+
+		li {
+			margin: 0;
+			padding: 0;
+			display: block;
+
+			&:before {
+				display: none;
+			}
+		}
+
+		a {
+			margin: 0;
+			padding: 7px 30px;
+			transition: background-color $transition-time, color $transition-time;
+			display: block;
+			white-space: nowrap;
+
+			@include link-default-style {
+				background: transparent;
+				color: getColor("black")!important;
+			}
+			&:hover {
+				background: getColor('blue');
+				color: getColor('white')!important;
+			}
+		}
+	}
+}

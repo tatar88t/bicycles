@@ -1,0 +1,159 @@
+.swiper {
+
+	&-wrapper {
+		align-items: stretch;
+		height: 100%;
+	}
+
+	&-slide {
+		height: auto;
+	}
+
+	//&-nav {
+	//	display: flex;
+	//	flex-direction: row;
+	//	align-items: center;
+	//	flex-wrap: nowrap;
+	//	justify-content: flex-start;
+	//}
+	//
+	//&-button {
+	//	width: 20px;
+	//	height: 20px;
+	//	outline: none;
+	//	box-shadow: none;
+	//	border: none;
+	//	border-radius: 0;
+	//	background: transparent;
+	//	cursor: pointer;
+	//	position: relative;
+	//	display: block;
+	//	transition: background-color $transition-time, border-color $transition-time;
+	//
+	//	.icon {
+	//		width: 11px;
+	//		height: 20px;
+	//		position: absolute;
+	//		top: 50%;
+	//		margin-top: -10px;
+	//		fill: getColor('red');
+	//		transition: fill $transition-time;
+	//	}
+	//
+	//	@include link-hover-style {
+	//		background-color: transparent;
+	//
+	//		.icon {
+	//			fill: getColor('red-light');
+	//		}
+	//	}
+	//
+	//	&-prev,
+	//	&-next {
+	//		left: auto;
+	//		right: auto;
+	//		top: auto;
+	//		bottom: auto;
+	//		margin: 0;
+	//	}
+	//
+	//	&-prev {
+	//		.icon {
+	//			transform: rotate(180deg);
+	//			left: 0;
+	//		}
+	//	}
+	//
+	//	&-next {
+	//		.icon {
+	//			right: 0;
+	//		}
+	//	}
+	//
+	//	&-disabled {
+	//		opacity: 0.5!important;
+	//		border-color: getColor('gray')!important;
+	//		background: transparent !important;
+	//
+	//		.icon {
+	//			fill: getColor('gray')!important;
+	//		}
+	//	}
+	//}
+	//
+	//&-nav-lg &-button {
+	//	width: 66px;
+	//	height: 66px;
+	//	border: 2px solid getColor('red');
+	//	border-radius: 3px;
+	//
+	//	.icon {
+	//		width: 26px;
+	//		height: 26px;
+	//		top: 50%;
+	//		left: 50%;
+	//		right: auto;
+	//		margin-top: -13px;
+	//		margin-left: -13px;
+	//		fill: getColor('black');
+	//	}
+	//
+	//	@include link-hover-style {
+	//		background-color: getColor('red');
+	//
+	//		.icon {
+	//			fill: getColor('white');
+	//		}
+	//	}
+	//}
+	//
+	&-pagination {
+		text-align: center;
+		font-size: 0;
+		line-height: 0;
+		position: static;
+	}
+
+	&-pagination-bullet {
+		width: 20px;
+		height: 20px;
+		background: none;
+		border-radius: 0;
+		display: inline-block;
+		vertical-align: top;
+		margin: -5px 10px;
+		position: relative;
+		opacity: 1;
+		cursor: pointer;
+		outline: none!important;
+		box-shadow: none!important;
+
+		&:before {
+			content: "";
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			top: 50%;
+			left: 50%;
+			margin-top: -5px;
+			margin-left: -5px;
+			background: getColor('gray-light');
+			transition: background $transition-time;
+			border-radius: 0;
+			transform: $standard-skew;
+			transform-origin: center;
+		}
+
+		&.swiper-pagination-bullet-active:before {
+			background: getColor('blue');
+		}
+	}
+}
+
+.swiper-slider-no-active {
+
+	.swiper-pagination,
+	.swiper-nav {
+		display: none!important;
+	}
+}

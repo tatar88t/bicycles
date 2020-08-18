@@ -1,0 +1,155 @@
+extends ../../layouts/default
+
+include ../../../common/markup/utilites
+
+block TITLE
+	title Каталог
+
+block CONTENT
+	.page-title
+		.container
+			ul.breadcrumb
+				li.back
+					a(href="") Вернуться назад
+				li
+					a(href="/")
+						+svg-icon("home")
+				li
+					a(href="") Велосипеды
+				li
+					span Горные велосипеды
+			h1 Горные велосипеды
+	.catalog
+		.container
+			.catalog-controls-mobile
+				button.mobile-filter-toggler(type="button", data-toggle-activity="#catalog-filter")
+					+svg-icon("filter")
+				.mobile-sort-block
+					a.mobile-sort-toggler(href="#", data-toggle-activity="#mobile-sort-list") Сортировка
+					#mobile-sort-list.dropdown
+						ul.dropdown-items
+							li
+								a.sort-link(href="") По цене
+							li
+								a.sort-link(href="") По году выпуска
+							li
+								a.sort-link.asc(href="") По популярности
+							li
+								a.sort-link.desc(href="") По марке
+			.row
+				.col-md-4.col-lg-3
+					include ../../components/catalog-filter/catalog-filter
+				.col-md-8.col-lg-9
+					.catalog-sort-block
+						.title Сортировать по:
+						ul
+							li
+								a.sort-link(href="") цене
+							li
+								a.sort-link(href="") году выпуска
+							li
+								a.sort-link.asc(href="") популярности
+							li
+								a.sort-link.desc(href="") марке
+					mixin catalog-item(ctiimg, ctiimgfull, ctiredbadge, ctibluebadge, cticategory, ctiname, ctiprice, ctioldprice)
+						a(class="catalog-item" + (ctiimgfull ? " full-image" : ""), style="background-image:url(images/" + ctiimg + ")")
+							.inner
+								.top-line
+									.badges-line
+										if (ctiredbadge)
+											.badge.badge-orange.badge-xs
+												span= ctiredbadge
+										if (ctibluebadge)
+											.badge.badge-blue.badge-xs
+												span= ctibluebadge
+									.icons-line
+										button.button.btn-location
+											+svg-icon("location")
+										button.button.btn-video
+											+svg-icon("video")
+										// если уже есть в сравнении, то добавить класс .active
+										button.button.btn-compare
+											+svg-icon("bar-chart")
+								.image(style="background-image:url(images/" + ctiimg + ")")
+								.category= cticategory
+								h4.title= ctiname
+								.price-block
+									.price= ctiprice
+									if (ctioldprice)
+										.old-price= ctioldprice
+								ul.chars-list
+									li
+										span.char-name Цвета:
+										ul.colors-list
+											li(style="background:#e40909") Красный
+											li(style="background:#1f2883") Синий
+											li(style="background:#fff000") Желтый
+									li
+										span.char-name Вес:
+										span 17.2 кг
+									li
+										span.char-name Диаметр колес:
+										span 28", 28.5", 29"
+									li
+										span.char-name Размер рамы:
+										span 16", 17"
+							button.btn.btn-xs.btn-basket(type="button") В корзину
+					.catalog-list
+						.row
+							.col-xs-6.col-lg-4
+								+catalog-item("main-sale-4.jpg", false, "-30%", "Подарок", "Велосипед", "PERFECT", "36 200 руб.", "39 800 руб.")
+							.col-xs-6.col-lg-4
+								+catalog-item("main-sale-2.jpg", false, "-30%", false, "Велосипед", "Asphalt 1", "41 300 руб.", "56 800 руб.")
+							.col-xs-6.col-lg-4
+								+catalog-item("main-sale-3.jpg", false, false, "Подарок", "Велосипед", "COVAX 2", "34 900 руб.", "37 500 руб.")
+
+							.col-xs-6.col-lg-4
+								+catalog-item("main-sale-2.jpg", false, "-30%", false, "Велосипед", "Asphalt 1", "41 300 руб.", "56 800 руб.")
+							.col-xs-6.col-lg-4
+								+catalog-item("main-sale-6.jpg", true, "-30%", false, "Велосипед", "MAESTRO 2", "32 300 руб.", "34 700 руб.")
+							.col-xs-6.col-lg-4
+								+catalog-item("main-sale-4.jpg", false, "-30%", "Подарок", "Велосипед", "PERFECT", "36 200 руб.", "39 800 руб.")
+
+							.col-xs-6.col-lg-4
+								+catalog-item("main-sale-4.jpg", false, "-30%", "Подарок", "Велосипед", "PERFECT", "36 200 руб.", "39 800 руб.")
+							.col-xs-6.col-lg-4
+								+catalog-item("main-sale-2.jpg", false, "-30%", false, "Велосипед", "Asphalt 1", "41 300 руб.", "56 800 руб.")
+							.col-xs-6.col-lg-4
+								+catalog-item("main-sale-3.jpg", false, false, "Подарок", "Велосипед", "COVAX 2", "34 900 руб.", "37 500 руб.")
+
+							.col-12
+								.catalog-offer.lg.vertical-center(style="background-image:url(images/catalog-offer-1.jpg);")
+									.title(style="color:#fff;") Онлайн-помощник<br>в подборе<br>велосипеда
+									a.btn(href="") Подобрать
+
+							.col-xs-6.col-lg-4
+								+catalog-item("main-sale-4.jpg", false, "-30%", "Подарок", "Велосипед", "PERFECT", "36 200 руб.", "39 800 руб.")
+							.col-xs-6.col-lg-4
+								+catalog-item("main-sale-2.jpg", false, "-30%", false, "Велосипед", "Asphalt 1", "41 300 руб.", "56 800 руб.")
+							.col-xs-6.col-lg-4
+								+catalog-item("main-sale-3.jpg", false, false, "Подарок", "Велосипед", "COVAX 2", "34 900 руб.", "37 500 руб.")
+
+							// wide
+							.col-xs-6.col-lg-8
+								+catalog-item("catalog-offer-2.jpg", true, "-20%", false, "Велосипед + самокат", "TRX 150", "28 600 руб.", "28 900 руб.")
+							.col-xs-6.col-lg-4
+								+catalog-item("main-sale-4.jpg", false, "-30%", "Подарок", "Велосипед", "PERFECT", "36 200 руб.", "39 800 руб.")
+
+							.col-xs-6.col-lg-4
+								+catalog-item("main-sale-4.jpg", false, "-30%", "Подарок", "Велосипед", "PERFECT", "36 200 руб.", "39 800 руб.")
+							.col-xs-6.col-lg-4
+								+catalog-item("main-sale-2.jpg", false, "-30%", false, "Велосипед", "Asphalt 1", "41 300 руб.", "56 800 руб.")
+							.col-xs-6.col-lg-4
+								+catalog-item("main-sale-3.jpg", false, false, "Подарок", "Велосипед", "COVAX 2", "34 900 руб.", "37 500 руб.")
+
+							.col-md-6
+								.catalog-offer.vertical-top(style="background-image:url(images/catalog-offer-3.jpg);")
+									.title Семейный комплект, при&nbsp;покупке 3&nbsp;великов самокат  в&nbsp;подарок!
+									a.btn.btn-orange.btn-xs(href="") В каталог
+
+							.col-md-6
+								.catalog-offer.vertical-bottom(style="background-image:url(images/catalog-offer-4.jpg);")
+									.title Купи еще&nbsp;самокат и&nbsp;получи еще&nbsp;скидку
+									a.btn.btn-orange.btn-xs(href="") В каталог
+					include ../../components/pagination/pagination
+

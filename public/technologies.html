@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Технологии</title>
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="MobileOptimized" content="320">
+    <!--link(rel="apple-touch-icon", sizes="180x180", href="/apple-touch-icon.png")-->
+    <!--link(rel="icon", type="image/png", sizes="32x32", href="/favicon-32x32.png")-->
+    <!--link(rel="icon", type="image/png", sizes="16x16", href="/favicon-16x16.png")-->
+    <!--link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat:300,500,600,800&display=swap&subset=latin,cyrillic")-->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/libs/overlayScrollbars/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="/libs/swiper/swiper.min.css">
+    <link rel="stylesheet" href="/libs/fancybox/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="/libs/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="/libs/selectric/selectric.css">
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body data-svg-sprite="/images/svg/svg-sprite.svg">
+    <header id="header" class="header">
+      <div class="header-top">
+        <div class="container-fluid">
+          <div class="header-inner">
+            <div class="toggle-menu-wrapper">
+              <button class="toggle-menu">
+                <div></div>
+              </button>
+            </div>
+            <ul class="header-menu">
+              <li><a href="">О бренде</a></li>
+              <li><a href="">Технологии</a></li>
+              <li><a href="">Оплата и доставка</a></li>
+              <li><a href="">Дилерам</a></li>
+              <li><a href="">Покупателю</a></li>
+            </ul>
+            <ul class="header-info-menu">
+              <li>
+                <button type="button" data-modal="#modal-city-select" class="header-city">Москва</button>
+              </li>
+              <li><a href="#main-contacts" data-scroll-to="#main-contacts" class="header-location">
+                  <svg class="icon icon-location">
+                    <use xlink:href="#location"></use>
+                  </svg><span>Адреса магазинов</span></a></li>
+              <li><a href="#main-sale" data-scroll-to="#main-sale" class="header-sale">
+                  <svg class="icon icon-zap">
+                    <use xlink:href="#zap"></use>
+                  </svg><span>Акции</span></a></li>
+            </ul>
+            <div class="header-search">
+              <button type="button" class="header-search-form-toggler">
+                <svg class="icon icon-loupe">
+                  <use xlink:href="#loupe"></use>
+                </svg>
+              </button>
+              <form method="" action="" novalidate="true" autocomplete="off" class="header-search-form">
+                <div class="container-fluid">
+                  <input type="text" name="" value="" placeholder="Поиск" class="header-search-form-input">
+                  <button type="button" class="header-search-form-toggler button-close">
+                    <svg class="icon icon-close">
+                      <use xlink:href="#close"></use>
+                    </svg>
+                  </button>
+                </div>
+              </form>
+            </div>
+            <ul class="header-user-menu">
+              <li>
+                <button type="button" title="Вход в личный кабинет" data-toggle-activity="#header-auth-menu">
+                  <svg class="icon icon-key">
+                    <use xlink:href="#key"></use>
+                  </svg>
+                </button>
+                <div id="header-auth-menu" class="dropdown">
+                  <ul class="dropdown-items">
+                    <li><a href="">Вход</a></li>
+                    <li><a href="">Выход</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="" title="Сравнение товаров">
+                  <svg class="icon icon-bar-chart">
+                    <use xlink:href="#bar-chart"></use>
+                  </svg></a></li>
+              <li><a href="" title="Корзина">
+                  <svg class="icon icon-cart">
+                    <use xlink:href="#cart"></use>
+                  </svg><span class="badge badge-xs badge-blue"><span>12</span></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="header-bottom">
+        <div class="container-fluid">
+          <div class="header-inner"><a href="/" class="header-logo"><img src="images/logo-full-black.png"></a>
+            <div class="toggle-menu-wrapper">
+              <button class="toggle-menu">
+                <div></div>
+              </button>
+            </div>
+            <button type="button" data-modal="#modal-city-select" class="header-city">Москва</button>
+            <hr>
+            <ul class="header-products-menu">
+              <li><a href="#" data-toggle-activity="#header-products-menu-1">Велосипеды</a>
+                <div id="header-products-menu-1" class="dropdown">
+                  <ul class="dropdown-items">
+                    <li><a href="">Категория 1</a></li>
+                    <li><a href="">Категория 2</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="#" data-toggle-activity="#header-products-menu-2">Самокаты</a>
+                <div id="header-products-menu-2" class="dropdown">
+                  <ul class="dropdown-items">
+                    <li><a href="">Категория 1</a></li>
+                    <li><a href="">Категория 2</a></li>
+                    <li><a href="">Категория 3</a></li>
+                    <li><a href="">Категория 4</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <hr><a href="#main-selection" data-scroll-to="#main-selection" class="header-select-product">Подобрать велосипед</a>
+            <hr>
+            <div class="header-info-block"><span class="header-info-item">Ежедневно с  9:00 до 21:00</span><a href="tel:88001234567" class="header-info-item header-phone">8 800 123 45 67</a></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="main-menu" class="main-menu">
+      <div class="main-menu__content">
+        <div class="header">
+          <div class="header-top">
+            <div class="container-fluid">
+              <div class="header-inner">
+                <div class="toggle-menu-wrapper">
+                  <button class="toggle-menu active">
+                    <div></div>
+                  </button>
+                </div>
+                <ul class="header-menu">
+                  <li><a href="">О бренде</a></li>
+                  <li><a href="">Технологии</a></li>
+                  <li><a href="">Оплата и доставка</a></li>
+                  <li><a href="">Дилерам</a></li>
+                  <li><a href="">Покупателю</a></li>
+                </ul>
+                <ul class="header-info-menu">
+                  <li>
+                    <button type="button" data-modal="#modal-city-select" class="header-city">Москва</button>
+                  </li>
+                  <li><a href="#main-contacts" data-scroll-to="#main-contacts" class="header-location">
+                      <svg class="icon icon-location">
+                        <use xlink:href="#location"></use>
+                      </svg><span>Адреса магазинов</span></a></li>
+                  <li><a href="#main-sale" data-scroll-to="#main-sale" class="header-sale">
+                      <svg class="icon icon-zap">
+                        <use xlink:href="#zap"></use>
+                      </svg><span>Акции</span></a></li>
+                </ul>
+                <div class="header-search">
+                  <button type="button" class="header-search-form-toggler">
+                    <svg class="icon icon-loupe">
+                      <use xlink:href="#loupe"></use>
+                    </svg>
+                  </button>
+                  <form method="" action="" novalidate="true" autocomplete="off" class="header-search-form">
+                    <div class="container-fluid">
+                      <input type="text" name="" value="" placeholder="Поиск" class="header-search-form-input">
+                      <button type="button" class="header-search-form-toggler button-close">
+                        <svg class="icon icon-close">
+                          <use xlink:href="#close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                <ul class="header-user-menu">
+                  <li>
+                    <button type="button" title="Вход в личный кабинет" data-toggle-activity="#header-auth-menu">
+                      <svg class="icon icon-key">
+                        <use xlink:href="#key"></use>
+                      </svg>
+                    </button>
+                    <div id="header-auth-menu" class="dropdown">
+                      <ul class="dropdown-items">
+                        <li><a href="">Вход</a></li>
+                        <li><a href="">Выход</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li><a href="" title="Сравнение товаров">
+                      <svg class="icon icon-bar-chart">
+                        <use xlink:href="#bar-chart"></use>
+                      </svg></a></li>
+                  <li><a href="" title="Корзина">
+                      <svg class="icon icon-cart">
+                        <use xlink:href="#cart"></use>
+                      </svg><span class="badge badge-xs badge-blue"><span>12</span></span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="header-bottom">
+            <div class="container-fluid">
+              <div class="header-inner"><a href="/" class="header-logo"><img src="images/logo-full-white.png"></a>
+                <div class="toggle-menu-wrapper">
+                  <button class="toggle-menu active">
+                    <div></div>
+                  </button>
+                </div>
+                <button type="button" data-modal="#modal-city-select" class="header-city">Москва</button>
+                <hr>
+                <ul class="header-products-menu">
+                  <li><a href="#" data-toggle-activity="#main-products-menu-1">Велосипеды</a>
+                    <div id="main-products-menu-1" class="dropdown">
+                      <ul class="dropdown-items">
+                        <li><a href="">Категория 1</a></li>
+                        <li><a href="">Категория 2</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li><a href="#" data-toggle-activity="#main-products-menu-2">Самокаты</a>
+                    <div id="main-products-menu-2" class="dropdown">
+                      <ul class="dropdown-items">
+                        <li><a href="">Категория 1</a></li>
+                        <li><a href="">Категория 2</a></li>
+                        <li><a href="">Категория 3</a></li>
+                        <li><a href="">Категория 4</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+                <hr><a href="#main-selection" data-scroll-to="#main-selection" class="header-select-product">Подобрать велосипед</a>
+                <hr>
+                <div class="header-info-block"><span class="header-info-item">Ежедневно с  9:00 до 21:00</span><a href="tel:88001234567" class="header-info-item header-phone">8 800 123 45 67</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-6 col-sm-4 col-md-3">
+              <div class="footer-menu">
+                <h4 class="title"><a href="">Велосипеды</a></h4>
+                <ul>
+                  <li><a href="">Горные</a></li>
+                  <li><a href="">Городские</a></li>
+                  <li><a href="">Детские</a></li>
+                  <li><a href="">Мужские</a></li>
+                  <li><a href="">Женские</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3">
+              <div class="footer-menu">
+                <h4 class="title"><a href="">Самокаты</a></h4>
+                <ul>
+                  <li><a href="">Взрослые</a></li>
+                  <li><a href="">Детские</a></li>
+                  <li><a href="">Трюковые</a></li>
+                  <li><a href="">Внедорожные</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3">
+              <div class="footer-menu">
+                <h4 class="title"><a href="">Dewolf</a></h4>
+                <ul>
+                  <li><a href="">О бренде</a></li>
+                  <li><a href="">Технологии</a></li>
+                  <li><a href="">Дилерам</a></li>
+                  <li><a href="">Где купить</a></li>
+                  <li><a href="">Оплата и доставка</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="footer">
+                <div class="container">
+                  <div class="footer-contacts">
+                    <div class="row">
+                      <div class="col-sm-6 col-md-3 mb-3 mb-md-0"><b>Центральный офис в Москве</b><br><a href="mailto:simle@mail.com">simle@mail.com</a><br><a href="tel:+74958808080">+7 (495) 880-80-80</a></div>
+                      <div class="col-sm-6 col-md-3 mb-3 mb-md-0"><b>Офис Волгаград</b><br><a href="mailto:simle@mail.com">simle@mail.com</a><br><a href="tel:+74958808080">+7 (495) 880-80-80</a></div>
+                      <div class="col-sm-6 col-md-3 mb-3 mb-md-0">
+                        <ul class="footer-soc">
+                          <li><a href="" target="_blank"><img src="images/icon-telegram.svg" alt="Telegram"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-whatsapp.svg" alt="WhatsApp"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-facebook.svg" alt="Facebook"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-instagram.svg" alt="Instagram"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-twitter.svg" alt="Twitter"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-vk.svg" alt="ВКонтакте"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-youtube.svg" alt="YouTube"></a></li>
+                        </ul>
+                      </div>
+                      <div class="col-sm-6 col-md-3 mb-3 mb-md-0">
+                        <ul class="footer-card-icons">
+                          <li><a href="" target="_blank"><img src="images/icon-visa.png" alt="VISA"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-mastercard.png" alt="MasterCard"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-mir.png" alt="МИР"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-jcb.png" alt="JSB"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-union-pay.png" alt="UnionPay"></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page-title">
+      <div class="container">
+        <ul class="breadcrumb">
+          <li class="back"><a href="">Вернуться назад</a></li>
+          <li><a href="/">
+              <svg class="icon icon-home">
+                <use xlink:href="#home"></use>
+              </svg></a></li>
+          <li><a href="">Технологии</a></li>
+        </ul>
+        <h1>технологии</h1>
+      </div>
+    </div>
+    <div id="technologies" class="technologies">
+      <div class="container">
+        <div class="technologies-tabs">
+          <ul class="nav-tabs">
+            <li><a href="#" class="active">Велосипеды</a></li>
+            <li><a href="#">Самокаты</a></li>
+          </ul>
+        </div>
+        <div class="technologies-features">
+                  <div class="technologies-features-item">
+                    <div style="background-image:url(images/tech-features-item-1.jpg)" class="technologies-features-item-img"></div>
+                    <div class="technologies-features-item-descr">
+                      <div class="title">
+                        <div class="title-icon"><img src="images/tech-features-item-icon-1.png" class="technologies-features-item-logo"></div>
+                        <div class="title-text">
+                          <div class="badge">
+                            <h2 class="badge badge-blue"><span>folding geometry</span></h2>
+                          </div>
+                          <div class="info">Геометрия для складных рам</div>
+                        </div>
+                      </div>
+                      <div class="description">
+                        <p>Комфортная геометрия с вертикальной посадкой, максимально адаптированная для складных рам с колесами небольшого размера, которая позволит наслаждаться прогулками в течение длительного времени, не испытывая при этом дискомфорта.</p>
+                      </div><a href="#" class="link"><span>Читать полностью</span></a>
+                    </div>
+                  </div>
+                  <div class="technologies-features-item">
+                    <div style="background-image:url(images/tech-features-item-2.jpg)" class="technologies-features-item-img"></div>
+                    <div class="technologies-features-item-descr">
+                      <div class="title">
+                        <div class="title-icon"><img src="images/tech-features-item-icon-2.png" class="technologies-features-item-logo"></div>
+                        <div class="title-text">
+                          <div class="badge">
+                            <h2 class="badge badge-blue"><span>comfort geometry</span></h2>
+                          </div>
+                          <div class="info">Комфортная геометрия </div>
+                        </div>
+                      </div>
+                      <div class="description">
+                        <p>Вальяжная, комфортная настолько, насколько это вообще возможно, геометрия. Вертикальная посадка, которая позволяет наслаждаться катанием и любоваться городскими видами, тщательно подобранные углы и длины труб, а также качественные компоненты комфорт-класса, от седел до рулей - вот рецепт хорошей, правильной комфортной геометрии.</p>
+                      </div><a href="#" class="link"><span>Читать полностью</span></a>
+                    </div>
+                  </div>
+                  <div class="technologies-features-item">
+                    <div style="background-image:url(images/tech-features-item-3.jpg)" class="technologies-features-item-img"></div>
+                    <div class="technologies-features-item-descr">
+                      <div class="title">
+                        <div class="title-icon"><img src="images/tech-features-item-icon-3.png" class="technologies-features-item-logo"></div>
+                        <div class="title-text">
+                          <div class="badge">
+                            <h2 class="badge badge-blue"><span>race geometry</span></h2>
+                          </div>
+                          <div class="info">Накатистая геометрия </div>
+                        </div>
+                      </div>
+                      <div class="description">
+                        <p>Накатистая геометрия для максимально эффективного приложения сил райдера во время гонок. Характерная &quot;вытянутость&quot; достигается за счет длинной верхней трубы, что позволяет добиться максимальной стабильности байка и аэродинамической посадки райдера во время гонки. Одновременно с этим решением используются укороченные нижние перья, позволяющие добиться большей маневренности в виражах.</p>
+                      </div><a href="#" class="link"><span>Читать полностью</span></a>
+                    </div>
+                  </div>
+                  <div class="technologies-features-item">
+                    <div style="background-image:url(images/tech-features-item-4.jpg)" class="technologies-features-item-img"></div>
+                    <div class="technologies-features-item-descr">
+                      <div class="title">
+                        <div class="title-icon"><img src="images/tech-features-item-icon-4.png" class="technologies-features-item-logo"></div>
+                        <div class="title-text">
+                          <div class="badge">
+                            <h2 class="badge badge-blue"><span>hmcf carbon</span></h2>
+                          </div>
+                          <div class="info">Композитный монокок</div>
+                        </div>
+                      </div>
+                      <div class="description">
+                        <p>Композитный монокок от итальянского дизайнерского бюро, изготовлен с применением технологий Nano Matrix. Каждая такая рама стандартно имеет коническую рулевую трубу и совместима с системой крепления X12 Through Axle.</p>
+                      </div><a href="#" class="link"><span>Читать полностью</span></a>
+                    </div>
+                  </div>
+                  <div class="technologies-features-item">
+                    <div style="background-image:url(images/tech-features-item-5.jpg)" class="technologies-features-item-img"></div>
+                    <div class="technologies-features-item-descr">
+                      <div class="title">
+                        <div class="title-icon"><img src="images/tech-features-item-icon-5.png" class="technologies-features-item-logo"></div>
+                        <div class="title-text">
+                          <div class="badge">
+                            <h2 class="badge badge-blue"><span>icr</span></h2>
+                          </div>
+                          <div class="info">АСР</div>
+                        </div>
+                      </div>
+                      <div class="description">
+                        <p>Такое технологическое решение имеет много преимуществ, от более аккуратного внешнего вида велосипеда до улучшения аэродинамических характеристик и уменьшения массы велосипеда в целом. Кроме того, проложенные внутри рамы тросы имеют дополнительную защиту от загрязнений, что существенно продлевает срок их службы и время точной, бесперебойной работы.</p>
+                      </div><a href="#" class="link"><span>Читать полностью</span></a>
+                    </div>
+                  </div>
+                  <div class="technologies-features-item">
+                    <div style="background-image:url(images/tech-features-item-6.jpg)" class="technologies-features-item-img"></div>
+                    <div class="technologies-features-item-descr">
+                      <div class="title">
+                        <div class="title-icon"><img src="images/tech-features-item-icon-6.png" class="technologies-features-item-logo"></div>
+                        <div class="title-text">
+                          <div class="badge">
+                            <h2 class="badge badge-blue"><span>sport geometry</span></h2>
+                          </div>
+                          <div class="info">Гибридная геометрия</div>
+                        </div>
+                      </div>
+                      <div class="description">
+                        <p>Гибридная геометрия, сочетающая в себе главные достоинства Race и Recreational геометрий. Более комфортная и вертикальная посадка райдера с одной стороны и стабильность и маневренность с другой. Велосипед с такой геометрией идеально подойдет тем, кому уже надоело просто кататься по тропкам, наслаждаясь видами, и кто хочет попробовать себя в более спортивном и агрессивном катании.</p>
+                      </div><a href="#" class="link"><span>Читать полностью</span></a>
+                    </div>
+                  </div>
+                  <div class="technologies-features-item">
+                    <div style="background-image:url(images/tech-features-item-7.jpg)" class="technologies-features-item-img"></div>
+                    <div class="technologies-features-item-descr">
+                      <div class="title">
+                        <div class="title-icon"><img src="images/tech-features-item-icon-7.png" class="technologies-features-item-logo"></div>
+                        <div class="title-text">
+                          <div class="badge">
+                            <h2 class="badge badge-blue"><span>ultra alloy 6061</span></h2>
+                          </div>
+                          <div class="info">Ультра легкая рама</div>
+                        </div>
+                      </div>
+                      <div class="description">
+                        <p>Алюминиевые рамы топ-класса, используемые в байках категории Race, изготовлены из нового сплава алюминия. Максимально облегченная конструкция, беспрецедентная жесткость и прочность на разрыв и наивысший предел пластичности.</p>
+                      </div><a href="#" class="link"><span>Читать полностью</span></a>
+                    </div>
+                  </div>
+                  <div class="technologies-features-item">
+                    <div style="background-image:url(images/tech-features-item-8.jpg)" class="technologies-features-item-img"></div>
+                    <div class="technologies-features-item-descr">
+                      <div class="title">
+                        <div class="title-icon"><img src="images/tech-features-item-icon-8.png" class="technologies-features-item-logo"></div>
+                        <div class="title-text">
+                          <div class="badge">
+                            <h2 class="badge badge-blue"><span>women geometry</span></h2>
+                          </div>
+                          <div class="info">Женская геометрия</div>
+                        </div>
+                      </div>
+                      <div class="description">
+                        <p>Не секрет, что по физиологии мужчины и женщины отличаются друг от друга. Именно поэтому наши инженеры и дизайнеры разработали специальную геометрию для леди. Дамские рамы имеют более короткую базу, чуть более комфортную посадку и заниженный стендовер, что значительно облегчает женщинам пользование велосипедом и позволяет получить максимум удовольствия во время поездки.</p>
+                      </div><a href="#" class="link"><span>Читать полностью</span></a>
+                    </div>
+                  </div>
+                  <div class="technologies-features-item">
+                    <div style="background-image:url(images/tech-features-item-9.jpg)" class="technologies-features-item-img"></div>
+                    <div class="technologies-features-item-descr">
+                      <div class="title">
+                        <div class="title-icon"><img src="images/tech-features-item-icon-9.png" class="technologies-features-item-logo"></div>
+                        <div class="title-text">
+                          <div class="badge">
+                            <h2 class="badge badge-blue"><span>recreational geometry</span></h2>
+                          </div>
+                          <div class="info">Геометрия для начинающих</div>
+                        </div>
+                      </div>
+                      <div class="description">
+                        <p>Специально оптимизированная геометрия для начинающих велосипедистов, не ставящих своей целью места на подиуме. Комфорт, удобство и стабильность - вот главные и важные параметры. Чуть измененный угол рулевой колонки и длина верхней трубы образуют комфортную вертикальную посадку для новичков, позволяя наслаждаться катанием целый день.</p>
+                      </div><a href="#" class="link"><span>Читать полностью</span></a>
+                    </div>
+                  </div>
+                  <div class="technologies-features-item">
+                    <div style="background-image:url(images/tech-features-item-10.jpg)" class="technologies-features-item-img"></div>
+                    <div class="technologies-features-item-descr">
+                      <div class="title">
+                        <div class="title-icon"><img src="images/tech-features-item-icon-10.png" class="technologies-features-item-logo"></div>
+                        <div class="title-text">
+                          <div class="badge">
+                            <h2 class="badge badge-blue"><span>super alloy 6061</span></h2>
+                          </div>
+                          <div class="info">Супер сплав</div>
+                        </div>
+                      </div>
+                      <div class="description">
+                        <p>Благодаря высокотемпературной обработке, из этого сплава получаются жесткие, прочные и в то же время очень легкие рамы.  Тройной баттинг в местах наименьшей нагрузки позволяет достичь максимально возможного результата в снижении веса конструкции.</p>
+                      </div><a href="#" class="link"><span>Читать полностью</span></a>
+                    </div>
+                  </div>
+                  <div class="technologies-features-item">
+                    <div style="background-image:url(images/tech-features-item-11.jpg)" class="technologies-features-item-img"></div>
+                    <div class="technologies-features-item-descr">
+                      <div class="title">
+                        <div class="title-icon"><img src="images/tech-features-item-icon-11.png" class="technologies-features-item-logo"></div>
+                        <div class="title-text">
+                          <div class="badge">
+                            <h2 class="badge badge-blue"><span>comfort jr geometry</span></h2>
+                          </div>
+                          <div class="info">Геометрия для детей и подростков</div>
+                        </div>
+                      </div>
+                      <div class="description">
+                        <p>Тщательно продуманная специальная геометрия для детских и подростковых велосипедов, разработанная с учетом особенностей физиологии юных райдеров. Велосипеды с такой геометрией максимально безопасны и комфортны для детей и подростков и позволяют получать море наслаждения от катания.</p>
+                      </div><a href="#" class="link"><span>Читать полностью</span></a>
+                    </div>
+                  </div>
+                  <div class="technologies-features-item">
+                    <div style="background-image:url(images/tech-features-item-12.jpg)" class="technologies-features-item-img"></div>
+                    <div class="technologies-features-item-descr">
+                      <div class="title">
+                        <div class="title-icon"><img src="images/tech-features-item-icon-12.png" class="technologies-features-item-logo"></div>
+                        <div class="title-text">
+                          <div class="badge">
+                            <h2 class="badge badge-blue"><span>lite alloy 6061</span></h2>
+                          </div>
+                          <div class="info">Улучшенный сплав 6061</div>
+                        </div>
+                      </div>
+                      <div class="description">
+                        <p>Улучшенная версия алюминиевого сплава 6061, которая позволяет достичь оптимального соотношения между жесткостью конструкции и низким весом. Сплав устойчив к естественным нагрузкам, ударам и поломкам. Баттирование труб позволяет сохранить прочность и в то же время снизить вес.</p>
+                      </div><a href="#" class="link"><span>Читать полностью</span></a>
+                    </div>
+                  </div>
+        </div>
+      </div>
+    </div>
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="row">
+            <div class="col-sm-4 col-md-3"><a href="/" class="footer-logo"><img src="images/logo-full-white.png" alt="Dewolf"></a></div>
+            <div class="col-md-6 order-sm-last order-md-auto">
+              <div class="row">
+                <div class="col-6 col-sm-4">
+                  <div class="footer-menu">
+                    <h4 class="title"><a href="">Велосипеды</a></h4>
+                    <ul>
+                      <li><a href="">Горные</a></li>
+                      <li><a href="">Городские</a></li>
+                      <li><a href="">Детские</a></li>
+                      <li><a href="">Мужские</a></li>
+                      <li><a href="">Женские</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4">
+                  <div class="footer-menu">
+                    <h4 class="title"><a href="">Самокаты</a></h4>
+                    <ul>
+                      <li><a href="">Взрослые</a></li>
+                      <li><a href="">Детские</a></li>
+                      <li><a href="">Трюковые</a></li>
+                      <li><a href="">Внедорожные</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4">
+                  <div class="footer-menu">
+                    <h4 class="title"><a href="">Dewolf</a></h4>
+                    <ul>
+                      <li><a href="">О бренде</a></li>
+                      <li><a href="">Технологии</a></li>
+                      <li><a href="">Дилерам</a></li>
+                      <li><a href="">Где купить</a></li>
+                      <li><a href="">Оплата и доставка</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="footer-contacts">
+                <div class="footer-contacts-block"><a href="tel:88001234567" class="footer-phone">8 800 123 45 67</a>
+                  <ul class="footer-soc">
+                    <li><a href="" target="_blank"><img src="images/icon-telegram.svg" alt="Telegram"></a></li>
+                    <li><a href="" target="_blank"><img src="images/icon-whatsapp.svg" alt="WhatsApp"></a></li>
+                  </ul>
+                </div><b>Центральный офис в Москве</b><br><a href="mailto:simle@mail.com">simle@mail.com</a><br><b>Офис Волгаград</b><br><a href="mailto:simle@mail.com">simle@mail.com</a><br><a href="tel:+74958808080" class="link-white">+7 (495) 880-80-80</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="row">
+            <div class="col-sm-6 col-md-3 order-md-last">
+              <ul class="footer-soc">
+                <li><a href="" target="_blank"><img src="images/icon-facebook.svg" alt="Facebook"></a></li>
+                <li><a href="" target="_blank"><img src="images/icon-instagram.svg" alt="Instagram"></a></li>
+                <li><a href="" target="_blank"><img src="images/icon-twitter.svg" alt="Twitter"></a></li>
+                <li><a href="" target="_blank"><img src="images/icon-vk.svg" alt="ВКонтакте"></a></li>
+                <li><a href="" target="_blank"><img src="images/icon-youtube.svg" alt="YouTube"></a></li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <div class="footer-copyright">
+                <p>Опубликованная на страницах данного сайта информация, продукция и её изображения являются объектом прав интеллектуальной собственности ООО «Dewolf». Изображение товара на сайте может отличаться от фактического изображения товара.</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3 order-md-first">
+              <ul class="footer-card-icons">
+                <li><a href="" target="_blank"><img src="images/icon-visa.png" alt="VISA"></a></li>
+                <li><a href="" target="_blank"><img src="images/icon-mastercard.png" alt="MasterCard"></a></li>
+                <li><a href="" target="_blank"><img src="images/icon-mir.png" alt="МИР"></a></li>
+                <li><a href="" target="_blank"><img src="images/icon-jcb.png" alt="JSB"></a></li>
+                <li><a href="" target="_blank"><img src="images/icon-union-pay.png" alt="UnionPay"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- MODALS-->
+    <div style="display:none;">
+      <div id="modal-city-select" class="modal">
+        <div class="modal__inner">
+          <h4>Выберите Ваш город</h4>
+          <ul>
+            <li><a href="">Москва</a></li>
+            <li><a href="">Санкт-Петербург</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="/js/jquery.js" type="module" defer></script>
+    <script src="/libs/overlayScrollbars/jquery.overlayScrollbars.min.js" type="module" defer></script>
+    <script src="/libs/swiper/swiper.min.js" type="module" defer></script>
+    <script src="/libs/fancybox/jquery.fancybox.min.js" type="module" defer></script>
+    <script src="/libs/perfect-scrollbar/perfect-scrollbar.min.js" type="module" defer></script>
+    <script src="/js/jquery-ui-slider.min.js" type="module" defer></script>
+    <script src="/libs/selectric/jquery.selectric.min.js" type="module" defer></script>
+    <script src="/libs/inputmask/jquery.inputmask.bundle.min.js" type="module" defer></script>
+    <script src="/js/main.js" type="module" defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=InitContactsMaps" async defer></script>
+  </body>
+</html>

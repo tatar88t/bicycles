@@ -1,0 +1,92 @@
+header#header.header
+    .header-top
+        .container-fluid
+            .header-inner
+                .toggle-menu-wrapper
+                    button.toggle-menu
+                        div
+                ul.header-menu
+                    li
+                        a(href="") О бренде
+                    li
+                        a(href="") Технологии
+                    li
+                        a(href="") Оплата и доставка
+                    li
+                        a(href="") Дилерам
+                    li
+                        a(href="") Покупателю
+                ul.header-info-menu
+                    li
+                        button.header-city(type="button", data-modal="#modal-city-select") Москва
+                    li
+                        a.header-location(href="#main-contacts", data-scroll-to="#main-contacts")
+                            +svg-icon("location")
+                            span Адреса магазинов
+                    li
+                        a.header-sale(href="#main-sale", data-scroll-to="#main-sale")
+                            +svg-icon("zap")
+                            span Акции
+                .header-search
+                    button.header-search-form-toggler(type="button")
+                        +svg-icon("loupe")
+                    form.header-search-form(method="", action="", novalidate="true", autocomplete="off")
+                        .container-fluid
+                            input.header-search-form-input(type="text", name="", value="", placeholder="Поиск")
+                            button.header-search-form-toggler.button-close(type="button")
+                                +svg-icon("close")
+                ul.header-user-menu
+                    li
+                        button(type="button", title="Вход в личный кабинет", data-toggle-activity="#header-auth-menu")
+                            +svg-icon("key")
+                        #header-auth-menu.dropdown
+                            ul.dropdown-items
+                                li
+                                    a(href="") Вход
+                                li
+                                    a(href="") Выход
+                    li
+                        a(href="", title="Сравнение товаров")
+                            +svg-icon("bar-chart")
+                    li
+                        a(href="", title="Корзина")
+                            +svg-icon("cart")
+                            span.badge.badge-xs.badge-blue
+                                span 12
+    .header-bottom
+        .container-fluid
+            .header-inner
+                a.header-logo(href="/")
+                    img(src="images/" + ((mainPage==true) ? "logo-full-white.png" : "logo-full-black.png"))
+                .toggle-menu-wrapper
+                    button.toggle-menu
+                        div
+                button.header-city(type="button", data-modal="#modal-city-select") Москва
+                hr
+                ul.header-products-menu
+                    li
+                        a(href="#", data-toggle-activity="#header-products-menu-1") Велосипеды
+                        #header-products-menu-1.dropdown
+                            ul.dropdown-items
+                                li
+                                    a(href="") Категория 1
+                                li
+                                    a(href="") Категория 2
+                    li
+                        a(href="#", data-toggle-activity="#header-products-menu-2") Самокаты
+                        #header-products-menu-2.dropdown
+                            ul.dropdown-items
+                                li
+                                    a(href="") Категория 1
+                                li
+                                    a(href="") Категория 2
+                                li
+                                    a(href="") Категория 3
+                                li
+                                    a(href="") Категория 4
+                hr
+                a.header-select-product(href="#main-selection", data-scroll-to="#main-selection") Подобрать велосипед
+                hr
+                .header-info-block
+                    span.header-info-item Ежедневно с  9:00 до 21:00
+                    a.header-info-item.header-phone(href="tel:88001234567") 8 800 123 45 67

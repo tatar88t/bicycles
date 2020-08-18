@@ -1,0 +1,189 @@
+extends ../../layouts/default
+
+include ../../../common/markup/utilites
+
+
+
+block TITLE
+    title О бренде
+block CONTENT
+    .about-page-content.main-page-content
+        // slider
+        .about-slider.main-slider
+            .swiper-container
+                .swiper-wrapper
+
+                    // slide 1
+                    .swiper-slide(style="background-image:url(images/about-slider-1.jpg)")
+                        .container
+                            .row
+                                .col-6
+                                    .title
+                                        span.badge.badge-xl.badge-blue
+                                            span created for emotions
+                                        span.badge.badge-xl.badge-blue
+                                            span создан для эмоций
+                    // slide 2
+                    .swiper-slide(style="background-image:url(images/main-slider-1.jpg)")
+                        .container
+                            .row
+                                .col-6
+                                    .title
+                                        span.badge.badge-xl.badge-blue
+                                            span Slogan number 2
+                                        span.badge.badge-xl.badge-blue
+                                            span Слоган номер 2
+                    // slide 3
+                    .swiper-slide(style="background-image:url(images/about-slider-1.jpg)")
+                        .container
+                            .row
+                                .col-6
+                                    .title
+                                        span.badge.badge-xl.badge-blue
+                                            span Slogan number 3
+                                        span.badge.badge-xl.badge-blue
+                                            span Слоган номер 3
+                    // slide 4
+                    .swiper-slide(style="background-image:url(images/main-slider-2.jpg)")
+                        .container
+                            .row
+                                .col-6
+                                    .title
+                                        span.badge.badge-xl.badge-blue
+                                            span Slogan number 4
+                                        span.badge.badge-xl.badge-blue
+                                            span Слоган номер 4
+
+
+            .swiper-nav
+                button.swiper-button.swiper-button-prev(type="button")
+                button.swiper-button.swiper-button-next(type="button")
+
+            .swiper-pagination
+
+        .container
+            .about-history
+                h2.section-title история бренда
+                .about-history-wrapper
+                    .col-sm-6.col-12.about-history-foundation
+                        p.
+                            Бренд DEWOLF основан в 2015 году в Германии.
+                            Однажды летним днем, команда велосипедистов-
+                            любителей отправилась прокатиться по красивым
+                             живописным местам в поисках приключений. Тропа
+                            вела их через густой хвойный лес. Проехав вглубь,
+                            они увидели отблеск, который их заинтересовал.
+                        .about-history-foundation-img(style="background-image:url(images/about-history-foundation.jpg)")
+                    .col-sm-6.col-12.about-history-goal
+                        p.
+                            Подъехав ближе они наткнулись на старый велосипед, вокруг которого было много волчьих следов. Эти знаки вдохновили единомышленников.
+                            #[span Цель была в поле зрения.]
+                            Именно в тот день родилась идея бренда DEWOLF, как велосипеда с яркой внешностью и дерзким характером. Под маркой DEWOLF выпускаются горные, городские, складные, женские, подростковые и детские велосипеды, а также с 2021 года качественные и стильные самокаты.
+                        .about-history-goal-img(style="background-image:url(images/about-history-goal.jpg)")
+    .about-destination-block
+        .container
+            .about-destination
+                .about-destination-mission
+                    h2.badge.badge-blue
+                        span миссия
+                    p.descr.
+                            Предоставить пользователям оптимальный выбор велосипедов и самокатов,
+                            предлагая качественную продукцию, украшая жизнь и предоставляя
+                            неограниченные возможности.
+                .about-destination-view
+                    h2.badge.badge-blue
+                        span видение
+                    p.descr.
+                            Мы создаем велосипеды и самокаты, доступные множеству людей. Любой
+                            человек сможет наслаждаться часами отдыха с семьей, либо использовать
+                            наши велосипеды и самокаты в пути на работу
+        .about-destination-block-cover(style="background-image:url(images/about-destination-block-cover.jpg)")
+            .about-destination-block-title
+                h2.badge.badge-xl.badge-blue
+                        span совершенный
+                br
+                h2.badge.badge-xl.badge-blue
+                        span продукт как знак
+                br
+                h2.badge.badge-xl.badge-blue
+                    span заботы о клиентах
+    .about-benefits
+        .container
+            h1.section-title.about-section-title.
+                почему велосипеды dewolw
+                #[br] так хороши?
+        .about-benefits_shaded
+            .container
+                h3.about-benefits-toggler.
+                    Детские
+                include ../../../blocks/components/benefit-card/benefit-card
+                -let textBlock_1 = "Мы разработали уникальную геометрию рамы для моделей 20 и 24 дюйма, которая подходитпо физиологическим особенностям как мальчикам, так и девочкам. В моделях 26 дюймов предусмотрели возможность использования велосипеда продолжительное время: от 140 см до 165 см – это закрывает потребность в частой смене велосипеда. Все велосипеды выполнены из легкого алюминиевого сплава 6061,"
+                -let textBlock_2 = "который позволяет достичь оптимального соотношения между жесткостью конструкции и её низким весом. Помимо этого, мы комплектуем наши детские велосипеды проверенным и удобным навесным оборудованием брендов  Shimano и Micro shift. Подходит стандартный автомобильный насос."
+                -let features = ["Пожизненная гарантия", "Euro Bottom Bracket", "Оборудование Shimano на 26 дюйма", "Комплетуется передним и задним фонариком", "Эргонномичные седла Vader", "Рама из легкого алюминиевого сплава 6061", "Оборудование Micro shift на 20 и 24 дюймах", "Комплектуется подножкой и звонком"]
+                -let blockname = "children"
+                    .benefit-card-wrapper
+                        +benefit-card-pattern(textBlock_1,textBlock_2)
+                        +descr-pattern(features, blockname)
+        .container
+            h3.about-benefits-toggler.
+                горные
+            -textBlock_1 = "В наших горных велосипедах мы используем качественный бренд покрышек Wanda, зарекомендовавший себя в производстве шин для автомобилей. Помимо этого, велосипеды оборудованы амортизационными вилками бренда MODE. Это сравнительно новый продукт на нашем рынке, дающий действительно качественные"
+            -textBlock_2 = "комплектующие с алюминиевыми элементами. Подходит стандартный автомобильный насос. Не нужно искать переходники и тратить время на накачку колес."
+            -features = ["Качественные вулканизированные покрышки Wanda", "Пожизненная гарантия на раму", "Навесное борудование Shimano", "Сумка с набором шестигранников и насос", "Амортизационные вилки MODE", "Гидравлические тормозные системы Tektro", "Эргономичные седла Vader", "Фляга и флягодержатель"]
+            -blockname = "mountain"
+                .benefit-card-wrapper
+                    +benefit-card-pattern(textBlock_1,textBlock_2)
+                    +descr-pattern_same-icon(features, blockname)
+        .about-benefits_shaded
+            .container
+                h3.about-benefits-toggler.
+                    Женские
+                -textBlock_1 = "Для женщин используется уникальная геометрия с укороченной рамой и комфортной посадкой. Велосипеды оборудованы эргономичными сиденьями Vader, качественными покрышками Wanda и амортизационными вилками бренда MODE с алюминиевыми "
+                -textBlock_2 = "элементами. Подходит стандартный автомобильный насос. Не нужно искать переходники и тратить время на накачку колес."
+                -features = ["Качественные вулканизированные покрышки Wanda", "Пожизненная гарантия на раму", "Навесное борудование Shimano", "Сумка с набором шестигранников и насос", "Амортизационные вилки MODE", "Гидравлические тормозные системы Tektro", "Эргономичные седла Vader", "Фляга и флягодержатель"]
+                -blockname = "mountain"
+                    .benefit-card-wrapper
+                        +benefit-card-pattern(textBlock_1,textBlock_2)
+                        +descr-pattern_same-icon(features, blockname)
+        .container
+            h3.about-benefits-toggler.
+                Городские
+            -textBlock_1 = "Мы делаем городские велосипеды максимально удобными и функциональными для катания. При покупке не придется ничего докупать. В комплекте все предусмотрено: крылья, багажник, подножка, а также передний и задний фонарь. Подходит стандартный автомобильный насос. Не нужно искать переходники и тратить время на "
+            -textBlock_2 = "накачку колес. Максимальное соотношение в компоновке качественных продуктов, навесного оборудования и аксессуаров в комплекте позволит насладиться каждым моментом."
+            -features = ["Качественные вулканизированные покрышки Wanda", "Пожизненная гарантия на раму", "Навесное борудование Shimano", "Максимальная комплектация аксессуарами", "Амортизационные вилки MODE", "Гидравлические тормозные системы Tektro", "Эргономичные седла Vader", "Сумка с набором шестигранников и насос"]
+            -blockname = "mountain"
+                .benefit-card-wrapper
+                    +benefit-card-pattern(textBlock_1,textBlock_2)
+                    +descr-pattern_same-icon(features, blockname)
+        .about-benefits_shaded
+            .container
+                h3.about-benefits-toggler.
+                    складные
+                -textBlock_1 = "Комфортная изогнутая геометрия, максимально адаптирована для складных рам с колесами небольшого размера. Отличительной частью является качественная фурнитура складных элементов из стали и алюминия. Шарнирные и складные системы более ресурсные и долговечные. Планетарная втулка Shimano Nexus на 3 передачи "
+                -textBlock_2 = "дает преимущества в мягком ходе и более редком обслуживании. Складные велосипеды DEWOLF позволяют наслаждаться прогулками в течение длительного времени, не испытывая при этом дискомфорта."
+                -features = ["Качественные вулканизированные покрышки Wanda", "Пожизненная гарантия на раму", "Навесное борудование Shimano", "Сумка с набором шестигранников и насос", "Складные механизмы из высококачественных материалов", "Максимально адаптированная геометрия рам", "Эргономичные седла Vader", "Транспортировоч- ная сумка в комплекте"]
+                -blockname = "mountain"
+                    .benefit-card-wrapper
+                        +benefit-card-pattern(textBlock_1,textBlock_2)
+                        +descr-pattern_same-icon(features, blockname)
+    .about-links
+        .container
+            .about-links-wrapper
+                .about-links-block
+                    a.about-links-link(style="background-image:url(images/about-links-choice.jpg)")
+                        .about-links-link-descr
+                            h4.title.about-links-title.
+                                выбрать свой
+                                #[br]
+                                dewolf
+                            button.btn.btn-orange.btn-xs.
+                                в каталог
+                .about-links-block
+                    a.about-links-link(style="background-image:url(images/about-links-for-dillers.jpg)")
+                        h4.title.about-links-title.
+                            хотите стать
+                            #[br]
+                            дилером
+                        button.btn.btn-orange.btn-xs.
+                            связаться
+

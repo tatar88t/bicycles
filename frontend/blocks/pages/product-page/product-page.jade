@@ -1,0 +1,358 @@
+extends ../../layouts/default
+
+include ../../../common/markup/utilites
+
+block TITLE
+    title Карточка товара
+
+block CONTENT
+    .page-title
+        .container
+            ul.breadcrumb
+                li.back
+                    a(href="") Вернуться назад
+                li
+                    a(href="/")
+                        +svg-icon("home")
+                li
+                    a(href="") Велосипеды
+                li
+                    a(href="") Горные велосипеды
+                li
+                    span GROW 20
+            h1 GROW 20
+    .product-page
+        .container
+            form.product-page-main(method="POST", action="", novalidate="true", autocomplete="off")
+                .row
+                    .col-md-7.col-xl-8
+                        .image-block
+                            .top-line
+                                .badges-line
+                                    .badge.badge-orange.badge-xs
+                                        span -30%
+                                    .badge.badge-blue.badge-xs
+                                        span Подарок
+                                .icons-line
+                                    button.button.btn-location
+                                        +svg-icon("location")
+                                    button.button.btn-video
+                                        +svg-icon("video")
+                                    // если уже есть в сравнении, то добавить класс .active
+                                    button.button.btn-compare
+                                        +svg-icon("bar-chart")
+                            .image(style="background-image:url(images/product-page-main.jpg)")
+                            a.btn-zoom(href="images/product-page-main.jpg", data-fancybox="GROW-20")
+                                +svg-icon("zoom")
+                    .col-md-5.col-xl-4
+                        .info-block
+                            | <span class="text-gray">Артикул:</span> 001936781
+                            .price-block
+                                .price 34 900 руб.
+                                .old-price 37 500 руб.
+                            .buy-block
+                                .add-basket-block
+                                    input.add-basket-block-input(type="text", name="", value="1", readonly)
+                                    .add-basket-block-input-value 1
+                                    .add-basket-block-amount-controls
+                                        button.add-basket-block-amount-control.plus(type="button")
+                                        button.add-basket-block-amount-control.minus(type="button")
+                                    button.btn.add-basket-block-btn(type="submit") В корзину
+                                a.btn-buy(href="") Купить в один клик
+                            span.text-gray Цвета:
+                            ul.colors-list
+                                li
+                                    input(type="radio", id="product-color-red", name="product-color", value="red", checked)
+                                    label.label(for="product-color-red", style="background:#e40909") Красный
+                                li
+                                    input(type="radio", id="product-color-blue", name="product-color", value="blue")
+                                    label.label(for="product-color-blue", style="background:#1f2883") Синий
+                                li
+                                    input(type="radio", id="product-color-yellow", name="product-color", value="yellow")
+                                    label.label(for="product-color-yellow", style="background:#fff000") Желтый
+                            br
+                            | <span class="text-gray">Вес:</span> 17.2 кг
+                            br
+                            br
+                            .row
+                                .col-6
+                                    span.text-gray Размер рамы:
+                                    ul.badges-list.mt-1.mt-sm-0.mt-md-1
+                                        li
+                                            input(type="radio", id="product-size-s", name="product-size", value="s", checked)
+                                            label.label(for="product-size-s") S
+                                        li
+                                            input(type="radio", id="product-size-l", name="product-size", value="l")
+                                            label.label(for="product-size-l") L
+                                        li
+                                            input(type="radio", id="product-size-x", name="product-size", value="x")
+                                            label.label(for="product-size-x") X
+                                        li
+                                            input(type="radio", id="product-size-xl", name="product-size", value="xl")
+                                            label.label(for="product-size-xl") XL
+                                .col-6
+                                    span.text-gray Размер колес:
+                                    ul.badges-list.mt-1.mt-sm-0.mt-md-1
+                                        li
+                                            input(type="radio", id="product-wheel-size-19", name="product-wheel-size", value="19", checked)
+                                            label.label(for="product-wheel-size-19") 19
+                                        li
+                                            input(type="radio", id="product-wheel-size-21", name="product-wheel-size", value="21")
+                                            label.label(for="product-wheel-size-21") 21
+                                        li
+                                            input(type="radio", id="product-wheel-size-23", name="product-wheel-size", value="23")
+                                            label.label(for="product-wheel-size-23") 23
+                                        li
+                                            input(type="radio", id="product-wheel-size-25", name="product-wheel-size", value="25")
+                                            label.label(for="product-wheel-size-25") 25
+                            br
+                            a(href="") Таблица размеров
+                            br
+                            br
+                            .h6 Наличие в магазинах
+                            | <span class="text-gray">Магазин Fitness Place:</span> <span class="text-red">нет в наличии</span>
+                            br
+                            | <span class="text-gray">Склад Москва:</span> <span class="text-green">в наличии</span>
+                            br
+                            | <span class="text-gray">Склад Санкт-Петербург:</span> <span class="text-green">в наличии</span>
+                            br
+                            br
+                            a(href="") Уточнить наличие в магазинах дилеров
+                            br
+                            br
+                            .h6 Подарки
+                            ul.info-block-icons-list.mt-1
+                                li
+                                    img(src="images/product-page-icon-1.png")
+                                    span Светодиодные фары
+                                li
+                                    img(src="images/product-page-icon-2.png")
+                                    span Велосипедный звонок
+                                li
+                                    img(src="images/product-page-icon-3.png")
+                                    span Монтажки
+                                li
+                                    img(src="images/product-page-icon-4.png")
+                                    span Ручной насос
+                                li
+                                    img(src="images/product-page-icon-5.png")
+                                    span Набор шестигранников
+                                li
+                                    img(src="images/product-page-icon-6.png")
+                                    span Светоотражающая лента
+            .product-page-tabs-block
+                ul.nav-tabs
+                    li
+                        a.active(href="#opisanie") Описание
+                    li
+                        a(href="#harakteristiki") Характеристики
+                .tab-container
+                    a.nav-tab-mobile(href="#opisanie") Описание
+                    #opisanie.tab-pane.active
+                        .description.columns-2
+                            p Самые легкие колеса XRC 1200 SPLINE® от DT SWISS. Сочетание высокотехнологичных карбоновых ободов, втулок SPLINE®, от DT SWISS (вес пары колес 1330 грамм) и бескамерных покрышек SCHWALBE ROCKET RON дадут максимальное ускорение, минимальный вес и превосходную жесткость. Высокотехнологичная рама из углеродного волокна. Легкая, как перышко и прочная, как металл. Мощные всепогодные гидравлические дисковые тормоза.
+                    a.nav-tab-mobile(href="#harakteristiki") Характеристики
+                    #harakteristiki.tab-pane
+                        .table-container
+                            .table-scroller
+                                table
+                                    tbody
+                                        tr
+                                            th Название
+                                            th Значение
+                                        tr
+                                            td Характеристика 1
+                                            td Значение 1
+                                        tr
+                                            td Характеристика 2
+                                            td Значение 2
+                                        tr
+                                            td Характеристика 3
+                                            td Значение 3
+                                        tr
+                                            td Характеристика 4
+                                            td Значение 4
+        .product-page-features
+            .container
+                h2.section-title Особенности
+            .product-page-features-slider
+                .swiper-container
+                    .swiper-wrapper
+                        a.swiper-slide(href="images/product-page-features-1.jpg", style="background-image:url(images/product-page-features-1.jpg)", data-fancybox="GROW-20-gallery")
+                        a.swiper-slide(href="images/product-page-features-2.jpg", style="background-image:url(images/product-page-features-2.jpg)", data-fancybox="GROW-20-gallery")
+                        a.swiper-slide(href="images/product-page-features-3.jpg", style="background-image:url(images/product-page-features-3.jpg)", data-fancybox="GROW-20-gallery")
+                        a.swiper-slide(href="images/product-page-features-4.jpg", style="background-image:url(images/product-page-features-2.jpg)", data-fancybox="GROW-20-gallery")
+                        a.swiper-slide(href="images/product-page-features-5.jpg", style="background-image:url(images/product-page-features-2.jpg)", data-fancybox="GROW-20-gallery")
+                .swiper-nav
+                    button.swiper-button.swiper-button-prev(type="button")
+                        +svg-icon("arrow-right")
+                    button.swiper-button.swiper-button-next(type="button")
+                        +svg-icon("arrow-right")
+                .container
+                    .swiper-pagination
+            .container
+                .row
+                    .col-md-5.col-xl-4
+                        .product-page-features-description-block
+                            .h2 Яркие краски на&nbsp;холсте  серого мегаполиса
+                            p.description Комфортный городской озорник на дорожных колесах 700С
+                    .col-md-7.offset-xl-1
+                        ul.product-page-features-icons-list
+                            li Двойные алюминиевые обода
+                            li Легкая и прочная алюминиевая рама
+                            li Всепогодные механические дисковые тормоза
+                            li Задний переключатель Shimano Acera RD-M360
+                            li В комплекте: крылья, подножка, фонари, багажник
+                            li Мягкая вилка ZOOM 189 AMS
+        mixin product-technology-item(ptiimg, ptititle, ptilogo, ptitext)
+            .product-page-technologies-item
+                .image(style="background-image:url(images/" + ptiimg + ")")
+                .content
+                    .logo
+                        img(src="images/" + ptilogo, alt=ptititle)
+                    h4.title= ptititle
+                    p.desc= ptitext
+        .product-page-technologies
+            .container
+                h2.section-title Технологии
+            .product-page-technologies-slider
+                .container
+                    .swiper-container
+                        .swiper-wrapper
+                            .swiper-slide
+                                + product-technology-item("product-page-technologies-1.jpg", "COMFORT GEOMETRY", "product-page-technologies-logo-1.jpg", "Вальяжная, комфортная настолько, насколько это вообще возможно, геометрия.")
+                            .swiper-slide
+                                + product-technology-item("product-page-technologies-2.jpg", "SPORT GEOMETRY", "product-page-technologies-logo-2.jpg", "Гибридная геометрия, сочетающая в себе главные достоинства Race и Recreational геометрий.")
+                            .swiper-slide
+                                + product-technology-item("product-page-technologies-3.jpg", "HMCF CARBON", "product-page-technologies-logo-3.jpg", "Композитный монокок от итальянского дизайнерского бюро, изготовлен с применением технологий Nano Matrix")
+                            .swiper-slide
+                                + product-technology-item("product-page-technologies-2.jpg", "SPORT GEOMETRY", "product-page-technologies-logo-2.jpg", "Гибридная геометрия, сочетающая в себе главные достоинства Race и Recreational геометрий.")
+                    .swiper-pagination
+                .swiper-nav
+                    button.swiper-button.swiper-button-prev(type="button")
+                        +svg-icon("arrow-right")
+                    button.swiper-button.swiper-button-next(type="button")
+                        +svg-icon("arrow-right")
+        .container
+            .product-page-geometry
+                h2.section-title Геометрия
+                .row
+                    .col-lg-6
+                        img.product-page-geometry-image(src="images/product-page-geometry.jpg")
+                    .col-lg-6
+                        .table-container
+                            .table-scroller
+                                table
+                                    tbody
+                                        tr
+                                            td(colspan="2")
+                                            td
+                                                span.badge.badge-sm.badge-blue
+                                                    span M
+                                            td
+                                                span.badge.badge-sm.badge-blue
+                                                    span L
+                                        tr
+                                            td
+                                            td.text-gray Размер рамы, дюймы
+                                            td.text-gray 10
+                                            td.text-gray 20
+                                        tr
+                                            td
+                                                span.text-bold.text-blue ST
+                                            td Длина подседельной трубы, мм
+                                            td 457.00
+                                            td 508.00
+                                        tr
+                                            td
+                                                span.text-bold.text-blue TT
+                                            td Длина верхней трубы, мм
+                                            td 586.00
+                                            td 586.00
+                                        tr
+                                            td
+                                                span.text-bold.text-blue HT
+                                            td Длина рулевой трубы, мм
+                                            td 140.00
+                                            td 140.00
+                                        tr
+                                            td
+                                                span.text-bold.text-blue SA
+                                            td Угол подседельной трубы, градусы
+                                            td 73.00
+                                            td 73.00
+                                        tr
+                                            td
+                                                span.text-bold.text-blue HA
+                                            td Угол рулевой трубы, градусы
+                                            td 71.00
+                                            td 71.00
+                                        tr
+                                            td
+                                                span.text-bold.text-blue CS
+                                            td Длина перьев, мм
+                                            td 455.00
+                                            td 455.00
+                                        tr
+                                            td
+                                                span.text-bold.text-blue WB
+                                            td Длина колесной базы, мм
+                                            td 1090.00
+                                            td 1090.00
+
+            .product-page-map
+                h2.section-title Найдите ближайший к вам магазин
+                ul.legend
+                    li
+                        img.map-point(src="images/logo-short-blue.png")
+                        span Фирменные магазины DEWOLF
+                    li
+                        .map-point.map-point-green
+                        span Дилерские магазины
+                .product-page-map-image-wrapper
+                    .product-page-map-image-scroller
+                        img.product-page-map-image(src="images/product-page-map.jpg", data-img-map="product-page-map-list")
+                        map(name="product-page-map-list")
+                            // coords="x,y" (x и y считаются от верхнего левого угла)
+                            area(href="#", coords="380,160", data-point-color="green", data-tooltip-content="<p><span class='text-bold'>Велосипеды и самокаты тут</span></p><p><span class='text-gray'>дилерский магазин</span></p>Воркута, пр-т Академика Сахарова, 25<br>Телефон: +7 836 45 63 24<br>Часы работы: 09:00-19:00")
+                            area(href="#", coords="970,370", data-point-src="images/logo-short-blue.png", data-tooltip-content="<p><span class='text-bold'>Велосипеды и самокаты тут<p><p><span class='text-gray'>дилерский магазин<p>Воркута, пр-т Академика Сахарова, 25<br>Телефон: +7 836 45 63 24<br>Часы работы: 09:00-19:00")
+            hr
+            ul.pagination.pagination-items-nav
+                li.prev
+                    a(href="")
+                        +svg-icon('arrow-right')
+                        span Городской велосипед Asphalt 4
+                li.centered
+                    a(href="")
+                        span К&nbsp;списку
+                li.next
+                    a(href="")
+                        +svg-icon('arrow-right')
+                        span Городской велосипед Asphalt 5
+        .product-page-viewed
+            .container
+                mixin catalog-item-short(ctisimg, ctisimgfull, ctiscategory, ctisname, ctisprice, ctisoldprice)
+                    a(class="catalog-item catalog-item-short" + (ctisimgfull ? " full-image" : ""), style="background-image:url(images/" + ctisimg + ")")
+                        .inner
+                            .image(style="background-image:url(images/" + ctisimg + ")")
+                            .category= ctiscategory
+                            h4.title= ctisname
+                            .price-block
+                                .price= ctisprice
+                                if (ctisoldprice)
+                                    .old-price= ctisoldprice
+                h2.section-title Ранее вы смотрели
+                .product-page-viewed-slider
+                    .swiper-container
+                        .swiper-wrapper
+                            .swiper-slide
+                                +catalog-item-short("main-sale-4.jpg", false, "Велосипед", "PERFECT", "36 200 руб.", "39 800 руб.")
+                            .swiper-slide
+                                +catalog-item-short("main-sale-2.jpg", false, "Велосипед", "Asphalt 1", "41 300 руб.", "56 800 руб.")
+                            .swiper-slide
+                                +catalog-item-short("main-sale-3.jpg", false, "Велосипед", "COVAX 2", "34 900 руб.", "37 500 руб.")
+                            .swiper-slide
+                                +catalog-item-short("main-sale-2.jpg", false, "Велосипед", "Asphalt 1", "41 300 руб.", "56 800 руб.")
+                    .swiper-pagination
+
+

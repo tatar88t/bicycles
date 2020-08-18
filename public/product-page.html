@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Карточка товара</title>
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="MobileOptimized" content="320">
+    <!--link(rel="apple-touch-icon", sizes="180x180", href="/apple-touch-icon.png")-->
+    <!--link(rel="icon", type="image/png", sizes="32x32", href="/favicon-32x32.png")-->
+    <!--link(rel="icon", type="image/png", sizes="16x16", href="/favicon-16x16.png")-->
+    <!--link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat:300,500,600,800&display=swap&subset=latin,cyrillic")-->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/libs/overlayScrollbars/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="/libs/swiper/swiper.min.css">
+    <link rel="stylesheet" href="/libs/fancybox/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="/libs/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="/libs/selectric/selectric.css">
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body data-svg-sprite="/images/svg/svg-sprite.svg">
+    <header id="header" class="header">
+      <div class="header-top">
+        <div class="container-fluid">
+          <div class="header-inner">
+            <div class="toggle-menu-wrapper">
+              <button class="toggle-menu">
+                <div></div>
+              </button>
+            </div>
+            <ul class="header-menu">
+              <li><a href="">О бренде</a></li>
+              <li><a href="">Технологии</a></li>
+              <li><a href="">Оплата и доставка</a></li>
+              <li><a href="">Дилерам</a></li>
+              <li><a href="">Покупателю</a></li>
+            </ul>
+            <ul class="header-info-menu">
+              <li>
+                <button type="button" data-modal="#modal-city-select" class="header-city">Москва</button>
+              </li>
+              <li><a href="#main-contacts" data-scroll-to="#main-contacts" class="header-location">
+                  <svg class="icon icon-location">
+                    <use xlink:href="#location"></use>
+                  </svg><span>Адреса магазинов</span></a></li>
+              <li><a href="#main-sale" data-scroll-to="#main-sale" class="header-sale">
+                  <svg class="icon icon-zap">
+                    <use xlink:href="#zap"></use>
+                  </svg><span>Акции</span></a></li>
+            </ul>
+            <div class="header-search">
+              <button type="button" class="header-search-form-toggler">
+                <svg class="icon icon-loupe">
+                  <use xlink:href="#loupe"></use>
+                </svg>
+              </button>
+              <form method="" action="" novalidate="true" autocomplete="off" class="header-search-form">
+                <div class="container-fluid">
+                  <input type="text" name="" value="" placeholder="Поиск" class="header-search-form-input">
+                  <button type="button" class="header-search-form-toggler button-close">
+                    <svg class="icon icon-close">
+                      <use xlink:href="#close"></use>
+                    </svg>
+                  </button>
+                </div>
+              </form>
+            </div>
+            <ul class="header-user-menu">
+              <li>
+                <button type="button" title="Вход в личный кабинет" data-toggle-activity="#header-auth-menu">
+                  <svg class="icon icon-key">
+                    <use xlink:href="#key"></use>
+                  </svg>
+                </button>
+                <div id="header-auth-menu" class="dropdown">
+                  <ul class="dropdown-items">
+                    <li><a href="">Вход</a></li>
+                    <li><a href="">Выход</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="" title="Сравнение товаров">
+                  <svg class="icon icon-bar-chart">
+                    <use xlink:href="#bar-chart"></use>
+                  </svg></a></li>
+              <li><a href="" title="Корзина">
+                  <svg class="icon icon-cart">
+                    <use xlink:href="#cart"></use>
+                  </svg><span class="badge badge-xs badge-blue"><span>12</span></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="header-bottom">
+        <div class="container-fluid">
+          <div class="header-inner"><a href="/" class="header-logo"><img src="images/logo-full-black.png"></a>
+            <div class="toggle-menu-wrapper">
+              <button class="toggle-menu">
+                <div></div>
+              </button>
+            </div>
+            <button type="button" data-modal="#modal-city-select" class="header-city">Москва</button>
+            <hr>
+            <ul class="header-products-menu">
+              <li><a href="#" data-toggle-activity="#header-products-menu-1">Велосипеды</a>
+                <div id="header-products-menu-1" class="dropdown">
+                  <ul class="dropdown-items">
+                    <li><a href="">Категория 1</a></li>
+                    <li><a href="">Категория 2</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="#" data-toggle-activity="#header-products-menu-2">Самокаты</a>
+                <div id="header-products-menu-2" class="dropdown">
+                  <ul class="dropdown-items">
+                    <li><a href="">Категория 1</a></li>
+                    <li><a href="">Категория 2</a></li>
+                    <li><a href="">Категория 3</a></li>
+                    <li><a href="">Категория 4</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <hr><a href="#main-selection" data-scroll-to="#main-selection" class="header-select-product">Подобрать велосипед</a>
+            <hr>
+            <div class="header-info-block"><span class="header-info-item">Ежедневно с  9:00 до 21:00</span><a href="tel:88001234567" class="header-info-item header-phone">8 800 123 45 67</a></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="main-menu" class="main-menu">
+      <div class="main-menu__content">
+        <div class="header">
+          <div class="header-top">
+            <div class="container-fluid">
+              <div class="header-inner">
+                <div class="toggle-menu-wrapper">
+                  <button class="toggle-menu active">
+                    <div></div>
+                  </button>
+                </div>
+                <ul class="header-menu">
+                  <li><a href="">О бренде</a></li>
+                  <li><a href="">Технологии</a></li>
+                  <li><a href="">Оплата и доставка</a></li>
+                  <li><a href="">Дилерам</a></li>
+                  <li><a href="">Покупателю</a></li>
+                </ul>
+                <ul class="header-info-menu">
+                  <li>
+                    <button type="button" data-modal="#modal-city-select" class="header-city">Москва</button>
+                  </li>
+                  <li><a href="#main-contacts" data-scroll-to="#main-contacts" class="header-location">
+                      <svg class="icon icon-location">
+                        <use xlink:href="#location"></use>
+                      </svg><span>Адреса магазинов</span></a></li>
+                  <li><a href="#main-sale" data-scroll-to="#main-sale" class="header-sale">
+                      <svg class="icon icon-zap">
+                        <use xlink:href="#zap"></use>
+                      </svg><span>Акции</span></a></li>
+                </ul>
+                <div class="header-search">
+                  <button type="button" class="header-search-form-toggler">
+                    <svg class="icon icon-loupe">
+                      <use xlink:href="#loupe"></use>
+                    </svg>
+                  </button>
+                  <form method="" action="" novalidate="true" autocomplete="off" class="header-search-form">
+                    <div class="container-fluid">
+                      <input type="text" name="" value="" placeholder="Поиск" class="header-search-form-input">
+                      <button type="button" class="header-search-form-toggler button-close">
+                        <svg class="icon icon-close">
+                          <use xlink:href="#close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                <ul class="header-user-menu">
+                  <li>
+                    <button type="button" title="Вход в личный кабинет" data-toggle-activity="#header-auth-menu">
+                      <svg class="icon icon-key">
+                        <use xlink:href="#key"></use>
+                      </svg>
+                    </button>
+                    <div id="header-auth-menu" class="dropdown">
+                      <ul class="dropdown-items">
+                        <li><a href="">Вход</a></li>
+                        <li><a href="">Выход</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li><a href="" title="Сравнение товаров">
+                      <svg class="icon icon-bar-chart">
+                        <use xlink:href="#bar-chart"></use>
+                      </svg></a></li>
+                  <li><a href="" title="Корзина">
+                      <svg class="icon icon-cart">
+                        <use xlink:href="#cart"></use>
+                      </svg><span class="badge badge-xs badge-blue"><span>12</span></span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="header-bottom">
+            <div class="container-fluid">
+              <div class="header-inner"><a href="/" class="header-logo"><img src="images/logo-full-white.png"></a>
+                <div class="toggle-menu-wrapper">
+                  <button class="toggle-menu active">
+                    <div></div>
+                  </button>
+                </div>
+                <button type="button" data-modal="#modal-city-select" class="header-city">Москва</button>
+                <hr>
+                <ul class="header-products-menu">
+                  <li><a href="#" data-toggle-activity="#main-products-menu-1">Велосипеды</a>
+                    <div id="main-products-menu-1" class="dropdown">
+                      <ul class="dropdown-items">
+                        <li><a href="">Категория 1</a></li>
+                        <li><a href="">Категория 2</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li><a href="#" data-toggle-activity="#main-products-menu-2">Самокаты</a>
+                    <div id="main-products-menu-2" class="dropdown">
+                      <ul class="dropdown-items">
+                        <li><a href="">Категория 1</a></li>
+                        <li><a href="">Категория 2</a></li>
+                        <li><a href="">Категория 3</a></li>
+                        <li><a href="">Категория 4</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+                <hr><a href="#main-selection" data-scroll-to="#main-selection" class="header-select-product">Подобрать велосипед</a>
+                <hr>
+                <div class="header-info-block"><span class="header-info-item">Ежедневно с  9:00 до 21:00</span><a href="tel:88001234567" class="header-info-item header-phone">8 800 123 45 67</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-6 col-sm-4 col-md-3">
+              <div class="footer-menu">
+                <h4 class="title"><a href="">Велосипеды</a></h4>
+                <ul>
+                  <li><a href="">Горные</a></li>
+                  <li><a href="">Городские</a></li>
+                  <li><a href="">Детские</a></li>
+                  <li><a href="">Мужские</a></li>
+                  <li><a href="">Женские</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3">
+              <div class="footer-menu">
+                <h4 class="title"><a href="">Самокаты</a></h4>
+                <ul>
+                  <li><a href="">Взрослые</a></li>
+                  <li><a href="">Детские</a></li>
+                  <li><a href="">Трюковые</a></li>
+                  <li><a href="">Внедорожные</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3">
+              <div class="footer-menu">
+                <h4 class="title"><a href="">Dewolf</a></h4>
+                <ul>
+                  <li><a href="">О бренде</a></li>
+                  <li><a href="">Технологии</a></li>
+                  <li><a href="">Дилерам</a></li>
+                  <li><a href="">Где купить</a></li>
+                  <li><a href="">Оплата и доставка</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="footer">
+                <div class="container">
+                  <div class="footer-contacts">
+                    <div class="row">
+                      <div class="col-sm-6 col-md-3 mb-3 mb-md-0"><b>Центральный офис в Москве</b><br><a href="mailto:simle@mail.com">simle@mail.com</a><br><a href="tel:+74958808080">+7 (495) 880-80-80</a></div>
+                      <div class="col-sm-6 col-md-3 mb-3 mb-md-0"><b>Офис Волгаград</b><br><a href="mailto:simle@mail.com">simle@mail.com</a><br><a href="tel:+74958808080">+7 (495) 880-80-80</a></div>
+                      <div class="col-sm-6 col-md-3 mb-3 mb-md-0">
+                        <ul class="footer-soc">
+                          <li><a href="" target="_blank"><img src="images/icon-telegram.svg" alt="Telegram"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-whatsapp.svg" alt="WhatsApp"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-facebook.svg" alt="Facebook"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-instagram.svg" alt="Instagram"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-twitter.svg" alt="Twitter"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-vk.svg" alt="ВКонтакте"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-youtube.svg" alt="YouTube"></a></li>
+                        </ul>
+                      </div>
+                      <div class="col-sm-6 col-md-3 mb-3 mb-md-0">
+                        <ul class="footer-card-icons">
+                          <li><a href="" target="_blank"><img src="images/icon-visa.png" alt="VISA"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-mastercard.png" alt="MasterCard"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-mir.png" alt="МИР"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-jcb.png" alt="JSB"></a></li>
+                          <li><a href="" target="_blank"><img src="images/icon-union-pay.png" alt="UnionPay"></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page-title">
+      <div class="container">
+        <ul class="breadcrumb">
+          <li class="back"><a href="">Вернуться назад</a></li>
+          <li><a href="/">
+              <svg class="icon icon-home">
+                <use xlink:href="#home"></use>
+              </svg></a></li>
+          <li><a href="">Велосипеды</a></li>
+          <li><a href="">Горные велосипеды</a></li>
+          <li><span>GROW 20</span></li>
+        </ul>
+        <h1>GROW 20</h1>
+      </div>
+    </div>
+    <div class="product-page">
+      <div class="container">
+        <form method="POST" action="" novalidate="true" autocomplete="off" class="product-page-main">
+          <div class="row">
+            <div class="col-md-7 col-xl-8">
+              <div class="image-block">
+                <div class="top-line">
+                  <div class="badges-line">
+                    <div class="badge badge-orange badge-xs"><span>-30%</span></div>
+                    <div class="badge badge-blue badge-xs"><span>Подарок</span></div>
+                  </div>
+                  <div class="icons-line">
+                    <button class="button btn-location">
+                      <svg class="icon icon-location">
+                        <use xlink:href="#location"></use>
+                      </svg>
+                    </button>
+                    <button class="button btn-video">
+                      <svg class="icon icon-video">
+                        <use xlink:href="#video"></use>
+                      </svg>
+                    </button>
+                    <!-- если уже есть в сравнении, то добавить класс .active-->
+                    <button class="button btn-compare">
+                      <svg class="icon icon-bar-chart">
+                        <use xlink:href="#bar-chart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div style="background-image:url(images/product-page-main.jpg)" class="image"></div><a href="images/product-page-main.jpg" data-fancybox="GROW-20" class="btn-zoom">
+                  <svg class="icon icon-zoom">
+                    <use xlink:href="#zoom"></use>
+                  </svg></a>
+              </div>
+            </div>
+            <div class="col-md-5 col-xl-4">
+              <div class="info-block"><span class="text-gray">Артикул:</span> 001936781
+                <div class="price-block">
+                  <div class="price">34 900 руб.</div>
+                  <div class="old-price">37 500 руб.</div>
+                </div>
+                <div class="buy-block">
+                  <div class="add-basket-block">
+                    <input type="text" name="" value="1" readonly class="add-basket-block-input">
+                    <div class="add-basket-block-input-value">1</div>
+                    <div class="add-basket-block-amount-controls">
+                      <button type="button" class="add-basket-block-amount-control plus"></button>
+                      <button type="button" class="add-basket-block-amount-control minus"></button>
+                    </div>
+                    <button type="submit" class="btn add-basket-block-btn">В корзину</button>
+                  </div><a href="" class="btn-buy">Купить в один клик</a>
+                </div><span class="text-gray">Цвета:</span>
+                <ul class="colors-list">
+                  <li>
+                    <input type="radio" id="product-color-red" name="product-color" value="red" checked>
+                    <label for="product-color-red" style="background:#e40909" class="label">Красный</label>
+                  </li>
+                  <li>
+                    <input type="radio" id="product-color-blue" name="product-color" value="blue">
+                    <label for="product-color-blue" style="background:#1f2883" class="label">Синий</label>
+                  </li>
+                  <li>
+                    <input type="radio" id="product-color-yellow" name="product-color" value="yellow">
+                    <label for="product-color-yellow" style="background:#fff000" class="label">Желтый</label>
+                  </li>
+                </ul><br><span class="text-gray">Вес:</span> 17.2 кг<br><br>
+                <div class="row">
+                  <div class="col-6"><span class="text-gray">Размер рамы:</span>
+                    <ul class="badges-list mt-1 mt-sm-0 mt-md-1">
+                      <li>
+                        <input type="radio" id="product-size-s" name="product-size" value="s" checked>
+                        <label for="product-size-s" class="label">S</label>
+                      </li>
+                      <li>
+                        <input type="radio" id="product-size-l" name="product-size" value="l">
+                        <label for="product-size-l" class="label">L</label>
+                      </li>
+                      <li>
+                        <input type="radio" id="product-size-x" name="product-size" value="x">
+                        <label for="product-size-x" class="label">X</label>
+                      </li>
+                      <li>
+                        <input type="radio" id="product-size-xl" name="product-size" value="xl">
+                        <label for="product-size-xl" class="label">XL</label>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-6"><span class="text-gray">Размер колес:</span>
+                    <ul class="badges-list mt-1 mt-sm-0 mt-md-1">
+                      <li>
+                        <input type="radio" id="product-wheel-size-19" name="product-wheel-size" value="19" checked>
+                        <label for="product-wheel-size-19" class="label">19</label>
+                      </li>
+                      <li>
+                        <input type="radio" id="product-wheel-size-21" name="product-wheel-size" value="21">
+                        <label for="product-wheel-size-21" class="label">21</label>
+                      </li>
+                      <li>
+                        <input type="radio" id="product-wheel-size-23" name="product-wheel-size" value="23">
+                        <label for="product-wheel-size-23" class="label">23</label>
+                      </li>
+                      <li>
+                        <input type="radio" id="product-wheel-size-25" name="product-wheel-size" value="25">
+                        <label for="product-wheel-size-25" class="label">25</label>
+                      </li>
+                    </ul>
+                  </div>
+                </div><br><a href="">Таблица размеров</a><br><br>
+                <div class="h6">Наличие в магазинах</div><span class="text-gray">Магазин Fitness Place:</span> <span class="text-red">нет в наличии</span><br><span class="text-gray">Склад Москва:</span> <span class="text-green">в наличии</span><br><span class="text-gray">Склад Санкт-Петербург:</span> <span class="text-green">в наличии</span><br><br><a href="">Уточнить наличие в магазинах дилеров</a><br><br>
+                <div class="h6">Подарки</div>
+                <ul class="info-block-icons-list mt-1">
+                  <li><img src="images/product-page-icon-1.png"><span>Светодиодные фары</span></li>
+                  <li><img src="images/product-page-icon-2.png"><span>Велосипедный звонок</span></li>
+                  <li><img src="images/product-page-icon-3.png"><span>Монтажки</span></li>
+                  <li><img src="images/product-page-icon-4.png"><span>Ручной насос</span></li>
+                  <li><img src="images/product-page-icon-5.png"><span>Набор шестигранников</span></li>
+                  <li><img src="images/product-page-icon-6.png"><span>Светоотражающая лента</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="product-page-tabs-block">
+          <ul class="nav-tabs">
+            <li><a href="#opisanie" class="active">Описание</a></li>
+            <li><a href="#harakteristiki">Характеристики</a></li>
+          </ul>
+          <div class="tab-container"><a href="#opisanie" class="nav-tab-mobile">Описание</a>
+            <div id="opisanie" class="tab-pane active">
+              <div class="description columns-2">
+                <p>Самые легкие колеса XRC 1200 SPLINE® от DT SWISS. Сочетание высокотехнологичных карбоновых ободов, втулок SPLINE®, от DT SWISS (вес пары колес 1330 грамм) и бескамерных покрышек SCHWALBE ROCKET RON дадут максимальное ускорение, минимальный вес и превосходную жесткость. Высокотехнологичная рама из углеродного волокна. Легкая, как перышко и прочная, как металл. Мощные всепогодные гидравлические дисковые тормоза.</p>
+              </div>
+            </div><a href="#harakteristiki" class="nav-tab-mobile">Характеристики</a>
+            <div id="harakteristiki" class="tab-pane">
+              <div class="table-container">
+                <div class="table-scroller">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Название</th>
+                        <th>Значение</th>
+                      </tr>
+                      <tr>
+                        <td>Характеристика 1</td>
+                        <td>Значение 1</td>
+                      </tr>
+                      <tr>
+                        <td>Характеристика 2</td>
+                        <td>Значение 2</td>
+                      </tr>
+                      <tr>
+                        <td>Характеристика 3</td>
+                        <td>Значение 3</td>
+                      </tr>
+                      <tr>
+                        <td>Характеристика 4</td>
+                        <td>Значение 4</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product-page-features">
+        <div class="container">
+          <h2 class="section-title">Особенности</h2>
+        </div>
+        <div class="product-page-features-slider">
+          <div class="swiper-container">
+            <div class="swiper-wrapper"><a href="images/product-page-features-1.jpg" style="background-image:url(images/product-page-features-1.jpg)" data-fancybox="GROW-20-gallery" class="swiper-slide"></a><a href="images/product-page-features-2.jpg" style="background-image:url(images/product-page-features-2.jpg)" data-fancybox="GROW-20-gallery" class="swiper-slide"></a><a href="images/product-page-features-3.jpg" style="background-image:url(images/product-page-features-3.jpg)" data-fancybox="GROW-20-gallery" class="swiper-slide"></a><a href="images/product-page-features-4.jpg" style="background-image:url(images/product-page-features-2.jpg)" data-fancybox="GROW-20-gallery" class="swiper-slide"></a><a href="images/product-page-features-5.jpg" style="background-image:url(images/product-page-features-2.jpg)" data-fancybox="GROW-20-gallery" class="swiper-slide"></a></div>
+          </div>
+          <div class="swiper-nav">
+            <button type="button" class="swiper-button swiper-button-prev">
+              <svg class="icon icon-arrow-right">
+                <use xlink:href="#arrow-right"></use>
+              </svg>
+            </button>
+            <button type="button" class="swiper-button swiper-button-next">
+              <svg class="icon icon-arrow-right">
+                <use xlink:href="#arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="container">
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-5 col-xl-4">
+              <div class="product-page-features-description-block">
+                <div class="h2">Яркие краски на&nbsp;холсте  серого мегаполиса</div>
+                <p class="description">Комфортный городской озорник на дорожных колесах 700С</p>
+              </div>
+            </div>
+            <div class="col-md-7 offset-xl-1">
+              <ul class="product-page-features-icons-list">
+                <li>Двойные алюминиевые обода</li>
+                <li>Легкая и прочная алюминиевая рама</li>
+                <li>Всепогодные механические дисковые тормоза</li>
+                <li>Задний переключатель Shimano Acera RD-M360</li>
+                <li>В комплекте: крылья, подножка, фонари, багажник</li>
+                <li>Мягкая вилка ZOOM 189 AMS</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product-page-technologies">
+        <div class="container">
+          <h2 class="section-title">Технологии</h2>
+        </div>
+        <div class="product-page-technologies-slider">
+          <div class="container">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                        <div class="product-page-technologies-item">
+                          <div style="background-image:url(images/product-page-technologies-1.jpg)" class="image"></div>
+                          <div class="content">
+                            <div class="logo"><img src="images/product-page-technologies-logo-1.jpg" alt="COMFORT GEOMETRY"></div>
+                            <h4 class="title">COMFORT GEOMETRY</h4>
+                            <p class="desc">Вальяжная, комфортная настолько, насколько это вообще возможно, геометрия.</p>
+                          </div>
+                        </div>
+                </div>
+                <div class="swiper-slide">
+                        <div class="product-page-technologies-item">
+                          <div style="background-image:url(images/product-page-technologies-2.jpg)" class="image"></div>
+                          <div class="content">
+                            <div class="logo"><img src="images/product-page-technologies-logo-2.jpg" alt="SPORT GEOMETRY"></div>
+                            <h4 class="title">SPORT GEOMETRY</h4>
+                            <p class="desc">Гибридная геометрия, сочетающая в себе главные достоинства Race и Recreational геометрий.</p>
+                          </div>
+                        </div>
+                </div>
+                <div class="swiper-slide">
+                        <div class="product-page-technologies-item">
+                          <div style="background-image:url(images/product-page-technologies-3.jpg)" class="image"></div>
+                          <div class="content">
+                            <div class="logo"><img src="images/product-page-technologies-logo-3.jpg" alt="HMCF CARBON"></div>
+                            <h4 class="title">HMCF CARBON</h4>
+                            <p class="desc">Композитный монокок от итальянского дизайнерского бюро, изготовлен с применением технологий Nano Matrix</p>
+                          </div>
+                        </div>
+                </div>
+                <div class="swiper-slide">
+                        <div class="product-page-technologies-item">
+                          <div style="background-image:url(images/product-page-technologies-2.jpg)" class="image"></div>
+                          <div class="content">
+                            <div class="logo"><img src="images/product-page-technologies-logo-2.jpg" alt="SPORT GEOMETRY"></div>
+                            <h4 class="title">SPORT GEOMETRY</h4>
+                            <p class="desc">Гибридная геометрия, сочетающая в себе главные достоинства Race и Recreational геометрий.</p>
+                          </div>
+                        </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="swiper-nav">
+            <button type="button" class="swiper-button swiper-button-prev">
+              <svg class="icon icon-arrow-right">
+                <use xlink:href="#arrow-right"></use>
+              </svg>
+            </button>
+            <button type="button" class="swiper-button swiper-button-next">
+              <svg class="icon icon-arrow-right">
+                <use xlink:href="#arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="product-page-geometry">
+          <h2 class="section-title">Геометрия</h2>
+          <div class="row">
+            <div class="col-lg-6"><img src="images/product-page-geometry.jpg" class="product-page-geometry-image"></div>
+            <div class="col-lg-6">
+              <div class="table-container">
+                <div class="table-scroller">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td colspan="2"></td>
+                        <td><span class="badge badge-sm badge-blue"><span>M</span></span></td>
+                        <td><span class="badge badge-sm badge-blue"><span>L</span></span></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td class="text-gray">Размер рамы, дюймы</td>
+                        <td class="text-gray">10</td>
+                        <td class="text-gray">20</td>
+                      </tr>
+                      <tr>
+                        <td><span class="text-bold text-blue">ST</span></td>
+                        <td>Длина подседельной трубы, мм</td>
+                        <td>457.00</td>
+                        <td>508.00</td>
+                      </tr>
+                      <tr>
+                        <td><span class="text-bold text-blue">TT</span></td>
+                        <td>Длина верхней трубы, мм</td>
+                        <td>586.00</td>
+                        <td>586.00</td>
+                      </tr>
+                      <tr>
+                        <td><span class="text-bold text-blue">HT</span></td>
+                        <td>Длина рулевой трубы, мм</td>
+                        <td>140.00</td>
+                        <td>140.00</td>
+                      </tr>
+                      <tr>
+                        <td><span class="text-bold text-blue">SA</span></td>
+                        <td>Угол подседельной трубы, градусы</td>
+                        <td>73.00</td>
+                        <td>73.00</td>
+                      </tr>
+                      <tr>
+                        <td><span class="text-bold text-blue">HA</span></td>
+                        <td>Угол рулевой трубы, градусы</td>
+                        <td>71.00</td>
+                        <td>71.00</td>
+                      </tr>
+                      <tr>
+                        <td><span class="text-bold text-blue">CS</span></td>
+                        <td>Длина перьев, мм</td>
+                        <td>455.00</td>
+                        <td>455.00</td>
+                      </tr>
+                      <tr>
+                        <td><span class="text-bold text-blue">WB</span></td>
+                        <td>Длина колесной базы, мм</td>
+                        <td>1090.00</td>
+                        <td>1090.00</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product-page-map">
+          <h2 class="section-title">Найдите ближайший к вам магазин</h2>
+          <ul class="legend">
+            <li><img src="images/logo-short-blue.png" class="map-point"><span>Фирменные магазины DEWOLF</span></li>
+            <li>
+              <div class="map-point map-point-green"></div><span>Дилерские магазины</span>
+            </li>
+          </ul>
+          <div class="product-page-map-image-wrapper">
+            <div class="product-page-map-image-scroller"><img src="images/product-page-map.jpg" data-img-map="product-page-map-list" class="product-page-map-image"><map name="product-page-map-list">
+                <!-- coords="x,y" (x и y считаются от верхнего левого угла)-->
+                <area href="#" coords="380,160" data-point-color="green" data-tooltip-content="&lt;p&gt;&lt;span class='text-bold'&gt;Велосипеды и самокаты тут&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span class='text-gray'&gt;дилерский магазин&lt;/span&gt;&lt;/p&gt;Воркута, пр-т Академика Сахарова, 25&lt;br&gt;Телефон: +7 836 45 63 24&lt;br&gt;Часы работы: 09:00-19:00">
+                <area href="#" coords="970,370" data-point-src="images/logo-short-blue.png" data-tooltip-content="&lt;p&gt;&lt;span class='text-bold'&gt;Велосипеды и самокаты тут&lt;p&gt;&lt;p&gt;&lt;span class='text-gray'&gt;дилерский магазин&lt;p&gt;Воркута, пр-т Академика Сахарова, 25&lt;br&gt;Телефон: +7 836 45 63 24&lt;br&gt;Часы работы: 09:00-19:00"></map></div>
+          </div>
+        </div>
+        <hr>
+        <ul class="pagination pagination-items-nav">
+          <li class="prev"><a href="">
+              <svg class="icon icon-arrow-right">
+                <use xlink:href="#arrow-right"></use>
+              </svg><span>Городской велосипед Asphalt 4</span></a></li>
+          <li class="centered"><a href=""><span>К&nbsp;списку</span></a></li>
+          <li class="next"><a href="">
+              <svg class="icon icon-arrow-right">
+                <use xlink:href="#arrow-right"></use>
+              </svg><span>Городской велосипед Asphalt 5</span></a></li>
+        </ul>
+      </div>
+      <div class="product-page-viewed">
+        <div class="container">
+          <h2 class="section-title">Ранее вы смотрели</h2>
+          <div class="product-page-viewed-slider">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><a style="background-image:url(images/main-sale-4.jpg)" class="catalog-item catalog-item-short">
+                              <div class="inner">
+                                <div style="background-image:url(images/main-sale-4.jpg)" class="image"></div>
+                                <div class="category">Велосипед</div>
+                                <h4 class="title">PERFECT</h4>
+                                <div class="price-block">
+                                  <div class="price">36 200 руб.</div>
+                                  <div class="old-price">39 800 руб.</div>
+                                </div>
+                              </div></a>
+                </div>
+                <div class="swiper-slide"><a style="background-image:url(images/main-sale-2.jpg)" class="catalog-item catalog-item-short">
+                              <div class="inner">
+                                <div style="background-image:url(images/main-sale-2.jpg)" class="image"></div>
+                                <div class="category">Велосипед</div>
+                                <h4 class="title">Asphalt 1</h4>
+                                <div class="price-block">
+                                  <div class="price">41 300 руб.</div>
+                                  <div class="old-price">56 800 руб.</div>
+                                </div>
+                              </div></a>
+                </div>
+                <div class="swiper-slide"><a style="background-image:url(images/main-sale-3.jpg)" class="catalog-item catalog-item-short">
+                              <div class="inner">
+                                <div style="background-image:url(images/main-sale-3.jpg)" class="image"></div>
+                                <div class="category">Велосипед</div>
+                                <h4 class="title">COVAX 2</h4>
+                                <div class="price-block">
+                                  <div class="price">34 900 руб.</div>
+                                  <div class="old-price">37 500 руб.</div>
+                                </div>
+                              </div></a>
+                </div>
+                <div class="swiper-slide"><a style="background-image:url(images/main-sale-2.jpg)" class="catalog-item catalog-item-short">
+                              <div class="inner">
+                                <div style="background-image:url(images/main-sale-2.jpg)" class="image"></div>
+                                <div class="category">Велосипед</div>
+                                <h4 class="title">Asphalt 1</h4>
+                                <div class="price-block">
+                                  <div class="price">41 300 руб.</div>
+                                  <div class="old-price">56 800 руб.</div>
+                                </div>
+                              </div></a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="row">
+            <div class="col-sm-4 col-md-3"><a href="/" class="footer-logo"><img src="images/logo-full-white.png" alt="Dewolf"></a></div>
+            <div class="col-md-6 order-sm-last order-md-auto">
+              <div class="row">
+                <div class="col-6 col-sm-4">
+                  <div class="footer-menu">
+                    <h4 class="title"><a href="">Велосипеды</a></h4>
+                    <ul>
+                      <li><a href="">Горные</a></li>
+                      <li><a href="">Городские</a></li>
+                      <li><a href="">Детские</a></li>
+                      <li><a href="">Мужские</a></li>
+                      <li><a href="">Женские</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4">
+                  <div class="footer-menu">
+                    <h4 class="title"><a href="">Самокаты</a></h4>
+                    <ul>
+                      <li><a href="">Взрослые</a></li>
+                      <li><a href="">Детские</a></li>
+                      <li><a href="">Трюковые</a></li>
+                      <li><a href="">Внедорожные</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4">
+                  <div class="footer-menu">
+                    <h4 class="title"><a href="">Dewolf</a></h4>
+                    <ul>
+                      <li><a href="">О бренде</a></li>
+                      <li><a href="">Технологии</a></li>
+                      <li><a href="">Дилерам</a></li>
+                      <li><a href="">Где купить</a></li>
+                      <li><a href="">Оплата и доставка</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="footer-contacts">
+                <div class="footer-contacts-block"><a href="tel:88001234567" class="footer-phone">8 800 123 45 67</a>
+                  <ul class="footer-soc">
+                    <li><a href="" target="_blank"><img src="images/icon-telegram.svg" alt="Telegram"></a></li>
+                    <li><a href="" target="_blank"><img src="images/icon-whatsapp.svg" alt="WhatsApp"></a></li>
+                  </ul>
+                </div><b>Центральный офис в Москве</b><br><a href="mailto:simle@mail.com">simle@mail.com</a><br><b>Офис Волгаград</b><br><a href="mailto:simle@mail.com">simle@mail.com</a><br><a href="tel:+74958808080" class="link-white">+7 (495) 880-80-80</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="row">
+            <div class="col-sm-6 col-md-3 order-md-last">
+              <ul class="footer-soc">
+                <li><a href="" target="_blank"><img src="images/icon-facebook.svg" alt="Facebook"></a></li>
+                <li><a href="" target="_blank"><img src="images/icon-instagram.svg" alt="Instagram"></a></li>
+                <li><a href="" target="_blank"><img src="images/icon-twitter.svg" alt="Twitter"></a></li>
+                <li><a href="" target="_blank"><img src="images/icon-vk.svg" alt="ВКонтакте"></a></li>
+                <li><a href="" target="_blank"><img src="images/icon-youtube.svg" alt="YouTube"></a></li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <div class="footer-copyright">
+                <p>Опубликованная на страницах данного сайта информация, продукция и её изображения являются объектом прав интеллектуальной собственности ООО «Dewolf». Изображение товара на сайте может отличаться от фактического изображения товара.</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3 order-md-first">
+              <ul class="footer-card-icons">
+                <li><a href="" target="_blank"><img src="images/icon-visa.png" alt="VISA"></a></li>
+                <li><a href="" target="_blank"><img src="images/icon-mastercard.png" alt="MasterCard"></a></li>
+                <li><a href="" target="_blank"><img src="images/icon-mir.png" alt="МИР"></a></li>
+                <li><a href="" target="_blank"><img src="images/icon-jcb.png" alt="JSB"></a></li>
+                <li><a href="" target="_blank"><img src="images/icon-union-pay.png" alt="UnionPay"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- MODALS-->
+    <div style="display:none;">
+      <div id="modal-city-select" class="modal">
+        <div class="modal__inner">
+          <h4>Выберите Ваш город</h4>
+          <ul>
+            <li><a href="">Москва</a></li>
+            <li><a href="">Санкт-Петербург</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="/js/jquery.js" type="module" defer></script>
+    <script src="/libs/overlayScrollbars/jquery.overlayScrollbars.min.js" type="module" defer></script>
+    <script src="/libs/swiper/swiper.min.js" type="module" defer></script>
+    <script src="/libs/fancybox/jquery.fancybox.min.js" type="module" defer></script>
+    <script src="/libs/perfect-scrollbar/perfect-scrollbar.min.js" type="module" defer></script>
+    <script src="/js/jquery-ui-slider.min.js" type="module" defer></script>
+    <script src="/libs/selectric/jquery.selectric.min.js" type="module" defer></script>
+    <script src="/libs/inputmask/jquery.inputmask.bundle.min.js" type="module" defer></script>
+    <script src="/js/main.js" type="module" defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=InitContactsMaps" async defer></script>
+  </body>
+</html>

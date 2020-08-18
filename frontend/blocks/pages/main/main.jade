@@ -1,0 +1,418 @@
+extends ../../layouts/main
+
+include ../../../common/markup/utilites
+
+block TITLE
+    title Домашняя страница
+
+block CONTENT
+    .main-page-content
+        // slider
+        .main-slider
+            .swiper-container
+                .swiper-wrapper
+
+                    // slide 1
+                    .swiper-slide(style="background-image:url(images/main-slider-1.jpg)")
+                        .container
+                            .row
+                                .col-6.offset-sm-6
+                                    .title
+                                        span.badge.badge-xl.badge-blue
+                                            span Горный
+                                        span.badge.badge-xl.badge-blue
+                                            span велосипед
+                                        span.badge.badge-xl.badge-blue
+                                            span CLK 900
+                                        .badge-wrapper
+                                            span.badge.badge-xl.badge-gray
+                                                span 57 900 руб.
+                                            button.btn.btn-black
+                                                +svg-icon("cart")
+                    // slide 2
+                    .swiper-slide(style="background-image:url(images/main-slider-2.jpg)")
+                        .container
+                            .row
+                                .col-6
+                                    .title
+                                        span.badge.badge-xl.badge-blue
+                                            span Взрослые
+                                        span.badge.badge-xl.badge-blue
+                                            span самокаты
+                                        span.badge.badge-xl.badge-blue
+                                            span dewolf
+                                        .badge-wrapper
+                                            span.badge.badge-xl.badge-gray
+                                                span 12 400 руб.
+                                            button.btn.btn-black
+                                                +svg-icon("cart")
+
+            .swiper-nav
+                button.swiper-button.swiper-button-prev(type="button")
+                button.swiper-button.swiper-button-next(type="button")
+
+            .swiper-pagination
+
+        // advantages
+        .main-advantages
+            .container
+                .row.no-gutters
+                    .col-md-6
+                        // item 1
+                        .main-advantages-item(style="background-image:url(images/main-advantages-1.jpg)")
+                            h3.title Велосипеды Dewolf — результат работы лучших немецких инженеров
+                    .col-md-6
+                        // item 2
+                        .main-advantages-item(style="background-image:url(images/main-advantages-2.jpg)")
+                            h3.title Ваше удовольствие от  катания — наша цель!
+                        // item 3
+                        .main-advantages-item(style="background-image:url(images/main-advantages-3.jpg)")
+                            img(src="images/logo-short-white.png")
+                            h3.title Свобода в движении вместе с DeWolf
+
+        // categories
+        mixin main-categories-item(mciimg, mciname, mciamount, mciminprice, mcitext)
+            .main-categories-item
+                .image(style="background-image:url(images/" + mciimg + ")")
+                .content
+                    .title
+                        .badge
+                            h2.badge.badge-blue
+                                span= mciname
+                        .badge.badge-gray
+                            span= mciamount
+                        .info= mciminprice
+                    p.description= mcitext
+                    a.link(href="")
+                        span Выбрать
+                        +svg-icon("arrow-right")
+
+        .main-categories
+            .container
+                // item 1
+                +main-categories-item("main-categories-1.jpg", "Горные", "18 моделей", "от 15 000 руб.", "Велосипед, предназначенный для катания вне дорог, и вследствие этого, имеющий особую конструкцию, отличную от шоссейного, трекового и дорожного велосипедов.")
+                // item 2
+                +main-categories-item("main-categories-2.jpg", "Городские", "20 моделей", "от 15 000 руб.", "Городской велосипед – полезное и недорогое средство передвижения. Это отличная альтернатива общественному транспорту или личному автомобилю.")
+                // item 3
+                +main-categories-item("main-categories-3.jpg", "Детские", "12 моделей", "от 10 000 руб.", "Сегодня это незаменимая вещь на прогулке. Кроме того, детский велосипед – это еще и формирование правильной осанки, развитие мышц ножек и координации движений.")
+                // item 4
+                +main-categories-item("main-categories-4.jpg", "Женские", "25 моделей", "от 13 000 руб.", "Главное отличие женского велосипеда от мужского - это использование заниженной рамы, которая гарантирует удобную посадку девушке в любой одежде")
+                // item 5
+                +main-categories-item("main-categories-5.jpg", "Мужские", "27 моделей", "от 17 000 руб.", "Катание на велосипеде – это великолепная возможность поддерживать себя в форме и тонусе, снимать стресс, получать море удовольствия от спортивных рекордов и неспешных велопрогулок.")
+        // slider
+        .main-slider
+            .swiper-container
+                .swiper-wrapper
+
+                    // slide 1
+                    .swiper-slide(style="background-image:url(images/main-slider-1.jpg)")
+                        .container
+                            .row
+                                .col-6.offset-sm-6
+                                    .title
+                                        span.badge.badge-xl.badge-blue
+                                            span Горный
+                                        span.badge.badge-xl.badge-blue
+                                            span велосипед
+                                        span.badge.badge-xl.badge-blue
+                                            span CLK 900
+                                        .badge-wrapper
+                                            span.badge.badge-xl.badge-gray
+                                                span 57 900 руб.
+                                            button.btn.btn-black
+                                                +svg-icon("cart")
+                    // slide 2
+                    .swiper-slide(style="background-image:url(images/main-slider-2.jpg)")
+                        .container
+                            .row
+                                .col-6
+                                    .title
+                                        span.badge.badge-xl.badge-blue
+                                            span Взрослые
+                                        span.badge.badge-xl.badge-blue
+                                            span самокаты
+                                        span.badge.badge-xl.badge-blue
+                                            span dewolf
+                                        .badge-wrapper
+                                            span.badge.badge-xl.badge-gray
+                                                span 12 400 руб.
+                                            button.btn.btn-black
+                                                +svg-icon("cart")
+
+            .swiper-nav
+                button.swiper-button.swiper-button-prev(type="button")
+                button.swiper-button.swiper-button-next(type="button")
+
+            .swiper-pagination
+
+        // catalog
+        mixin main-catalog-item(mctiimg, mctiimgfull, mctiredbadge, mctibluebadge, mcticategory, mctiname, mctiprice, mctioldprice)
+            a(class="main-catalog-item" + (mctiimgfull ? " full-image" : ""), style="background-image:url(images/" + mctiimg + ")")
+                .inner
+                    .top-line
+                        .badges-line
+                            if (mctiredbadge)
+                                .badge.badge-orange.badge-xs
+                                    span= mctiredbadge
+                            if (mctibluebadge)
+                                .badge.badge-blue.badge-xs
+                                    span= mctibluebadge
+                        .icons-line
+                            // если уже есть в сравнении, то добавить класс .active
+                            button.button.btn-compare
+                                +svg-icon("bar-chart")
+                    .image(style="background-image:url(images/" + mctiimg + ")")
+                    .category= mcticategory
+                    h4.title= mctiname
+                    .price-block
+                        .price= mctiprice
+                        if (mctioldprice)
+                            .old-price= mctioldprice
+        .main-catalog
+            .container
+                .row
+                    .col-md-6
+                        .main-catalog-slider
+                            .section-title
+                                .badge
+                                    h2.badge.badge-blue
+                                        span Взрослые
+                                .badge.badge-gray
+                                    span 12 моделей
+                            .swiper-container
+                                .row.swiper-wrapper
+                                    .col-xs-6.swiper-slide
+                                        // item
+                                        +main-catalog-item("main-catalog-1.jpg", false, "-30%", false, "Самокат", "Shulz 200", "8 200 руб.", "9 800 руб.")
+                                    .col-xs-6.swiper-slide
+                                        // item
+                                        +main-catalog-item("main-catalog-2.jpg", false, false, false, "Самокат", "Tech Jogger 230", "6 100 руб.", false)
+                            .swiper-pagination
+                    .col-md-6
+                        .main-catalog-slider
+                            .section-title.badge-wrapper
+                                .badge
+                                    h2.badge.badge-blue
+                                        span Детские
+                                .badge.badge-gray
+                                    span 27 моделей
+                            .swiper-container
+                                .row.swiper-wrapper
+                                    .col-xs-6.swiper-slide
+                                        // item
+                                        +main-catalog-item("main-catalog-3.jpg", false, false, false, "Самокат", "Comfort 125R", "4 200 руб.", false)
+                                    .col-xs-6.swiper-slide
+                                        // item
+                                        +main-catalog-item("main-catalog-4.jpg", false, "-20%", false, "Самокат", "Globber FLOW 125", "3 100 руб.", "7 300 руб.")
+                            .swiper-pagination
+                    .col-md-6
+                        .main-catalog-slider
+                            .section-title.badge-wrapper
+                                .badge
+                                    h2.badge.badge-blue
+                                        span Трюковые
+                                .badge.badge-gray
+                                    span 7 моделей
+                            .swiper-container
+                                .row.swiper-wrapper
+                                    .col-xs-6.swiper-slide
+                                        // item
+                                        +main-catalog-item("main-catalog-4.jpg", false, "-20%", false, "Самокат", "Globber FLOW 125", "3 100 руб.", "7 300 руб.")
+                                    .col-xs-6.swiper-slide
+                                        // item
+                                        +main-catalog-item("main-catalog-3.jpg", false, false, false, "Самокат", "Comfort 125R", "4 200 руб.", false)
+                            .swiper-pagination
+                    .col-md-6
+                        .main-catalog-slider
+                            .section-title.badge-wrapper
+                                .badge
+                                    h2.badge.badge-blue
+                                        span Внедорожные
+                                .badge.badge-gray
+                                    span 9 моделей
+                            .swiper-container
+                                .row.swiper-wrapper
+                                    .col-xs-6.swiper-slide
+                                        // item
+                                        +main-catalog-item("main-catalog-1.jpg", false, "-30%", false, "Самокат", "Shulz 200", "8 200 руб.", "9 800 руб.")
+                                    .col-xs-6.swiper-slide
+                                        // item
+                                        +main-catalog-item("main-catalog-2.jpg", false, false, false, "Самокат", "Tech Jogger 230", "6 100 руб.", false)
+                            .swiper-pagination
+        // instagram
+        .main-instagram
+            .container
+                .row
+                    .col-md-6
+                        h2.section-title
+                            a(href="")
+                                .badge.badge-blue.badge-xl
+                                    span Instagram
+                                .badge.badge-blue.badge-xl
+                                    span альбом
+                                .badge.badge-blue.badge-xl
+                                    span Dewolf
+                    .col-md-6.order-md-first
+                        .main-instagram-slider
+                            .swiper-container
+                                .swiper-wrapper
+                                    - for (var i=1; i<7; i++)
+                                        // slide
+                                        .swiper-slide
+                                            a.main-instagram-item(href="images/main-instagram-" + i + ".jpg", data-fancybox="#instagram-album")
+                                                img(src="images/main-instagram-" + i + ".jpg")
+                            .swiper-pagination
+        // selection
+        #main-selection.main-selection
+            .container
+                .row
+                    .col-md-6
+                        h2.section-title Онлайн-помощник в&nbsp;подборе велосипеда
+                    .col-md-6
+                        form.main-selection-form-slider(method="POST", action="", novalidate="true", autocomplete="off")
+                            .swiper-container.swiper-container-fade
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        .title
+                                            span Выберите: для кого подбираем велосипед?
+                                        .content
+                                            .row
+                                                .col-6.col-sm-5
+                                                    .main-selection-label-title Взрослые
+                                                    .form-row
+                                                        ul.form-variants-list
+                                                            li
+                                                                input(type="radio", id="main-selection-who-man" name="main-selection-who", value="man")
+                                                                label.main-selection-label.custom-radio(for="main-selection-who-man") Мужчины
+                                                            li
+                                                                input(type="radio", id="main-selection-who-woman" name="main-selection-who", value="woman")
+                                                                label.main-selection-label.custom-radio(for="main-selection-who-woman") Женщины
+                                                .col-6.col-sm-5
+                                                    .main-selection-label-title Дети
+                                                    .form-row
+                                                        ul.form-variants-list
+                                                            li
+                                                                input(type="radio", id="main-selection-who-boys" name="main-selection-who", value="boys")
+                                                                label.main-selection-label.custom-radio(for="main-selection-who-boys") Мальчики
+                                                            li
+                                                                input(type="radio", id="main-selection-who-girls" name="main-selection-who", value="girls")
+                                                                label.main-selection-label.custom-radio(for="main-selection-who-girls") Девочки
+                                    .swiper-slide
+                                        .title
+                                            span Вопрос 2
+                                        .content
+                                            .form-row
+                                                ul.form-variants-list
+                                                    li
+                                                        input(type="radio", id="main-selection-2-1" name="main-selection-2", value="1")
+                                                        label.main-selection-label.custom-radio(for="main-selection-2-1") Вариант 1
+                                                    li
+                                                        input(type="radio", id="main-selection-2-2" name="main-selection-2", value="2")
+                                                        label.main-selection-label.custom-radio(for="main-selection-2-2") Вариант 2
+                                    .swiper-slide
+                                        .title
+                                            span Вопрос 3
+                                        .content
+                                            .form-row
+                                                ul.form-variants-list
+                                                    li
+                                                        input(type="radio", id="main-selection-3-1" name="main-selection-3", value="1")
+                                                        label.main-selection-label.custom-radio(for="main-selection-3-1") Вариант 1
+                                                    li
+                                                        input(type="radio", id="main-selection-3-2" name="main-selection-2", value="2")
+                                                        label.main-selection-label.custom-radio(for="main-selection-3-2") Вариант 2
+                            .swiper-nav
+                                button.swiper-button.swiper-button-prev(type="button")
+                                    +svg-icon("arrow-right")
+                                    span Назад
+                                button.swiper-button.swiper-button-next(type="button")
+                                    span Далее
+                                    +svg-icon("arrow-right")
+                                button.btn.btn-white.btn-submit(type="submit") Подобрать
+        // sale
+        #main-sale.main-sale
+            .container
+                h2.section-title Лучшие цены
+                .main-sale-slider
+                    .swiper-container
+                        .row.swiper-wrapper
+                            .col-xs-6.col-md-8.col-lg-6.swiper-slide
+                                // item
+                                +main-catalog-item("main-sale-1.jpg", true, "-20%", false, "Велосипед + самокат", "TRX 150", "28 600 руб.", "28 900 руб.")
+                            .col-xs-6.col-md-4.col-lg-3.swiper-slide
+                                // item
+                                +main-catalog-item("main-sale-2.jpg", false, "-30%", false, "Велосипед", "Asphalt 1", "41 300 руб.", "56 800 руб.")
+                            .col-xs-6.col-md-4.col-lg-3.swiper-slide
+                                // item
+                                +main-catalog-item("main-sale-3.jpg", false, false, "Подарок", "Велосипед", "COVAX 2", "34 900 руб.", "37 500 руб.")
+                            .col-xs-6.col-md-4.col-lg-3.swiper-slide
+                                // item
+                                +main-catalog-item("main-sale-4.jpg", false, "-30%", "Подарок", "Велосипед", "PERFECT", "36 200 руб.", "39 800 руб.")
+                            .col-xs-6.col-md-4.col-lg-3.swiper-slide
+                                // item
+                                +main-catalog-item("main-sale-5.jpg", false, false, false, "Велосипед", "FOREST", "43 300 руб.", "46 500 руб.")
+                            .col-xs-6.col-md-4.col-lg-3.swiper-slide
+                                // item
+                                +main-catalog-item("main-sale-6.jpg", true, "-30%", false, "Велосипед", "MAESTRO 2", "32 300 руб.", "34 700 руб.")
+                            .col-xs-6.col-md-4.col-lg-3.swiper-slide
+                                // item
+                                +main-catalog-item("main-sale-7.jpg", false, "-40%", false, "Велосипед", "CLK 900", "21 500 руб.", "26 900 руб.")
+                    .swiper-pagination
+        // contacts
+        #main-contacts.main-contacts
+            #main-contacts-map.main-contacts-map(data-lat="", data-lng="")
+            .container
+                .row.no-gutters
+                    .col-md-6.offset-md-6
+                        form.main-contacts-form(method="POST", action="", novalidate="true", autocomplete="off")
+                            h2.section-title Хотите прокатиться?
+                                br
+                                span.text-blue Приходите в магазин...
+                            .form-row
+                                select(id="main-contacts-city" name="main-contacts-city")
+                                    option(disabled, selected, value="") Выберите город
+                                    option(value="1") Москва
+                                    option(value="2") Санкт-Петербург
+                            .form-row
+                                ul.form-variants-list
+                                    li
+                                        input(type="checkbox", id="main-contacts-shop-type-company-store" name="main-contacts-shop-type", value="company-store")
+                                        label.main-contacts-label.custom-checkbox(for="main-contacts-shop-type-company-store") Фирменный магазин Dewolf
+                                    li
+                                        input(type="checkbox", id="main-contacts-shop-type-dealer-shop" name="main-contacts-shop-type", value="dealer-shop")
+                                        label.main-contacts-label.custom-checkbox(for="main-contacts-shop-type-dealer-shop") Магазины дилеров
+                                    li
+                                        input(type="checkbox", id="main-contacts-shop-type-service-center" name="main-contacts-shop-type", value="service-center")
+                                        label.main-contacts-label.custom-checkbox(for="main-contacts-shop-type-service-center") Сервисные центры
+                            button.btn.btn-blue.btn-submit(type="submit") Искать
+        // call-to-action-slider
+        .main-call-to-action
+            .main-slider
+                .swiper-container
+                    .swiper-wrapper
+
+                        // slide 1
+                        .swiper-slide(style="background-image:url(images/main-call-to-action-bg.jpg)")
+                            .container
+                                .title
+                                    span.badge.badge-xl.badge-blue
+                                        span Отправляйтесь
+                                    span.badge.badge-xl.badge-blue
+                                        span в путешествие
+                                    span.badge.badge-xl.badge-blue
+                                        span или покоряйте
+                                    span.badge.badge-xl.badge-blue
+                                        span новые
+                                    span.badge.badge-xl.badge-blue
+                                        span вершины
+                                    span.badge.badge-xl.badge-blue
+                                        span вместе
+                                    span.badge.badge-xl.badge-blue
+                                        span с Dewolf
+                .swiper-nav
+                    button.swiper-button.swiper-button-prev(type="button")
+                    button.swiper-button.swiper-button-next(type="button")
+
+                .swiper-pagination
+
+
